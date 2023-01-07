@@ -1,0 +1,32 @@
+project:
+  type: book
+  output-dir: docs
+book:
+  title: "Regression Modeling: A Computational Project-Based Approach"
+  author: "William M. Murrah III"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - simulation.qmd
+    - designanalysis.qmd
+    - simpleModels.qmd
+    - multipleRegression.qmd
+    - moderatedRegression.qmd
+    - summary.qmd
+    - references.qmd
+  page-footer:
+    left: |
+      *Regression Modeling: a Computational Project-Based Approach* was written by William M. Murrah III.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+bibliography: regmodbook.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

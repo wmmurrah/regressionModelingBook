@@ -1,0 +1,28 @@
+---
+title: Introduction to Scientific Modeling
+---
+
+
+## A little philosophy of science
+
+To me, reality consists of all that exists.
+This includes, physical objects and processes as well as things like ideas, feeling, and beliefs.
+So, to me, reality is unitary by definition -- there is one reality.
+But it is extremely complicated. 
+I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.
+
+Does this mean we can understand reality at all? 
+I don't think so. 
+I don't fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won't start.
+When we can't fully understand something, we are left to build an model of that process. 
+I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system.
+
+## Modeling in Science
+
+### Modeling Workflow
+
+1. Define a generative model of the sample,
+2. Define specific estimand,
+3. Define statistical model to produce estimand,
+4. Test statistical model (3) using generative model (1),
+5. Analyze and summarize sample.

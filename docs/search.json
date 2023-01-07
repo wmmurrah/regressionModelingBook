@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Regression Modeling: A Computational Project-Based Approach",
+    "section": "",
+    "text": "Preface\nThis book was created to:\nA traditional teaching method involves having student conduct simple statistical algorithms by hand, meaning working out the calculations step-by-step on paper, as to develop an intuition of the methods, and what they are doing. I take a computational approach in an attempt to achieve the same outcome, by encouraging readers to program the algorithms using the computer."
+  },
+  {
+    "objectID": "index.html#model-based-approach",
+    "href": "index.html#model-based-approach",
+    "title": "Regression Modeling: A Computational Project-Based Approach",
+    "section": "Model-Based Approach",
+    "text": "Model-Based Approach\nA major goal of this book is that, after working through it, the researcher has a firm grasp of the general linear model, as a foundation to scientific modeling."
+  },
+  {
+    "objectID": "index.html#computational-approach",
+    "href": "index.html#computational-approach",
+    "title": "Regression Modeling: A Computational Project-Based Approach",
+    "section": "Computational Approach",
+    "text": "Computational Approach\nI use a programming language, not only to do statistics but as a tool to learn statistics.\nsimulation is used to develop intuitions about statistical methods."
+  },
+  {
+    "objectID": "index.html#project-based-approach",
+    "href": "index.html#project-based-approach",
+    "title": "Regression Modeling: A Computational Project-Based Approach",
+    "section": "Project-Based Approach",
+    "text": "Project-Based Approach\nProject-based examples,"
+  },
+  {
+    "objectID": "index.html#other-approaches-utilized-in-this-book",
+    "href": "index.html#other-approaches-utilized-in-this-book",
+    "title": "Regression Modeling: A Computational Project-Based Approach",
+    "section": "Other Approaches Utilized in this Book",
+    "text": "Other Approaches Utilized in this Book\nTo the extent possible, I have tried to use empirical studies and other published work when developing projects and research examples. I prioritized articles that provide access to raw data and computer code, as this not only helps readers see how information moves from raw data to peer reviewed publications, but also gives readers “hands-on” experience with the data interpretation process.\nI have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.\nI have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "7  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "intro.html#modeling-workflow",
+    "href": "intro.html#modeling-workflow",
+    "title": "1  Introduction to Scientific Modeling",
+    "section": "2.1 Modeling Workflow",
+    "text": "2.1 Modeling Workflow\n\nDefine a generative model of the sample,\nDefine specific estimand,\nDefine statistical model to produce estimand,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to Scientific Modeling",
+    "section": "",
+    "text": "2 A little philosophy of science\nWe live in an extremely complicated world.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But it is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.\nDoes this mean we can understand reality? I don’t think so. I don’t fully understand how my car works, but I do have a basic idea that allows me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system."
+  },
+  {
+    "objectID": "intro.html#a-little-philosophy-of-science",
+    "href": "intro.html#a-little-philosophy-of-science",
+    "title": "1  Introduction to Scientific Modeling",
+    "section": "1.1 A little philosophy of science",
+    "text": "1.1 A little philosophy of science\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But it is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.\nDoes this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system."
+  },
+  {
+    "objectID": "intro.html#modeling-in-science",
+    "href": "intro.html#modeling-in-science",
+    "title": "1  Introduction to Scientific Modeling",
+    "section": "1.2 Modeling in Science",
+    "text": "1.2 Modeling in Science\n\n1.2.1 Modeling Workflow\n\nDefine a generative model of the sample,\nDefine specific estimand,\nDefine statistical model to produce estimand,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
+  }
+]

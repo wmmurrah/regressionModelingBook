@@ -1,0 +1,36 @@
+# Preface {.unnumbered}
+
+This book was created to:
+
+* provide an applied textbook that integrates content knowledge and computational skills.
+* present the statistical methods within a modeling framework
+* integrate computational methods into learning research methods
+
+
+A traditional teaching method involves having student conduct simple statistical algorithms by hand, meaning working out the calculations step-by-step on paper, as to develop an intuition of the methods, and what they are doing.
+I take a computational approach in an attempt to achieve the same outcome, by encouraging readers to program the algorithms using the computer.
+
+## Model-Based Approach
+
+A major goal of this book is that, after working through it, the researcher has a firm grasp of the general linear model, as a foundation to scientific modeling.
+
+## Computational Approach
+
+I use a programming language, not only to *do* statistics but as a tool to *learn* statistics.
+
+
+simulation is used to develop intuitions about statistical methods.
+
+
+## Project-Based Approach
+
+Project-based examples,
+
+## Other Approaches Utilized in this Book
+
+To the extent possible, I have tried to use empirical studies and other published work when developing projects and research examples. 
+I prioritized articles that provide access to raw data and computer code, as this not only helps readers see how information moves from raw data to peer reviewed publications, but also gives readers "hands-on" experience with the data interpretation process. 
+
+I have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.
+
+I have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process. 
