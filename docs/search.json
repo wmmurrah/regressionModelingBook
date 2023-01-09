@@ -35,27 +35,6 @@
     "text": "Other Approaches Utilized in this Book\nTo the extent possible, I have tried to use empirical studies and other published work when developing projects and research examples. I prioritized articles that provide access to raw data and computer code, as this not only helps readers see how information moves from raw data to peer reviewed publications, but also gives readers “hands-on” experience with the data interpretation process.\nI have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.\nI have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process."
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "7  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "intro.html#modeling-workflow",
-    "href": "intro.html#modeling-workflow",
-    "title": "1  Introduction to Scientific Modeling",
-    "section": "2.1 Modeling Workflow",
-    "text": "2.1 Modeling Workflow\n\nDefine a generative model of the sample,\nDefine specific estimand,\nDefine statistical model to produce estimand,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction to Scientific Modeling",
-    "section": "",
-    "text": "2 A little philosophy of science\nWe live in an extremely complicated world.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But it is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.\nDoes this mean we can understand reality? I don’t think so. I don’t fully understand how my car works, but I do have a basic idea that allows me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system."
-  },
-  {
     "objectID": "intro.html#a-little-philosophy-of-science",
     "href": "intro.html#a-little-philosophy-of-science",
     "title": "1  Introduction to Scientific Modeling",
@@ -68,5 +47,19 @@
     "title": "1  Introduction to Scientific Modeling",
     "section": "1.2 Modeling in Science",
     "text": "1.2 Modeling in Science\n\n1.2.1 Modeling Workflow\n\nDefine a generative model of the sample,\nDefine specific estimand,\nDefine statistical model to produce estimand,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "7  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "statisticalthinkinglink.html",
+    "href": "statisticalthinkinglink.html",
+    "title": "Website",
+    "section": "",
+    "text": "statistical-thinking.com"
   }
 ]

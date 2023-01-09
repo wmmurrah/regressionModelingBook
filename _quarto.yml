@@ -3,7 +3,7 @@ project:
   output-dir: docs
 book:
   title: "Regression Modeling: A Computational Project-Based Approach"
-  author: "William M. Murrah III"
+  author: "William M. Murrah, III"
   chapters:
     - index.qmd
     - intro.qmd
@@ -14,11 +14,12 @@ book:
     - moderatedRegression.qmd
     - summary.qmd
     - references.qmd
+    - statisticalthinkinglink.qmd
   page-footer:
     left: |
       *Regression Modeling: a Computational Project-Based Approach* was written by William M. Murrah III.
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      Return to  <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.
 
 bibliography: regmodbook.bib
 
