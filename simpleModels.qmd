@@ -17,9 +17,12 @@ Next we will look at the variables available in the `NHANES` dataframe, which is
 To illustrate how we can make statistical inferences, we can assume we want to know if adult height differs between women and men.
 Admittedly, this is a ver trivial goal of research, but it will help us to review the topic of statistical inference.
 To do this we will consider three scenarios.
+
 First, we will pretend that we have no idea about what to expect between variables in this data and are engaging in an **exploratory** study which includes looking for relations between height and gender.
+
 Second, we will pretend that we suspect that there is a relation between height and gender, possibly among other relations, and we want to know if heights are different between the populations of adult women and men.
 This is a **rough confirmatory** study.
+
 Third, we will pretend that a primary goal of our study is to test the hypothesis that men are taller than women.
 We have a compelling theoretical model that suggest this relation, and we decide to test this hypothesis *before* we collect or at least before we look at our data.
 This is a **strict confirmatory** study.
