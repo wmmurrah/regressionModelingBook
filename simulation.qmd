@@ -1,1 +1,9 @@
-# Simulation in R
+---
+title: "Simulation in R"
+execute:
+  echo: true
+---
+
+
+
+

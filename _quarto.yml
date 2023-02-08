@@ -2,13 +2,12 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Regression Modeling: A Computational Project-Based Approach"
+  title: "Design and Analysis: A Computational Model-Based Approach"
   author: "William M. Murrah, III"
   chapters:
     - index.qmd
     - intro.qmd
     - simulation.qmd
-    - designanalysis.qmd
     - simpleModels.qmd
     - multipleRegression.qmd
     - moderatedRegression.qmd
@@ -17,7 +16,7 @@ book:
     - statisticalthinkinglink.qmd
   page-footer:
     left: |
-      *Regression Modeling: a Computational Project-Based Approach* was written by William M. Murrah III.
+      *Design and Analysis: A Computational Model-Based Approach* was written by William M. Murrah III.
     right: |
       Return to  <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.
 

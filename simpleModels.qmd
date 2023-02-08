@@ -1,4 +1,163 @@
 ---
 title: "Simple Regression Models"
+editor: 
+  markdown: 
+    wrap: sentence
+bibliography: regmodbook.bib    
 ---
+
+```{r}
+#install.packages("NHANES)
+library(NHANES)
+library(effectsize)
+data(NHANES)
+```
+
+Next we will look at the variables available in the `NHANES` dataframe, which is a available in the NHANES package in R.
+To illustrate how we can make statistical inferences, we can assume we want to know if adult height differs between women and men.
+Admittedly, this is a ver trivial goal of research, but it will help us to review the topic of statistical inference.
+To do this we will consider three scenarios.
+First, we will pretend that we have no idea about what to expect between variables in this data and are engaging in an **exploratory** study which includes looking for relations between height and gender.
+Second, we will pretend that we suspect that there is a relation between height and gender, possibly among other relations, and we want to know if heights are different between the populations of adult women and men.
+This is a **rough confirmatory** study.
+Third, we will pretend that a primary goal of our study is to test the hypothesis that men are taller than women.
+We have a compelling theoretical model that suggest this relation, and we decide to test this hypothesis *before* we collect or at least before we look at our data.
+This is a **strict confirmatory** study.
+
+```{r}
+names(NHANES)
+```
+
+The names are helpful, but we will want to know more about each variable.
+Because this is a data set from an R package, you can learn more about it using R's help system as follows:
+
+```{r}
+#| eval: false
+?NHANES
+```
+
+You should run the above command in RStudio and take a few minutes to read through the resulting help file, which will give you an idea of what is contained in the data, an what each variables captures.
+
+One thing you might have noticed reading through the data description is that height was measured in centimeters (cm).
+Below I create a variable I call `Height_in` that converts from centimeters to inches.
+
+```{r}
+NHANES$Height_in <- NHANES$Height/2.54
+```
+
+Let's look at the distribution of heights using this real data.
+
+```{r}
+hist(NHANES$Height_in, breaks = "fd")
+```
+
+The data do not look normally distributed.
+instead, there is a long tail on the left side of the distribution.
+What do you think is going on here?
+You may want to read back over the data description.
+To understand this, take a look at the distribution of the age variable.
+
+```{r}
+hist(NHANES$Age)
+```
+
+The data contain information on people from birth well into adulthood.
+Maybe the long left tail of the height distibution is a result of this age distribution.
+To explore this we can plot height against age.
+
+```{r}
+plot(Height_in ~ Age, NHANES)
+```
+
+This plot seems consistent with our hunch.
+From birth to the late teens we see a relation between height and age.
+For participants older than 18 or so, we don't see a relation between height and age.
+Because we are interested in the height of adults we subset the data to only include those of the age of 18.
+
+```{r}
+nhanesAdult <- NHANES[NHANES$Age >= 18, ]
+```
+
+```{r}
+plot(Height_in ~ Age, nhanesAdult)
+```
+
+We can now look at the distribution of heights among adults.
+
+```{r}
+hist(nhanesAdult$Height_in)
+```
+
+This looks more normally distributed, which is what we would expect from a random sample of adults.
+
+We might expect there to be differences in the average heights between males and females.
+To explore this we can use a boxplot.
+
+```{r}
+boxplot(Height_in ~ Gender, nhanesAdult)
+```
+
+We do see that the median height of males is greater than that of females.
+The following code gives us the sample means for each gender category.
+
+```{r}
+aggregate(Height_in ~ Gender, data = NHANES, FUN = mean)
+```
+
+To review what we learned about statistical inference first we will consider our three scenarios.
+
+### Exploratory Study
+
+Recall that if we have no idea about what to expect between variables in this data then we are engaging in an **exploratory** study which includes looking for relations between height and gender.
+
+The appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group's heights [@Fife2022Understandingexploratory/confirmatorydata].
+
+```{r}
+ht.gender_model <- lm(Height_in ~ Gender, data =nhanesAdult)
+boxplot(Height_in ~ Gender, data = nhanesAdult)
+summary(ht.gender_model)
+confint(ht.gender_model)
+cohens_d(Height_in ~ Gender, data =nhanesAdult)
+```
+
+It is very important to note that a probabilistic interpretation  is **NOT** appropriate for  the p values.
+The p-value of less than .001 for the gender coefficient in the linear model output, should not be used as evidence against the null hypothesis.
+It would also be very important to report all the tests and comparisons conducted to be transparent about what was done in the study.
+
+You should also explore the residuals of the model.
+We will talk about more sophisticated ways to explore residuals later, for now.
+Such studies should be followed collecting new data to use one of the other types of studies described below.
+
+```{r}
+hist(resid(ht.gender_model))
+```
+
+### Rough Confirmatory Study
+
+If originally we suspected that there is a relation between height and gender, possibly among other relations of interest, and we want to know if heights are different between the populations of adult women and men, this study could be considered a **rough confirmatory** study.
+
+In that situation it would also be appropriate to use graphs, means, and effect sizes, along with confidence intervals.
+All of the output we obtained above could be used. 
+The difference is that you may emphasize the confidence intervals of the linear model coefficients
+
+```{r}
+confint(ht.gender_model)
+```
+Such studies should be followed by strict confirmatory studies if there is support for any of the hypotheses.
+All analyses and exploratory techniques should be reported transparently.
+
+
+### Strict Confirmatory Study
+
+This study requires that specific hypotheses related to theory are posited before the data are collected. 
+Then those, and only those hypotheses should be tested and interpreted in the manner that follows. 
+Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above.
+This includes adding any sub-group analyses. 
+If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis.
+Such an error is known as **HARK**ing, whichs stands for **H**ypothesizing **A**fter the **R**esults are **K**nown.
+It's bad. Really bad.
+```{r}
+summary(ht.gender_model)
+```
+
 
