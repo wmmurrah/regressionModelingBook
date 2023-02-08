@@ -154,7 +154,7 @@ Then those, and only those hypotheses should be tested and interpreted in the ma
 Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above.
 This includes adding any sub-group analyses. 
 If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis.
-Such an error is known as **HARK**ing, whichs stands for **H**ypothesizing **A**fter the **R**esults are **K**nown.
+Such an error is known as **HARK**ing, which stands for **H**ypothesizing **A**fter the **R**esults are **K**nown.
 It's bad. Really bad.
 ```{r}
 summary(ht.gender_model)
