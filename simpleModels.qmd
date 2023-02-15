@@ -6,6 +6,374 @@ editor:
 bibliography: regmodbook.bib    
 ---
 
+## Variances, Covariances, and Correlations
+
+```{r}
+#| warning: false
+library(car)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(gridExtra)
+data("Davis")
+```
+
+### Variance ( $n$ = 1,000, $\bar{X}$ = 100)
+
+```{r , echo=FALSE}
+par(mfrow = c(1, 2))
+set.seed(1234)
+V <- rnorm(1000, 100, 2)
+hist(V, col = "skyblue", breaks = 30, xlim = c(60, 140), ylim = c(0, 100))
+abline(v = mean(V), col = "red", lwd = 3)
+W <- rnorm(1000, 100, 10)
+hist(W, col = "skyblue", breaks = 30, xlim = c(60, 140), 
+     ylim = c(0, 100))
+abline(v = mean(W), col = "red", lwd = 3)
+```
+
+The sample variance is defined as:
+  
+$$
+s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{2.1}
+$$
+  
+  
+where $X$ is the variable in question, $\sum{\mathit{x}^2}$ is the sum of the squared deviations from the mean of $X$, the latter symbolized as $\overline{X}$, and $N$ the sample size. 
+
+
+Defining $X$ and computing the variance "by hand":
+
+```{r}
+X <- c(65, 69, 67.5, 75, 62.5, 68, 72, 67, 70, 72, 66.5, 68.5) # height
+N <- length(X)
+Xbar <- mean(X)
+var_x <- sum((X - Xbar)^2)/(N - 1)
+var_x
+```
+
+or simply:
+```{r}
+var(X)
+```
+
+
+### Bivariate Relationship
+
+```{r , echo=FALSE}
+# set.seed(123)
+# idx <- sample(nrow(Davis), 10)
+# idx <- c(179, 14, 195, 170, 40, 118, 43, 194, 153, 90)
+# dat <- Davis[idx, c(3,5)]
+# rownames(dat) <- NULL
+studht <- read.csv("https://raw.githubusercontent.com/wmmurrah/regressionModelingBook/main/data/studentHeight.csv",
+                   header = TRUE)
+
+```
+
+
+```{r, echo = FALSE, out.height="100%"}
+
+studhtxy <- studht[ ,1:3]
+names(studhtxy) <- c("repht(X)", "height(Y)", "Gender")
+plt <- ggplot(studhtxy, aes(x = `repht(X)`, y = `height(Y)`)) + geom_point() + 
+  ylab("Measured Height") + xlab("Reported Height") 
+
+grid.arrange(tableGrob(studhtxy), plt, ncol = 2, widths = c(1,1.5))
+```
+### Covariance
+
+The covariance of two variables is defined as
+
+$$
+  s_{xy} = \frac{\sum{(X - \overline{X})(Y - \overline{Y})}}{N - 1} = \frac{\sum{xy}}{N - 1}. \tag{2.3}
+$$
+  
+Note that we can rewrite the variance equation as 
+
+$$
+  s_{xx} = \frac{\sum{(X - \overline{X})(X - \overline{X})}}{N - 1} = \frac{\sum{xx}}{N - 1},
+$$
+  
+suggesting that the variance of a variable can be considered its covariance with itself.
+
+```{r exdat}
+dat <- studht[ ,1:2]
+names(dat) <- c("X", "Y")
+
+dat <- within(dat, {
+  `$d_x$` = X -  mean(X)
+  `$d_x^2$` = (X - mean(X))^2
+  `$d_y$` = Y - mean(Y)
+  `$d_y^2$` = (Y - mean(Y))^2
+})
+
+dat <- dat[ ,c("X", "$d_x$", "$d_x^2$", "Y", "$d_y$", "$d_y^2$")]
+kable(dat, digits = 2)
+```
+
+$\sum{X} = `r sum(dat$X)`$,
+$\bar{X} = `r round(mean(dat$X),2)`$,
+
+$\sum{Y} = `r sum(dat$Y)`$,
+$\bar{Y} = `r round(mean(dat$Y),2)`$,
+
+$\sum{d_x^2} = `r round(sum(dat[3]),2)`$,
+$\sum{d_y^2} = `r round(sum(dat[6]),2)`$ 
+  
+$$
+  s_x^2 = \frac{\sum{x^2}}{N - 1} = \frac{`r round(sum(dat[3]),2)`}{10 - 1} = `r round(var(dat$X),2)`  
+$$
+
+$$
+  s_x = \sqrt{s_x^2} = `r round(sd(dat$X),2)`
+$$
+
+$$
+  s_y^2 = \frac{\sum{y^2}}{N - 1} = \frac{`r round(sum(dat[6]),2)`}{10 - 1} = `r round(var(dat$Y),2)`  
+$$
+  
+$$
+  s_y = \sqrt{s_y^2} = `r round(sd(dat$Y),2)`
+$$
+
+
+```{r, results = 'asis', echo= FALSE}
+
+dat$`$d_xd_y$` <- with(dat, `$d_x$`*`$d_y$`)
+
+kable(dat, digits = 2)
+```
+
+$\sum{X} = `r sum(dat$X)`$, 
+$\bar{X} = `r round(mean(dat$X),2)`$,
+
+$\sum{Y} = `r sum(dat$Y)`$, 
+$\bar{Y} = `r round(mean(dat$Y),2)`$, 
+
+$\sum{d_xd_y} = `r round(sum(dat[7]),2)`$ 
+
+$$
+  s_{xy} = \frac{\sum{(X - \overline{X})(Y - \overline{Y})}}{N - 1} = 
+$$
+  
+
+$$
+  \frac{\sum{xy}}{N - 1} = \frac{`r round(sum(dat[7]),2)`}{9} =`r round(cov(dat$X, dat$Y),2)`. 
+$$
+
+### Correlation
+
+$$r_{XY} = \frac{\text{Cov}(XY)}{s_{X}s_{Y}} = 
+  \frac{`r round(cov(dat$X, dat$Y),2)`}{`r round(sd(dat$X),2)` \times `r round(sd(dat$Y),2)`} = 
+  \frac{`r round(cov(dat$X, dat$Y),2)`}{`r round(sd(dat$X)*sd(dat$Y),2)`} = `r round(cor(dat$X, dat$Y),2)`.$$
+
+## Conceptual Demonstration of Simple Regression
+
+Population Model:
+  
+$$Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i$$
+
+$$ \hat{Y_i} = \beta_0 + \beta_1 X_i$$
+
+Sample Model:
+  
+$$Y_i = b_0 + b_1 X_i + e_i$$
+$$\hat{Y_i} = b_0 + b_1 X_i$$
+
+```{r}
+#| echo: true
+
+df <- dat[ ,c("X", "Y")]
+kable(df)
+```
+
+$$
+\text{Cor}_{XY} = `r with(df, round(cor(X, Y),2))`
+$$
+
+```{r}
+cor(df$X, df$Y)
+```
+
+#### Data Summary
+
+```{r}
+kable(psych::describe(df, fast = TRUE), digits = 2)
+
+```
+
+```{r}
+plot(Y ~ X, data = df)
+```
+
+```{r}
+#| echo: false
+Y <- df$Y
+X <- df$X
+mod0 <- lm(Y ~ 1)
+int <- round(coef(mod0), 2)[1]
+slope <-0
+d <- Y - mean(Y)
+# Base plot.
+plot(Y ~ X, xaxt = "n", yaxt = "n")
+# axis(side = 2, at = 0:12)
+# axis(side = 1, at = 0:20)
+# Regression line.
+abline(mod0, col = 'red', lty = 20)
+
+text(x = 64, y = 69, bquote(bar(Y) == .(int)), col = "red")
+# points(x = X, y = predict(mod), col = "red")
+# segments(x0 = X, x1 = X, y0 = Y, y1 = predict(mod), col = "blue")
+# text(x = X + .4, y = Y - .5*d, labels =round(d,1))
+# text(x=5, y=11, bquote(Y[i] == .(int) + y[i]))
+# text(x=5, y=9, bquote(hat(Y)[i] == .(int)))
+```
+```{r}
+Ybar <- mean(df$Y)
+
+Ybar
+
+# Empty Model
+emptyModel <- lm(Y ~ 1, data = df)
+
+coef(emptyModel)
+
+# Predicted value
+predict(emptyModel)
+```
+
+```{r}
+#| echo: false
+int <- round(coef(mod0), 2)[1]
+slope <-0
+d <- Y - mean(Y)
+# Base plot.
+plot(X, Y,xlim = c(60, 73), ylim = c(60, 73))
+# axis(side = 2, at = 0:12)
+# axis(side = 1, at = 0:20)
+# Regression line.
+abline(mod0, col = 'red', lty = 20)
+text(x = 64, y = 69, bquote(bar(Y) == .(int)), col = "red")
+points(x = X, y = predict(mod0), col = "red")
+segments(x0 = X, x1 = X, y0 = Y, y1 = predict(mod0), col = "orange")
+text(x = X + .4, y = Y - .5*d, labels =round(d,1))
+text(x= 66, y=72, bquote(Y[i] == .(int) + e[i]))
+text(x=66, y=71, bquote(hat(Y)[i] == .(int)))
+```
+
+```{r, eval=FALSE}
+d <- Y - mean(Y)
+```
+```{r, echo=FALSE}
+kable(data.frame(d = d), digits = 1)
+```
+
+```{r, echo=FALSE}
+mod <- lm(Y ~ X)
+int <- round(coef(mod), 2)[1]
+slope <- round(coef(mod), 2)[2]
+d <- Y - predict(mod)
+# Base plot.
+plot(X, Y, xlim = c(60, 73), ylim = c(60, 73))
+# axis(side = 2, at = 0:12)
+# axis(side = 1, at = 0:20)
+# Regression line.
+abline(mod)
+points(x = X, y = predict(mod), col = "red")
+segments(x0 = X, x1 = X, y0 = Y, y1 = predict(mod), col = "blue")
+text(x = X + .4, y = Y - .5*d, labels =round(d,1))
+text(x=66, y=72, bquote(Y[i] == .(int) + .(slope)*X[i] + epsilon[i]))
+text(x=66, y=71, bquote(hat(Y)[i] == .(int) + .(slope)*X[i]))
+# segments(x0 = 0, x1 = X[3], y0 = 0, y1 = 0, col="green")
+ # text(x = 6.2, y = 1.9, paste("Y = ",round(predict(mod)[3], 1)))
+text(x = 6.2, y = 1.9, bquote(hat(Y) == .(round(predict(mod)[3], 1))))
+# X line
+# segments(x0 = X[3], x1 = X[3], y0 = 1, y1 = predict(mod)[3], col = "green")
+text(x = 3, y = .2, paste("X = ", X[3]))
+# segments(x0 = 0, x1 = X[3], y0 = Y[3], y1 = Y[3], col="green",
+         # lty = 2)
+# segments(x0 = 0, x1 = X[3], y0=1, y1 = 1, col = "green")
+```
+
+```{r}
+simpleReg <- lm(Y ~ X, data = df)
+print(coef(simpleReg), digits = 2)
+
+df$resid <- resid(simpleReg)
+```
+
+```{r, echo=FALSE}
+
+kable(df, digits = 1)
+
+```
+
+```{r, echo=FALSE}
+mod <- lm(Y ~ X)
+int <- round(coef(mod), 2)[1]
+slope <- round(coef(mod), 2)[2]
+d <- Y - predict(mod)
+# Base plot.
+plot(X, Y, xlim = c(60, 73), ylim = c(60, 73))
+# axis(side = 2, at = 0:12)
+# axis(side = 1, at = 0:20)
+# Regression line.
+abline(mod)
+points(x = X, y = predict(mod), col = "red")
+segments(x0 = X, x1 = X, y0 = Y, y1 = predict(mod), col = "blue")
+text(x = X + .4, y = Y - .5*d, labels =round(d,1))
+text(x=66, y=72, bquote(Y[i] == .(int) + .(slope)*X[i] + epsilon[i]))
+text(x=66, y=71, bquote(hat(Y)[i] == .(int) + .(slope)*X[i]))
+# segments(x0 = 0, x1 = X[3], y0 = 0, y1 = 0, col="green")
+ # text(x = 6.2, y = 1.9, paste("Y = ",round(predict(mod)[3], 1)))
+text(x = 63, y = 63, bquote(Delta*hat(Y) == 0.9),
+     col = "green")
+# X line
+segments(x0 = X[5], x1 = X[5]+1, y0 = predict(mod)[5], y1 = predict(mod)[5], col = "green")
+# text(x = 3, y = .2, paste("X = ", X[3]))
+text(x = X[5]+.5, y = 61, bquote(Delta*X == 1),col = "green")
+# segments(x0 = 0, x1 = X[3], y0 = Y[3], y1 = Y[3], col="green",
+         # lty = 2)
+# Y line
+segments(x0 = X[5]+1, x1 = X[5]+1, y0=predict(mod)[5], y1 = predict(mod)[5]+slope, col = "green")
+```
+
+```{r, echo=FALSE}
+mod <- lm(Y ~ X)
+int <- round(coef(mod), 2)[1]
+slope <- round(coef(mod), 2)[2]
+d <- Y - predict(mod)
+# Base plot.
+plot(X, Y, xlim = c(60, 73), ylim = c(60, 73))
+# axis(side = 2, at = 0:12)
+# axis(side = 1, at = 0:20)
+# Regression line.
+abline(mod)
+points(x = X, y = predict(mod), col = "red")
+segments(x0 = X, x1 = X, y0 = Y, y1 = predict(mod), col = "blue")
+text(x = X + .4, y = Y - .5*d, labels =round(d,1))
+text(x=66, y=72, bquote(Y[i] == .(int) + .(slope)*X[i] + epsilon[i]))
+text(x=66, y=71, bquote(hat(Y)[i] == .(int) + .(slope)*X[i]))
+# segments(x0 = 0, x1 = X[3], y0 = 0, y1 = 0, col="green")
+ # text(x = 6.2, y = 1.9, paste("Y = ",round(predict(mod)[3], 1)))
+
+
+
+# Add mean segments
+int0 <- round(coef(mod0), 2)[1]
+int  <- round(coef(mod), 2)[1]
+slope <- round(coef(mod), 2)[2]
+d <- Y - predict(mod)
+Xmean = round(mean(X), 2)
+text(x = Xmean+1.2, y = 62, bquote(bar(X) == .(Xmean)), col = "red")
+abline(mod0, col = "red", lty = 20)
+abline(v = mean(X), col = "red", lty = 20)
+text(x = 62, y = 69, bquote(bar(Y) == .(int0)), col = "red")
+```
+
+
+## Real Data Example
 ```{r}
 #install.packages("NHANES)
 library(NHANES)
