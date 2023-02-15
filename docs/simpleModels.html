@@ -237,12 +237,13 @@ div.csl-indent {
   <li><a href="#covariance" id="toc-covariance" class="nav-link" data-scroll-target="#covariance"><span class="toc-section-number">3.1.3</span>  Covariance</a></li>
   <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation"><span class="toc-section-number">3.1.4</span>  Correlation</a></li>
   </ul></li>
-  <li><a href="#conceptual-demonstration-of-simple-regression" id="toc-conceptual-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#conceptual-demonstration-of-simple-regression"><span class="toc-section-number">3.2</span>  Conceptual Demonstration of Simple Regression</a></li>
-  <li><a href="#real-data-example" id="toc-real-data-example" class="nav-link" data-scroll-target="#real-data-example"><span class="toc-section-number">3.3</span>  Real Data Example</a>
+  <li><a href="#conceptual-demonstration-of-simple-regression" id="toc-conceptual-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#conceptual-demonstration-of-simple-regression"><span class="toc-section-number">3.2</span>  Conceptual Demonstration of Simple Regression</a>
   <ul class="collapse">
-  <li><a href="#exploratory-study" id="toc-exploratory-study" class="nav-link" data-scroll-target="#exploratory-study"><span class="toc-section-number">3.3.1</span>  Exploratory Study</a></li>
-  <li><a href="#rough-confirmatory-study" id="toc-rough-confirmatory-study" class="nav-link" data-scroll-target="#rough-confirmatory-study"><span class="toc-section-number">3.3.2</span>  Rough Confirmatory Study</a></li>
-  <li><a href="#strict-confirmatory-study" id="toc-strict-confirmatory-study" class="nav-link" data-scroll-target="#strict-confirmatory-study"><span class="toc-section-number">3.3.3</span>  Strict Confirmatory Study</a></li>
+  <li><a href="#graphical-demonstration-of-simple-regression" id="toc-graphical-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#graphical-demonstration-of-simple-regression"><span class="toc-section-number">3.2.1</span>  Graphical Demonstration of Simple Regression</a></li>
+  <li><a href="#interpreting-output-from-simple-regression" id="toc-interpreting-output-from-simple-regression" class="nav-link" data-scroll-target="#interpreting-output-from-simple-regression"><span class="toc-section-number">3.2.2</span>  Interpreting Output from Simple Regression</a></li>
+  <li><a href="#exploratory-study" id="toc-exploratory-study" class="nav-link" data-scroll-target="#exploratory-study"><span class="toc-section-number">3.2.3</span>  Exploratory Study</a></li>
+  <li><a href="#rough-confirmatory-study" id="toc-rough-confirmatory-study" class="nav-link" data-scroll-target="#rough-confirmatory-study"><span class="toc-section-number">3.2.4</span>  Rough Confirmatory Study</a></li>
+  <li><a href="#strict-confirmatory-study" id="toc-strict-confirmatory-study" class="nav-link" data-scroll-target="#strict-confirmatory-study"><span class="toc-section-number">3.2.5</span>  Strict Confirmatory Study</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -616,11 +617,13 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </section>
 <section id="conceptual-demonstration-of-simple-regression" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="conceptual-demonstration-of-simple-regression"><span class="header-section-number">3.2</span> Conceptual Demonstration of Simple Regression</h2>
+<p>Let’s say we were about to conduct a large study and needed to know the participants heights. But it is very expensive to directly measure each participants height. We could just ask participants to report their height. So, we want to know how accurate people are at reporting their height. To evaluate that we could ask a random sample of people from the study population to report their height and then obtain direct measures of their height and see how strongly those are related. We want to see how well reported height predicts measured height.</p>
+<p>Below are statistical models of the relationship between measured height (<span class="math inline">\(Y\)</span>) and reported height (<span class="math inline">\(X\)</span>).</p>
 <p>Population Model:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i\]</span></p>
 <p><span class="math display">\[ \hat{Y_i} = \beta_0 + \beta_1 X_i\]</span></p>
 <p>Sample Model:</p>
-<p><span class="math display">\[Y_i = b_0 + b_1 X_i + e_i\]</span> <span class="math display">\[\hat{Y_i} = b_0 + b_1 X_i\]</span></p>
+<p><span class="math display">\[Y_i = b_0 + b_1 X_i + e_i\]</span> <span class="math display">\[\hat{Y_i} = b_0 + b_1 X_i\]</span> Below is a data set of graduate students in a research methods class, were I asked them to report their height (<span class="math inline">\(X\)</span>) and then we measured their height (<span class="math inline">\(Y\)</span>). This data set is much smaller than we would need to adequately answer our research question, but we will use it to demonstrate some key principles of simple regression.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> dat[ ,<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>)]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -740,6 +743,9 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </table>
 </div>
 </div>
+</section>
+<section id="graphical-demonstration-of-simple-regression" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="graphical-demonstration-of-simple-regression"><span class="header-section-number">3.2.1</span> Graphical Demonstration of Simple Regression</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Y <span class="sc">~</span> X, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -781,51 +787,77 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> Y <span class="sc">-</span> <span class="fu">mean</span>(Y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>d <span class="ot">&lt;-</span> df<span class="sc">$</span>Y <span class="sc">-</span> <span class="fu">mean</span>(df<span class="sc">$</span>Y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">Y</th>
 <th style="text-align: right;">d</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">65.0</td>
 <td style="text-align: right;">-3.6</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">69.0</td>
 <td style="text-align: right;">0.4</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">67.5</td>
 <td style="text-align: right;">-1.1</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">75.0</td>
 <td style="text-align: right;">6.4</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">62.5</td>
 <td style="text-align: right;">-6.1</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">68.0</td>
 <td style="text-align: right;">-0.6</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">72.0</td>
 <td style="text-align: right;">3.4</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">67.0</td>
 <td style="text-align: right;">-1.6</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">70.0</td>
 <td style="text-align: right;">1.4</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">72.0</td>
 <td style="text-align: right;">3.4</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">66.5</td>
 <td style="text-align: right;">-2.1</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">68.5</td>
 <td style="text-align: right;">-0.1</td>
 </tr>
 </tbody>
@@ -853,6 +885,7 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 <tr class="header">
 <th style="text-align: right;">X</th>
 <th style="text-align: right;">Y</th>
+<th style="text-align: right;">d</th>
 <th style="text-align: right;">resid</th>
 </tr>
 </thead>
@@ -860,61 +893,73 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 <tr class="odd">
 <td style="text-align: right;">64</td>
 <td style="text-align: right;">65.0</td>
+<td style="text-align: right;">-3.6</td>
 <td style="text-align: right;">-0.1</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">68</td>
 <td style="text-align: right;">69.0</td>
+<td style="text-align: right;">0.4</td>
 <td style="text-align: right;">0.3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">66</td>
 <td style="text-align: right;">67.5</td>
+<td style="text-align: right;">-1.1</td>
 <td style="text-align: right;">0.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">75</td>
 <td style="text-align: right;">75.0</td>
+<td style="text-align: right;">6.4</td>
 <td style="text-align: right;">0.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">61</td>
 <td style="text-align: right;">62.5</td>
+<td style="text-align: right;">-6.1</td>
 <td style="text-align: right;">0.1</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">68</td>
 <td style="text-align: right;">68.0</td>
+<td style="text-align: right;">-0.6</td>
 <td style="text-align: right;">-0.7</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">72</td>
 <td style="text-align: right;">72.0</td>
+<td style="text-align: right;">3.4</td>
 <td style="text-align: right;">-0.3</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">66</td>
 <td style="text-align: right;">67.0</td>
+<td style="text-align: right;">-1.6</td>
 <td style="text-align: right;">0.1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">69</td>
 <td style="text-align: right;">70.0</td>
+<td style="text-align: right;">1.4</td>
 <td style="text-align: right;">0.4</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">70</td>
 <td style="text-align: right;">72.0</td>
+<td style="text-align: right;">3.4</td>
 <td style="text-align: right;">1.5</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">66</td>
 <td style="text-align: right;">66.5</td>
+<td style="text-align: right;">-2.1</td>
 <td style="text-align: right;">-0.4</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">69</td>
 <td style="text-align: right;">68.5</td>
+<td style="text-align: right;">-0.1</td>
 <td style="text-align: right;">-1.1</td>
 </tr>
 </tbody>
@@ -932,21 +977,47 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 </section>
-</section>
-<section id="real-data-example" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="real-data-example"><span class="header-section-number">3.3</span> Real Data Example</h2>
+<section id="interpreting-output-from-simple-regression" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="interpreting-output-from-simple-regression"><span class="header-section-number">3.2.2</span> Interpreting Output from Simple Regression</h3>
+<p>We need to be able to interpret the coefficients, and determine their implications for our research question. We can look at a summary of the results of the simple regression in R as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("NHANES)</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHANES)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effectsize)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Y ~ X)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.13544 -0.36315  0.01185  0.29091  1.46275 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  7.41084    3.88315   1.908   0.0854 .  
+X            0.90181    0.05717  15.774 2.15e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.6947 on 10 degrees of freedom
+Multiple R-squared:  0.9614,    Adjusted R-squared:  0.9575 
+F-statistic: 248.8 on 1 and 10 DF,  p-value: 2.153e-08</code></pre>
+</div>
+</div>
+<p>There is a lot of information contained in this output. First, note that the multiple R-squared is .96, which is an estimate of the proportion of measured height (<span class="math inline">\(Y\)</span>) that can be explained by reported height (<span class="math inline">\(X\)</span>). We can convert this proportion into a percentage by multiplying it by 100, and state that reported height explains about 96% of the variance in measured height.</p>
+<p>Next, we can look at the intercept under the <code>Coefficients:</code> heading of the output. This value is 7.4 (rounding to 1 decimal place). What does this tell us? The intercept is technically the predicted value of the outcome (<span class="math inline">\(Y\)</span>) when the predictor is zero. I would interpret this to mean that, according to this model, someone who reported their height as zero, would be predicted to have a measured height of a little less than 7 and 1/2 inches. This value is not very meaningful because no graduate students reported a zero height. The intercept is outside the range of the observed data (and theoretical population). Later we will learn how to make the intercept more meaningful. Often, though, the intercept is not the important coefficient. The slope is often what we want to learn about. For this simple regression, the estimated slope is about 0.9. Technically, the slope is the expected change in the outcome for a one unit change in the predictor. For this example, that suggests that, according to this simple regression model, two graduate students who reported their heights as being different by one inch, would be predicted to differ in actual height by about 0.9 inches.</p>
+<p>We set this up as ## Real Data Example</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("NHANES)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHANES)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effectsize)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next we will look at the variables available in the <code>NHANES</code> dataframe, which is a available in the NHANES package in R. To illustrate how we can make statistical inferences, we can assume we want to know if adult height differs between women and men. Admittedly, this is a ver trivial goal of research, but it will help us to review the topic of statistical inference. To do this we will consider three scenarios.</p>
 <p>First, we will pretend that we have no idea about what to expect between variables in this data and are engaging in an <strong>exploratory</strong> study which includes looking for relations between height and gender.</p>
 <p>Second, we will pretend that we suspect that there is a relation between height and gender, possibly among other relations, and we want to know if heights are different between the populations of adult women and men. This is a <strong>rough confirmatory</strong> study.</p>
 <p>Third, we will pretend that a primary goal of our study is to test the hypothesis that men are taller than women. We have a compelling theoretical model that suggest this relation, and we decide to test this hypothesis <em>before</em> we collect or at least before we look at our data. This is a <strong>strict confirmatory</strong> study.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "ID"               "SurveyYr"         "Gender"           "Age"             
  [5] "AgeDecade"        "AgeMonths"        "Race1"            "Race3"           
@@ -971,62 +1042,62 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 <p>The names are helpful, but we will want to know more about each variable. Because this is a data set from an R package, you can learn more about it using R’s help system as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>?NHANES</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>?NHANES</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You should run the above command in RStudio and take a few minutes to read through the resulting help file, which will give you an idea of what is contained in the data, an what each variables captures.</p>
 <p>One thing you might have noticed reading through the data description is that height was measured in centimeters (cm). Below I create a variable I call <code>Height_in</code> that converts from centimeters to inches.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>NHANES<span class="sc">$</span>Height_in <span class="ot">&lt;-</span> NHANES<span class="sc">$</span>Height<span class="sc">/</span><span class="fl">2.54</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>NHANES<span class="sc">$</span>Height_in <span class="ot">&lt;-</span> NHANES<span class="sc">$</span>Height<span class="sc">/</span><span class="fl">2.54</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s look at the distribution of heights using this real data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(NHANES<span class="sc">$</span>Height_in, <span class="at">breaks =</span> <span class="st">"fd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>The data do not look normally distributed. instead, there is a long tail on the left side of the distribution. What do you think is going on here? You may want to read back over the data description. To understand this, take a look at the distribution of the age variable.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(NHANES<span class="sc">$</span>Age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(NHANES<span class="sc">$</span>Height_in, <span class="at">breaks =</span> <span class="st">"fd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="simpleModels_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The data contain information on people from birth well into adulthood. Maybe the long left tail of the height distibution is a result of this age distribution. To explore this we can plot height against age.</p>
+<p>The data do not look normally distributed. instead, there is a long tail on the left side of the distribution. What do you think is going on here? You may want to read back over the data description. To understand this, take a look at the distribution of the age variable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Height_in <span class="sc">~</span> Age, NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(NHANES<span class="sc">$</span>Age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="simpleModels_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The data contain information on people from birth well into adulthood. Maybe the long left tail of the height distibution is a result of this age distribution. To explore this we can plot height against age.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Height_in <span class="sc">~</span> Age, NHANES)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p>This plot seems consistent with our hunch. From birth to the late teens we see a relation between height and age. For participants older than 18 or so, we don’t see a relation between height and age. Because we are interested in the height of adults we subset the data to only include those of the age of 18.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>nhanesAdult <span class="ot">&lt;-</span> NHANES[NHANES<span class="sc">$</span>Age <span class="sc">&gt;=</span> <span class="dv">18</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>nhanesAdult <span class="ot">&lt;-</span> NHANES[NHANES<span class="sc">$</span>Age <span class="sc">&gt;=</span> <span class="dv">18</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Height_in <span class="sc">~</span> Age, nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Height_in <span class="sc">~</span> Age, nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>We can now look at the distribution of heights among adults.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(nhanesAdult<span class="sc">$</span>Height_in)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(nhanesAdult<span class="sc">$</span>Height_in)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>This looks more normally distributed, which is what we would expect from a random sample of adults.</p>
 <p>We might expect there to be differences in the average heights between males and females. To explore this we can use a boxplot.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Height_in <span class="sc">~</span> Gender, nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Height_in <span class="sc">~</span> Gender, nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>We do see that the median height of males is greater than that of females. The following code gives us the sample means for each gender category.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggregate</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span> NHANES, <span class="at">FUN =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggregate</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span> NHANES, <span class="at">FUN =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Gender Height_in
 1 female  61.65979
@@ -1034,17 +1105,18 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 <p>To review what we learned about statistical inference first we will consider our three scenarios.</p>
-<section id="exploratory-study" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="exploratory-study"><span class="header-section-number">3.3.1</span> Exploratory Study</h3>
+</section>
+<section id="exploratory-study" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="exploratory-study"><span class="header-section-number">3.2.3</span> Exploratory Study</h3>
 <p>Recall that if we have no idea about what to expect between variables in this data then we are engaging in an <strong>exploratory</strong> study which includes looking for relations between height and gender.</p>
 <p>The appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group’s heights <span class="citation" data-cites="Fife2022Understandingexploratory/confirmatorydata">(<a href="references.html#ref-Fife2022Understandingexploratory/confirmatorydata" role="doc-biblioref">Fife and Rodgers 2022</a>)</span>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>ht.gender_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span>nhanesAdult)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span> nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>ht.gender_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span>nhanesAdult)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span> nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1066,13 +1138,13 @@ Residual standard error: 2.905 on 7422 degrees of freedom
 Multiple R-squared:  0.4671,    Adjusted R-squared:  0.467 
 F-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                2.5 %    97.5 %
 (Intercept) 63.708878 63.894440
 Gendermale   5.306584  5.570939</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span>nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span>nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Missing values detected. NAs dropped.</code></pre>
 </div>
@@ -1087,18 +1159,18 @@ Gendermale   5.306584  5.570939</code></pre>
 <p>It is very important to note that a probabilistic interpretation is <strong>NOT</strong> appropriate for the p values. The p-value of less than .001 for the gender coefficient in the linear model output, should not be used as evidence against the null hypothesis. It would also be very important to report all the tests and comparisons conducted to be transparent about what was done in the study.</p>
 <p>You should also explore the residuals of the model. We will talk about more sophisticated ways to explore residuals later, for now. Such studies should be followed collecting new data to use one of the other types of studies described below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">resid</span>(ht.gender_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">resid</span>(ht.gender_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="simpleModels_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+<p><img src="simpleModels_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
-<section id="rough-confirmatory-study" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="rough-confirmatory-study"><span class="header-section-number">3.3.2</span> Rough Confirmatory Study</h3>
+<section id="rough-confirmatory-study" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="rough-confirmatory-study"><span class="header-section-number">3.2.4</span> Rough Confirmatory Study</h3>
 <p>If originally we suspected that there is a relation between height and gender, possibly among other relations of interest, and we want to know if heights are different between the populations of adult women and men, this study could be considered a <strong>rough confirmatory</strong> study.</p>
 <p>In that situation it would also be appropriate to use graphs, means, and effect sizes, along with confidence intervals. All of the output we obtained above could be used. The difference is that you may emphasize the confidence intervals of the linear model coefficients</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                2.5 %    97.5 %
 (Intercept) 63.708878 63.894440
@@ -1107,11 +1179,11 @@ Gendermale   5.306584  5.570939</code></pre>
 </div>
 <p>Such studies should be followed by strict confirmatory studies if there is support for any of the hypotheses. All analyses and exploratory techniques should be reported transparently.</p>
 </section>
-<section id="strict-confirmatory-study" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="strict-confirmatory-study"><span class="header-section-number">3.3.3</span> Strict Confirmatory Study</h3>
+<section id="strict-confirmatory-study" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="strict-confirmatory-study"><span class="header-section-number">3.2.5</span> Strict Confirmatory Study</h3>
 <p>This study requires that specific hypotheses related to theory are posited before the data are collected. Then those, and only those hypotheses should be tested and interpreted in the manner that follows. Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above. This includes adding any sub-group analyses. If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis. Such an error is known as <strong>HARK</strong>ing, which stands for <strong>H</strong>ypothesizing <strong>A</strong>fter the <strong>R</strong>esults are <strong>K</strong>nown. It’s bad. Really bad.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:

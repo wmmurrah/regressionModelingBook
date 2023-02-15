@@ -172,6 +172,15 @@ $$r_{XY} = \frac{\text{Cov}(XY)}{s_{X}s_{Y}} =
 
 ## Conceptual Demonstration of Simple Regression
 
+Let's say we were about to conduct a large study and needed to know the participants heights. 
+But it is very expensive to directly measure each participants height. 
+We could just ask participants to report their height.
+So, we want to know how accurate people are at reporting their height.
+To evaluate that we could ask a random sample of people from the study population to report their height and then obtain direct measures of their height and see how strongly those are related.
+We want to see how well reported height predicts measured height.
+
+Below are statistical models of the relationship between measured height ($Y$) and reported height ($X$).
+
 Population Model:
   
 $$Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i$$
@@ -182,6 +191,8 @@ Sample Model:
   
 $$Y_i = b_0 + b_1 X_i + e_i$$
 $$\hat{Y_i} = b_0 + b_1 X_i$$
+Below is a data set of graduate students in a research methods class, were I asked them to report their height ($X$) and then we measured their height ($Y$).
+This data set is much smaller than we would need to adequately answer our research question, but we will use it to demonstrate some key principles of simple regression.
 
 ```{r}
 #| echo: true
@@ -205,6 +216,8 @@ kable(psych::describe(df, fast = TRUE), digits = 2)
 
 ```
 
+
+### Graphical Demonstration of Simple Regression
 ```{r}
 plot(Y ~ X, data = df)
 ```
@@ -214,7 +227,7 @@ plot(Y ~ X, data = df)
 Y <- df$Y
 X <- df$X
 mod0 <- lm(Y ~ 1)
-int <- round(coef(mod0), 2)[1]
+int <- round(coef(mod0), 1)[1]
 slope <-0
 d <- Y - mean(Y)
 # Base plot.
@@ -247,7 +260,7 @@ predict(emptyModel)
 
 ```{r}
 #| echo: false
-int <- round(coef(mod0), 2)[1]
+int <- round(coef(mod0), 1)[1]
 slope <-0
 d <- Y - mean(Y)
 # Base plot.
@@ -264,16 +277,16 @@ text(x= 66, y=72, bquote(Y[i] == .(int) + e[i]))
 text(x=66, y=71, bquote(hat(Y)[i] == .(int)))
 ```
 
-```{r, eval=FALSE}
-d <- Y - mean(Y)
+```{r}
+df$d <- df$Y - mean(df$Y)
 ```
 ```{r, echo=FALSE}
-kable(data.frame(d = d), digits = 1)
+kable(df, digits = 1)
 ```
 
 ```{r, echo=FALSE}
 mod <- lm(Y ~ X)
-int <- round(coef(mod), 2)[1]
+int <- round(coef(mod), 1)[1]
 slope <- round(coef(mod), 2)[2]
 d <- Y - predict(mod)
 # Base plot.
@@ -374,7 +387,33 @@ abline(v = mean(X), col = "red", lty = 20)
 text(x = 62, y = 69, bquote(bar(Y) == .(int0)), col = "red")
 ```
 
+### Interpreting Output from Simple Regression
 
+We need to be able to interpret the coefficients, and determine their implications for our research question.
+We can look at a summary of the results of the simple regression in R as follows:
+```{r}
+summary(mod)
+```
+
+There is a lot of information contained in this output.
+First, note that the multiple R-squared is .96, which is an estimate of the proportion of measured height ($Y$) that can be explained by reported height ($X$). 
+We can convert this proportion into a percentage by multiplying it by 100, and state that reported height explains about 96% of the variance in measured height.
+
+Next, we can look at the intercept under the `Coefficients:` heading of the output.
+This value is `r round(coef(mod)[1],1)` (rounding to 1 decimal place).
+What does this tell us?
+The intercept is technically the predicted value of the outcome ($Y$) when the predictor is zero. 
+I would interpret this to mean that, according to this model, someone who reported their height as zero, would be predicted to have a measured height of a little less than 7 and 1/2 inches.
+This value is not very meaningful because no graduate students reported a zero height. 
+The intercept is outside the range of the observed data (and theoretical population).
+Later we will learn how to make the intercept more meaningful.
+Often, though, the intercept is not the important coefficient.
+The slope is often what we want to learn about.
+For this simple regression, the estimated slope is about `r round(coef(mod)[2],2)`.
+Technically, the slope is the expected change in the outcome for a one unit change in the predictor.
+For this example, that suggests that, according to this simple regression model, two graduate students who reported their heights as being different by one inch, would be predicted to differ in actual height by about `r round(coef(mod)[2],2)` inches.
+
+We set this up as 
 ## Real Data Example
 ```{r}
 #install.packages("NHANES)
