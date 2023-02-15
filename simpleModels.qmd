@@ -18,7 +18,9 @@ library(gridExtra)
 data("Davis")
 ```
 
-### Variance ( $n$ = 1,000, $\bar{X}$ = 100)
+### Variance 
+
+for ( $n$ = 1,000, $\bar{X}$ = 100)
 
 ```{r , echo=FALSE}
 par(mfrow = c(1, 2))
