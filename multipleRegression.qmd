@@ -1,4 +1,646 @@
 ---
 title: "Multiple Regression Models"
 ---
+```{r}
+#| echo: false
+# Some customization.  You can alter or delete as desired (if you know what you are doing).
+library(mosaic)
+# This changes the default colors in lattice plots.
+trellis.par.set(theme=theme.mosaic())  
 
+# knitr settings to control how R chunks work.
+library(knitr)
+# opts_knit$set(root.dir = "../../")
+opts_chunk$set(
+  echo = TRUE,
+  tidy=FALSE,     # display code as typed
+  size="small",    # slightly smaller font for code
+  comment = NULL,
+  warning = FALSE,
+  message = FALSE
+)
+
+```
+
+## Assumptions of Linear Models
+
+1. **Linearity** - Expected value of the response variable is a linear function of the explanatory variables.
+
+2. **Constant Variance**(Homogeneity of variance; Identically distributed) - The variance of the errors is constant across values of the explanatory variables.
+
+3. **Normality** - The errors (residuals) are normally distributed, with an expected mean of zero (unbiased).
+
+4. **Independence** - The observations are sampled independently (the residuals are independent).
+
+5. **No measurement error in predictors** - The predictors are measured without error. **THIS IS AN IMPORTANT AND ALMOST ALWAYS VIOLATED ASSUMPTION**.
+
+6. **Predictors are not Invariant** - No predictor is constant. 
+
+## Review of Simple Regression with a Simulation
+
+$$
+Y_i = b_0 + b_1 X_i + e_i
+$$
+
+$$
+height_i = b_0 + b_1 repht_i + e_i
+$$
+
+```{r}
+n <- 10000
+mu <- 67
+sigma <- 4
+
+b0 <- 0
+b1 <- 1
+
+repht <- rnorm(n, b0, sigma)
+
+height <- b0 + b1*repht + rnorm(n, 0, sigma)
+```
+
+
+```{r}
+plot(height ~ repht, col = "grey")
+abline(reg = lm(height ~ repht))
+```
+
+## Simple Regression Model
+
+
+```{r}
+mod.simple <- lm(height ~ repht)
+summary(mod.simple) 
+```
+
+## Plotting Residuals
+
+```{r}
+#| fig-height: 6
+plot(resid(mod.simple) ~ predict(mod.simple))
+abline(h = 0, col = "red")
+```
+
+# Multiple Regression
+
+## Weight Data from Chapter 6
+```{r}
+mswt <- read.csv("data/middleschoolweight.csv", header = TRUE)
+str(mswt)
+```
+
+## Look at some of the data
+
+```{r}
+library(psych)
+headTail(mswt) # in the psych package
+```
+
+## Visualizing Weight versus Height
+
+```{r}
+#| tidy: false
+library(car)
+scatterplot(Weight ~ Height, 
+            data = mswt, 
+            regLine = FALSE, 
+            smooth = FALSE, 
+            id = list(labels = mswt$Name, 
+                      n = 2),
+            boxplots = FALSE)
+```
+
+## Visualizing Weight and Age
+
+```{r}
+plot(Weight ~ Age, mswt)
+```
+
+## Scatterplot Matrix 
+
+```{r}
+pairs(mswt[ ,-(1:3)])
+```
+
+## Descriptive Statistics
+
+```{r}
+describe(mswt[ ,-(1:2)])
+```
+
+## Empty Model of Weight
+```{r}
+mod0 <- lm(Weight ~ 1, data = mswt)
+summary(mod0)
+```
+
+## Model of Weight on Age
+
+```{r}
+mod.height <- lm(Weight ~ Age, data = mswt)
+summary(mod.height)
+```
+
+## Centering the Predictor
+
+```{r}
+mswt$cAge <- mswt$Age - mean(mswt$Age)
+mod.cage <- lm(Weight ~ cAge, data = mswt)
+summary(mod.cage)
+```
+
+# Exercise Example
+
+## Exercise Data
+
+**wtloss**   - Average weekly weight loss
+
+**food**     - average daily caloric intake above minimum 1000, in 100s of calories 
+
+**exercise**  - average weekly hours of exercise
+
+* What relation should we expect between amount of food consumed and weight loss?
+
+## Exercise Data
+
+```{r}
+#| results: asis
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+# Set ggplot default font size
+theme_update(text = element_text(size = 18))
+tsize = 30
+options(scipen=5)
+
+exercise <- read.csv("data/exercise.csv", header = TRUE)
+exer <- exercise %>% 
+  select(exercise, food, wtloss)
+exer <- as.data.frame(exer)
+kable(exer)
+```
+## Assessing the Shape of Variable Distributions
+    
+```{r}
+library(gridExtra)
+h1 <- ggplot(exercise, aes(factor(wtloss))) + geom_bar() +
+  xlab("Wt Loss(100's gr/wk.)") + ylim(0, 4)
+h2 <- ggplot(exercise, aes(factor(exercise))) + geom_bar() +
+     xlab("Exericise(hrs./wk.)") + ylab(NULL) + ylim(0, 4)
+h3 <- ggplot(exercise, aes(factor(food))) + geom_bar() + 
+      xlab("food (100's cal. over min.)") + ylab(NULL) + ylim(0, 4)
+grid.arrange(h1, h2, h3, nrow= 1)
+```
+
+## Correlations Between Predictors (APA style table)
+
+```{r}
+library(apaTables)
+library(kableExtra)
+tab <- apa.cor.table(exer, )
+kable(tab[[3]], justify = 'left', caption = "Table 1: Means, standard deviations, and correlations with confidence intervals") %>% 
+  add_footnote("Note. M and SD are used to represent mean and standard deviation, respectively. Values in square brackets indicate the 95% confidence interval. The confidence interval is a plausible range of population correlations that could have caused the sample correlation (Cumming, 2014). \n\n* indicates p < .05. ** indicates p < .01.",notation = "none", threeparttable = TRUE )
+
+```
+
+### The Effect of Food Intake on Weight Loss is Confounded by Exercise
+
+```{r, results = 'asis', fig.height=6}
+exercise <- within(exercise, exercise <- factor(exercise))
+ggplot(exercise, aes(x = food, y = wtloss)) +
+  geom_point(size = 4) + 
+  theme(text = element_text(size=tsize))
+```
+
+### The Effect of Food Intake on Weight Loss is Confounded by Exercise
+
+```{r, fig.height=7}
+
+ggplot(exercise, aes(x = food, y = wtloss, shape = exercise, 
+                     color = exercise)) +
+  geom_point(size = 4) + 
+  theme(text = element_text(size=tsize))
+```
+
+### The Effect of Food Intake on Weight Loss is Confounded by Exercise
+
+```{r}
+
+exercise$alev <- dplyr::recode(exercise$exercise, `0`= 0L, `2` = 2L, `4` = 0L)
+ggplot(exercise, aes(x = food, y = wtloss, shape = exercise, 
+                     color = exercise, alpha = alev)) +
+  # scale_alpha_discrete(exercise$alev) + 
+  geom_point(size = 4) + guides(alpha = FALSE) +
+  theme(text = element_text(size=tsize))
+```
+
+## Basic Ideas
+
+* simple regression analysis: 1 IV
+
+$$Y_i = a + b_1 X_i + e_i$$
+
+
+* multiple regression: 2 + IVs
+
+$$Y_i = a + b_1 X_{1i} + b_2 X_{2i} + \dots + b_k X_{ki} + e_i$$
+
+
+* to find $b_k$ (i.e., $b_1, b_2, \dots, b_k$) so that $\Sigma{e^2}$ [i.e. $\Sigma (Y - \hat{Y})^2$] is minimal (least squares principle).
+
+## Four Reasons for Conducting Multiple Regression Analysis
+
+1. To **explain** how much **variance** in $Y$ can be accounted for by $X_1$ and $X_2$. For example, how much variation in Reading Achievement ( $Y$ ) can be accounted for by Verbal Aptitude( $X_1$ ) and Achievement Motivation ( $X_2$ )?
+
+2. To **test** whether the obtained sample **regression coefficients** ($b_1$ an $b_2$) are statistically different from zero. For example, is it reasonable that these sample coefficients have occurred due to sampling error alone ("by chance")?
+
+3. Illustration of an added independent variable ( $X_3$ ) explains **additional variance** in $Y$ above the other regressors.
+
+4. To evaluate the **relative importance** of  the independent variables in explaining variation in $Y$.
+
+## Obtaining Simple and Multiple Regression Models
+
+Give this a try
+
+### R code
+```{r, echo = TRUE}
+exercise <- read.csv("data/exercise.csv", header = TRUE)
+mod_exer <- lm(wtloss ~ exercise, data = exercise)
+mod_food <- lm(wtloss ~ food, data = exercise)
+mod_exer_food <- lm(wtloss ~ exercise + food, 
+                    data = exercise)
+```
+
+
+## Comparing Simple and Multiple Regression Models
+```{r, results = 'asis'}
+library(texreg)
+htmlreg(list(mod_exer, mod_food, mod_exer_food), doctype = FALSE,
+          custom.model.names = c("exercise", "food", "both"),
+       caption = "Models Predicting Weight Loss")
+```
+
+
+### Raw Regression Coefficients ( $b$s ) vs Standardized Regression Coefficients ( $\beta$s )
+
+
+* As if things were not confusing enough, $\beta$, in addition to representing the population parameter, is also often used to represent the standardized regression coefficient
+
+
+
+
+
+## Relationship Between $b$ and $\beta$
+    
+$b_k = \beta_k \frac{s_y}{s_k}$,
+where $k$ indicates the $k$th IV $X_k$ and $s$ is the standard deviation.
+
+$\beta_k = b_k \frac{s_k}{s_y}$
+
+With 1 IV, $\beta = r_{xy}$
+
+## Standardized Coefficients in R
+
+```{r, warning=FALSE, echo = TRUE}
+library(parameters)
+parameters(mod_exer_food, standardize = "smart")
+```
+
+## Standardized Coefficients in R
+
+```{r}
+zmod_exer_food <- lm(scale(wtloss) ~ scale(exercise) + 
+                     scale(food), 
+                     data = exercise)
+print(summary(zmod_exer_food), digits = 5)
+```
+
+## Unstandardized and Standardized Coefficients
+
+```{r, results = 'asis'}
+zmod_exer <- lm(scale(wtloss) ~ scale(exercise), data = exercise)
+zmod_food <- lm(scale(wtloss) ~ scale(food), data = exercise)
+names(zmod_exer$coefficients) <- names(mod_exer$coefficients)
+names(zmod_food$coefficients) <- names(mod_food$coefficients)
+names(zmod_exer_food$coefficients) <- names(mod_exer_food$coefficients)
+
+# htmlreg(list(mod_exer_food, zmod_exer_food),
+#        custom.model.names = c("unstandardized", "standardized"))
+htmlreg(list(mod_exer, zmod_exer, mod_food, zmod_food, mod_exer_food, zmod_exer_food),
+       custom.model.names = rep(c("unstand.", "stand."), 3), scalebox = .8, doctype = FALSE,
+       caption = "Comparing unstandardized and standardized models of weight loss")
+```
+
+## Basic Ideas: $R^2$
+
+$$
+ Y_i = a + b_1 X_i + e_i
+$$
+    
+$r^2_{yx}$ is the proportion of variance in $Y$ accounted for by $X$.
+  
+  
+$$Y_i = a + b_1 X_{1i} + b_2 X_{2i} + e_i$$
+      
+$r^2_{y12} = r^2_{\hat{Y}Y} = R^2$ is the proportion of variance in $Y$ accounted for by $X_1$ and $X_2$ combined
+    
+when $r_{12} = 0, \quad r^2_{y12} = r^2_{y1} + r^2_{y2}$
+      
+when $r^2_{12} \neq 0$, see next slide
+
+## $R^2$ Represented Graphically
+
+```{r, out.width='100%'}
+#include_graphics("products/slides/figures/venn.jpg")
+```
+
+![](images/venn.jpg)
+
+
+## Multiple Regression with correlated predictors
+    
+When independent variables are correlated, it is possible that:
+
+* the test of the overall model (test of $R^2$) is statistically significant and practically meaningful, but **NONE** of the individual regression coefficients are statistically significant (a seemingly contradictory finding).
+
+* a statistically non-significant $b_k$ does not necessarily mean that the variable $X_k$ is **NOT** a meaningful predictor of $Y$ by itself. As a matter of fact, $X_k$ may be correlated substantially with $Y$ and by itself, may account for substantial variance in $Y$.
+
+## Squared Multiple Correlation Coefficient
+      
+$$R^2 = \frac{SS_{reg}}{SS_{total}}$$
+
+$$R^2 = r^2_{Y,\hat{Y}}$$
+
+$$R^2 = \frac{r^2_{y1} + r^2_{y2} - 2r_{y1}r_{y2}r_{12}}{1 - r^2_{12}}$$
+
+when $r_{12} = 0$: $R^2 = r^2_{y1} + r^2_{y2}$
+
+## Tests of Significance and Interpretation
+      
+### Test of $R^2$
+      
+$$F_{(df1, df2)} = \frac{R^2/k}{(1 - R^2)/(N - k - 1)}, \quad df_1 = k, df_2 = N - k - 1.$$
+      
+      
+### Test of $SS_{reg}$
+      
+$$F_{(df1, df2)} = \frac{SS_{reg}/k}{SS_{error}/(N - k - 1)}, \quad df_1 = k, df_2 = N - k - 1.$$
+ 
+## Tests of Significance and Interpretation
+      
+* in simple regression analysis, test for the only regression coefficient $b$ is the same as the test of $R^2$ and the same as test of $SS_{reg}$.
+    
+    
+* in multiple regression analysis, test of $R^2$ and test of $SS_{reg}$ is a test of all regression coefficients **simultaneously**.
+ 
+* in multiple regression analysis, the test of individual regression coefficient $b_k$ is testing the **unique** contribution of $X_k$, given all other independent variables are already in the model (contribution of $X_k$ over and beyond other independent variables).
+
+
+## Relative Importance of Predictors
+    
+* the magnitude of $b_k$ is affected by the **scale of measurement**
+    + **NOT** ideal for inferring substantive or statistical meaningfulness
+    + **NOT** ideal for inferring relative importance across variables in model
+    + for different populations, can be used for assessing the importance of the same variable across populations.
+    
+* $\beta$ is on a standardized scale (in standard deviation units: a $z$ score)
+    + better for assessing relative importance across variables in model (though we will find that there are problems with this)
+    + magnitude impacted by group $s$, thus less suitable for comparisons across populations.
+
+# Divorce Example
+
+```{r, message=FALSE}
+library(rethinking)
+data("WaffleDivorce")
+divorce <- WaffleDivorce
+rm(WaffleDivorce)
+divorce$whm <- divorce$WaffleHouses/divorce$Population
+```
+
+## Waffle Houses and Divorce Rates
+
+```{r}
+ggplot(divorce, aes(whm, Divorce)) + geom_point() + 
+  geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +
+  geom_smooth(method = "lm") +
+  xlab("Waffle Houses per million") + ylab("Divorce rate")
+
+```
+
+## Waffle Houses and Divorce Rates: Simple Regression Table
+
+```{r, results='asis'}
+mod <- lm(Divorce ~ whm, data = divorce)
+htmlreg(mod, custom.coef.names = c("(Intercept", "Waffle houses/million"), doctype = FALSE,
+        custom.model.names = "Simple Regression")
+```
+
+## Spurious Association
+
+![](images/thirdvariableproblem.png)
+
+---
+## Divorce and Marriage
+
+```{r, }
+ctr <- function(vec){scale(vec, scale = FALSE)}
+p1 <- ggplot(divorce, aes(Marriage, Divorce)) + geom_point() + 
+ # geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +
+  geom_smooth(method = "lm") +
+  xlab("Marriage rate (per 1,000 adults)") + ylab("Divorce rate")
+p2 <- ggplot(divorce, aes(MedianAgeMarriage, Divorce)) + geom_point() + 
+ # geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +
+  geom_smooth(method = "lm") +
+  xlab("Median Age at Marriage") + ylab("Divorce rate")
+
+grid.arrange(p1, p2, ncol = 2)
+```
+
+## Marriage Rate
+
+```{r, results = 'asis'}
+cp1 <- ggplot(divorce, aes(ctr(Marriage), Divorce)) + geom_point() + 
+ # geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +
+  geom_smooth(method = "lm") +
+  xlab("Marriage rate (per 1,000 adults)") + ylab("Divorce rate")
+cp2 <- ggplot(divorce, aes(ctr(MedianAgeMarriage), Divorce)) + geom_point() + 
+ # geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +
+  geom_smooth(method = "lm") +
+  xlab("Median Age at Marriage") + ylab("Divorce rate")
+mod1 <- lm(Divorce ~ ctr(Marriage), data = divorce)
+mod2 <- lm(Divorce ~ ctr(MedianAgeMarriage), data = divorce)
+op1 <- tableGrob(screenreg(mod1))
+op2 <- tableGrob(screenreg(mod2), )
+grid.arrange(cp1, op1, ncol = 2)
+```
+
+## Age at Marriage
+
+```{r, results = 'asis'}
+op2 <- tableGrob(screenreg(mod2))
+
+grid.arrange(cp2, op2, ncol = 2)
+```
+
+## Multiple Regression
+
+```{r, results='asis'}
+mod3 <- lm(Divorce ~ ctr(Marriage) + ctr(MedianAgeMarriage), data = divorce)
+htmlreg(list(mod1, mod2, mod3), doctype = FALSE)
+```
+
+# ECLSK Example
+    
+```{r}
+load("data/ach3.Rdata")
+load("data/simach3.Rdata")
+load("data/simach3orth.Rdata")
+ach3 <- ach3 %>% 
+  dplyr::select(c1read, c1genk, c5read)
+```
+
+## ECLSK data sets 
+
+```{r, results='asis', out.width=.99}
+library(pander)
+tab <- apa.cor.table(data = ach3)
+tab2 <- apa.cor.table(data = simach3)
+pandoc.table(tab[[3]], caption = "Real data",
+             justify = c('left', 'left', 'right', 'right', 'left', 'left'))
+```
+
+## ECLSK simulated data
+```{r, results='asis', out.width=.99}
+pandoc.table(tab2[[3]], caption = "Simulated data",
+             justify = c('left', 'left', 'right', 'right', 'left', 'left'))
+```
+   
+## Title
+    
+```{r}
+g1 <- ggplot(ach3, aes(c1read, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  # geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) + 
+  ggtitle("k Reading and 5th Reading")
+      g2 <- ggplot(ach3, aes(c1genk, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  # geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) +
+  ggtitle("k General Know. and 5th Reading")
+    
+grid.arrange(g1, g2, nrow = 1)
+```
+
+## Three Models
+    
+```{r, results='asis'}
+rmodread <- lm(c5read ~ c1read, ach3)
+rmodgenk <- lm(c5read ~ c1genk, ach3)
+rmodML <- lm(c5read ~ c1read + c1genk, ach3)
+htmlreg(list(rmodread, rmodgenk, rmodML), doctype = FALSE)
+```
+
+## Comparing Real and Simulated Data 
+```{r}
+g1 <- ggplot(ach3, aes(c1read, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) + 
+  ggtitle("Real Data")
+
+g2 <- ggplot(simach3, aes(c1read, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) +
+  ggtitle("Simulated Data")
+
+grid.arrange(g1, g2, nrow = 1)
+```
+
+## Comparing Real and Simulated Data 
+```{r}
+g1 <- ggplot(ach3, aes(c1genk, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) + 
+  ggtitle("Real Data")
+    
+g2 <- ggplot(simach3, aes(c1genk, c5read)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(40, 250) + xlim(-10, 130) +
+  ggtitle("Simulated Data")
+
+grid.arrange(g1, g2, nrow = 1)
+```
+
+## Comparing Real and Simulated Data 
+```{r}
+g1 <- ggplot(ach3, aes(c1read, c1genk)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(-15, 50) + xlim(-10, 80) + 
+  ggtitle("Real Data")
+
+g2 <- ggplot(simach3, aes(c1read, c1genk)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(-15, 50) + xlim(-10, 80) +
+  ggtitle("Simulated Data")
+
+grid.arrange(g1, g2, nrow = 1)
+```
+
+## Comparing Two Simulated Data Sets 
+
+```{r, results='asis', out.width=.99}
+tab <- apaTables::apa.cor.table(data = simach3)
+tab2 <- apaTables::apa.cor.table(data = simach3orthogonal)
+pandoc.table(tab[[3]], caption = "Simulated data 1",
+              justify = c('left', 'left', 'right', 'right', 'left', 'left'))
+```
+
+## Comparing Two Simulated Data Sets
+```{r, results='asis', out.width=.99}
+pandoc.table(tab2[[3]], caption = "Simulated data 2",
+             justify = c('left', 'left', 'right', 'right', 'left', 'left'))
+```
+
+## Comparing Two Simulated Data Sets
+```{r}
+g1 <- ggplot(simach3, aes(c1read, c1genk)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(-15, 50) + xlim(-10, 80) + 
+  ggtitle("Simulated Data 1")
+
+g2 <- ggplot(simach3orthogonal, aes(c1read, c1genk)) + 
+  geom_point(alpha = .4) + 
+  theme(legend.position = "none") +
+  geom_smooth(method = "lm", fullrange = TRUE) +
+  ylim(-15, 50) + xlim(-10, 80) +
+  ggtitle("Simulated Data 2")
+
+grid.arrange(g1, g2, nrow = 1)
+```
+
+## Comparing Models
+
+```{r, results = 'asis'}
+mod1 <- lm(c5read ~ c1read, data = simach3orthogonal)
+mod2 <- update(mod1, . ~ c1genk)
+mod3 <- update(mod1, . ~ . + c1genk)
+mod4 <- lm(c5read ~ c1read + c1genk, data = simach3)
+htmlreg(list(mod1, mod2, mod3, mod4), doctype = FALSE)
+```

@@ -89,5 +89,327 @@
     "title": "References",
     "section": "",
     "text": "Fife, Dustin A., and Joseph Lee Rodgers. 2022. “Understanding the\nExploratory/Confirmatory Data Analysis Continuum: Moving Beyond the\n“Replication Crisis”.” American\nPsychologist 77 (3): 453–66. https://doi.org/10.1037/amp0000886."
+  },
+  {
+    "objectID": "multipleRegression.html",
+    "href": "multipleRegression.html",
+    "title": "4  Multiple Regression Models",
+    "section": "",
+    "text": "5 Multiple Regression"
+  },
+  {
+    "objectID": "multipleRegression.html#assumptions-of-linear-models",
+    "href": "multipleRegression.html#assumptions-of-linear-models",
+    "title": "4  Multiple Regression Models",
+    "section": "4.1 Assumptions of Linear Models",
+    "text": "4.1 Assumptions of Linear Models\n\nLinearity - Expected value of the response variable is a linear function of the explanatory variables.\nConstant Variance(Homogeneity of variance; Identically distributed) - The variance of the errors is constant across values of the explanatory variables.\nNormality - The errors (residuals) are normally distributed, with an expected mean of zero (unbiased).\nIndependence - The observations are sampled independently (the residuals are independent).\nNo measurement error in predictors - The predictors are measured without error. THIS IS AN IMPORTANT AND ALMOST ALWAYS VIOLATED ASSUMPTION.\nPredictors are not Invariant - No predictor is constant."
+  },
+  {
+    "objectID": "multipleRegression.html#review-of-simple-regression-with-a-simulation",
+    "href": "multipleRegression.html#review-of-simple-regression-with-a-simulation",
+    "title": "4  Multiple Regression Models",
+    "section": "4.2 Review of Simple Regression with a Simulation",
+    "text": "4.2 Review of Simple Regression with a Simulation\n\\[\nY_i = b_0 + b_1 X_i + e_i\n\\]\n\\[\nheight_i = b_0 + b_1 repht_i + e_i\n\\]\n\nn <- 10000\nmu <- 67\nsigma <- 4\n\nb0 <- 0\nb1 <- 1\n\nrepht <- rnorm(n, b0, sigma)\n\nheight <- b0 + b1*repht + rnorm(n, 0, sigma)\n\n\nplot(height ~ repht, col = \"grey\")\nabline(reg = lm(height ~ repht))"
+  },
+  {
+    "objectID": "multipleRegression.html#simple-regression-model",
+    "href": "multipleRegression.html#simple-regression-model",
+    "title": "4  Multiple Regression Models",
+    "section": "4.3 Simple Regression Model",
+    "text": "4.3 Simple Regression Model\n\nmod.simple <- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15.3696  -2.6667  -0.0084   2.6934  16.0702 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 0.009310   0.039877   0.233    0.815    \nrepht       0.994206   0.009927 100.147   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.988 on 9998 degrees of freedom\nMultiple R-squared:  0.5008,    Adjusted R-squared:  0.5007 \nF-statistic: 1.003e+04 on 1 and 9998 DF,  p-value: < 2.2e-16"
+  },
+  {
+    "objectID": "multipleRegression.html#plotting-residuals",
+    "href": "multipleRegression.html#plotting-residuals",
+    "title": "4  Multiple Regression Models",
+    "section": "4.4 Plotting Residuals",
+    "text": "4.4 Plotting Residuals\n\nplot(resid(mod.simple) ~ predict(mod.simple))\nabline(h = 0, col = \"red\")"
+  },
+  {
+    "objectID": "multipleRegression.html#weight-data-from-chapter-6",
+    "href": "multipleRegression.html#weight-data-from-chapter-6",
+    "title": "4  Multiple Regression Models",
+    "section": "5.1 Weight Data from Chapter 6",
+    "text": "5.1 Weight Data from Chapter 6\n\nmswt <- read.csv(\"data/middleschoolweight.csv\", header = TRUE)\nstr(mswt)\n\n'data.frame':   19 obs. of  5 variables:\n $ Name  : chr  \"Alfred\" \"Antonia\" \"Barbara\" \"Camella\" ...\n $ Sex   : chr  \"M\" \"F\" \"F\" \"F\" ...\n $ Age   : int  14 13 13 14 14 12 12 15 13 12 ...\n $ Height: num  69 56.5 65.3 62.8 63.5 57.3 59.8 62.5 62.5 59 ...\n $ Weight: num  112 84 98 102 102 ..."
+  },
+  {
+    "objectID": "multipleRegression.html#look-at-some-of-the-data",
+    "href": "multipleRegression.html#look-at-some-of-the-data",
+    "title": "4  Multiple Regression Models",
+    "section": "5.2 Look at some of the data",
+    "text": "5.2 Look at some of the data\n\nlibrary(psych)\nheadTail(mswt) # in the psych package\n\n       Name  Sex Age Height Weight\n1    Alfred    M  14     69  112.5\n2   Antonia    F  13   56.5     84\n3   Barbara    F  13   65.3     98\n4   Camella    F  14   62.8  102.5\n...    <NA> <NA> ...    ...    ...\n16   Robert    M  12   64.8    128\n17   Sequan    M  15     67    133\n18   Thomas    M  11   57.5     85\n19  William    M  15   66.5    112"
+  },
+  {
+    "objectID": "multipleRegression.html#visualizing-weight-versus-height",
+    "href": "multipleRegression.html#visualizing-weight-versus-height",
+    "title": "4  Multiple Regression Models",
+    "section": "5.3 Visualizing Weight versus Height",
+    "text": "5.3 Visualizing Weight versus Height\n\nlibrary(car)\nscatterplot(Weight ~ Height, \n            data = mswt, \n            regLine = FALSE, \n            smooth = FALSE, \n            id = list(labels = mswt$Name, \n                      n = 2),\n            boxplots = FALSE)\n\n\n\n\n Joyce Philip \n    11     15"
+  },
+  {
+    "objectID": "multipleRegression.html#visualizing-weight-and-age",
+    "href": "multipleRegression.html#visualizing-weight-and-age",
+    "title": "4  Multiple Regression Models",
+    "section": "5.4 Visualizing Weight and Age",
+    "text": "5.4 Visualizing Weight and Age\n\nplot(Weight ~ Age, mswt)"
+  },
+  {
+    "objectID": "multipleRegression.html#scatterplot-matrix",
+    "href": "multipleRegression.html#scatterplot-matrix",
+    "title": "4  Multiple Regression Models",
+    "section": "5.5 Scatterplot Matrix",
+    "text": "5.5 Scatterplot Matrix\n\npairs(mswt[ ,-(1:3)])"
+  },
+  {
+    "objectID": "multipleRegression.html#descriptive-statistics",
+    "href": "multipleRegression.html#descriptive-statistics",
+    "title": "4  Multiple Regression Models",
+    "section": "5.6 Descriptive Statistics",
+    "text": "5.6 Descriptive Statistics\n\ndescribe(mswt[ ,-(1:2)])\n\n       vars  n   mean    sd median trimmed   mad  min max range  skew kurtosis\nAge       1 19  13.32  1.49   13.0   13.29  1.48 11.0  16   5.0  0.05    -1.33\nHeight    2 19  62.34  5.13   62.8   62.42  5.49 51.3  72  20.7 -0.22    -0.67\nWeight    3 19 100.03 22.77   99.5  100.00 21.50 50.5 150  99.5  0.16    -0.11\n         se\nAge    0.34\nHeight 1.18\nWeight 5.22"
+  },
+  {
+    "objectID": "multipleRegression.html#empty-model-of-weight",
+    "href": "multipleRegression.html#empty-model-of-weight",
+    "title": "4  Multiple Regression Models",
+    "section": "5.7 Empty Model of Weight",
+    "text": "5.7 Empty Model of Weight\n\nmod0 <- lm(Weight ~ 1, data = mswt)\nsummary(mod0)\n\n\nCall:\nlm(formula = Weight ~ 1, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-49.526 -15.776  -0.526  12.224  49.974 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  100.026      5.225   19.14 2.05e-13 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 22.77 on 18 degrees of freedom"
+  },
+  {
+    "objectID": "multipleRegression.html#model-of-weight-on-age",
+    "href": "multipleRegression.html#model-of-weight-on-age",
+    "title": "4  Multiple Regression Models",
+    "section": "5.8 Model of Weight on Age",
+    "text": "5.8 Model of Weight on Age\n\nmod.height <- lm(Weight ~ Age, data = mswt)\nsummary(mod.height)\n\n\nCall:\nlm(formula = Weight ~ Age, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  -50.493     33.290  -1.517 0.147706    \nAge           11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848"
+  },
+  {
+    "objectID": "multipleRegression.html#centering-the-predictor",
+    "href": "multipleRegression.html#centering-the-predictor",
+    "title": "4  Multiple Regression Models",
+    "section": "5.9 Centering the Predictor",
+    "text": "5.9 Centering the Predictor\n\nmswt$cAge <- mswt$Age - mean(mswt$Age)\nmod.cage <- lm(Weight ~ cAge, data = mswt)\nsummary(mod.cage)\n\n\nCall:\nlm(formula = Weight ~ cAge, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  100.026      3.611  27.702 1.38e-15 ***\ncAge          11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848"
+  },
+  {
+    "objectID": "multipleRegression.html#exercise-data",
+    "href": "multipleRegression.html#exercise-data",
+    "title": "4  Multiple Regression Models",
+    "section": "6.1 Exercise Data",
+    "text": "6.1 Exercise Data\nwtloss - Average weekly weight loss\nfood - average daily caloric intake above minimum 1000, in 100s of calories\nexercise - average weekly hours of exercise\n\nWhat relation should we expect between amount of food consumed and weight loss?"
+  },
+  {
+    "objectID": "multipleRegression.html#exercise-data-1",
+    "href": "multipleRegression.html#exercise-data-1",
+    "title": "4  Multiple Regression Models",
+    "section": "6.2 Exercise Data",
+    "text": "6.2 Exercise Data\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(knitr)\n\n# Set ggplot default font size\ntheme_update(text = element_text(size = 18))\ntsize = 30\noptions(scipen=5)\n\nexercise <- read.csv(\"data/exercise.csv\", header = TRUE)\nexer <- exercise %>% \n  select(exercise, food, wtloss)\nexer <- as.data.frame(exer)\nkable(exer)\n\n\n\n\nexercise\nfood\nwtloss\n\n\n\n\n0\n2\n6\n\n\n0\n4\n2\n\n\n0\n6\n4\n\n\n2\n2\n8\n\n\n2\n4\n9\n\n\n2\n6\n8\n\n\n2\n8\n5\n\n\n4\n4\n11\n\n\n4\n6\n13\n\n\n4\n8\n9"
+  },
+  {
+    "objectID": "multipleRegression.html#assessing-the-shape-of-variable-distributions",
+    "href": "multipleRegression.html#assessing-the-shape-of-variable-distributions",
+    "title": "4  Multiple Regression Models",
+    "section": "6.3 Assessing the Shape of Variable Distributions",
+    "text": "6.3 Assessing the Shape of Variable Distributions\n\nlibrary(gridExtra)\nh1 <- ggplot(exercise, aes(factor(wtloss))) + geom_bar() +\n  xlab(\"Wt Loss(100's gr/wk.)\") + ylim(0, 4)\nh2 <- ggplot(exercise, aes(factor(exercise))) + geom_bar() +\n     xlab(\"Exericise(hrs./wk.)\") + ylab(NULL) + ylim(0, 4)\nh3 <- ggplot(exercise, aes(factor(food))) + geom_bar() + \n      xlab(\"food (100's cal. over min.)\") + ylab(NULL) + ylim(0, 4)\ngrid.arrange(h1, h2, h3, nrow= 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#correlations-between-predictors-apa-style-table",
+    "href": "multipleRegression.html#correlations-between-predictors-apa-style-table",
+    "title": "4  Multiple Regression Models",
+    "section": "6.4 Correlations Between Predictors (APA style table)",
+    "text": "6.4 Correlations Between Predictors (APA style table)\n\nlibrary(apaTables)\nlibrary(kableExtra)\ntab <- apa.cor.table(exer, )\nkable(tab[[3]], justify = 'left', caption = \"Table 1: Means, standard deviations, and correlations with confidence intervals\") %>% \n  add_footnote(\"Note. M and SD are used to represent mean and standard deviation, respectively. Values in square brackets indicate the 95% confidence interval. The confidence interval is a plausible range of population correlations that could have caused the sample correlation (Cumming, 2014). \\n\\n* indicates p < .05. ** indicates p < .01.\",notation = \"none\", threeparttable = TRUE )\n\n\n\nTable 1: Means, standard deviations, and correlations with confidence intervals\n \n  \n      \n    Variable \n    M \n    SD \n    1 \n    2 \n  \n \n\n  \n     \n    1. exercise \n    2.00 \n    1.63 \n     \n     \n  \n  \n     \n     \n     \n     \n     \n     \n  \n  \n     \n    2. food \n    5.00 \n    2.16 \n    .38 \n     \n  \n  \n     \n     \n     \n     \n    [-.33, .81] \n     \n  \n  \n     \n     \n     \n     \n     \n     \n  \n  \n     \n    3. wtloss \n    7.50 \n    3.31 \n    .86** \n    .05 \n  \n  \n     \n     \n     \n     \n    [.51, .97] \n    [-.60, .66] \n  \n  \n     \n     \n     \n     \n     \n     \n  \n\n\n\n Note. M and SD are used to represent mean and standard deviation, respectively. Values in square brackets indicate the 95% confidence interval. The confidence interval is a plausible range of population correlations that could have caused the sample correlation (Cumming, 2014). * indicates p < .05. ** indicates p < .01.\n\n\n\n\n\n\n\n6.4.1 The Effect of Food Intake on Weight Loss is Confounded by Exercise\nexercise <- within(exercise, exercise <- factor(exercise))\nggplot(exercise, aes(x = food, y = wtloss)) +\n  geom_point(size = 4) + \n  theme(text = element_text(size=tsize))\n\n\n\n\n\n6.4.2 The Effect of Food Intake on Weight Loss is Confounded by Exercise\n\nggplot(exercise, aes(x = food, y = wtloss, shape = exercise, \n                     color = exercise)) +\n  geom_point(size = 4) + \n  theme(text = element_text(size=tsize))\n\n\n\n\n\n\n6.4.3 The Effect of Food Intake on Weight Loss is Confounded by Exercise\n\nexercise$alev <- dplyr::recode(exercise$exercise, `0`= 0L, `2` = 2L, `4` = 0L)\nggplot(exercise, aes(x = food, y = wtloss, shape = exercise, \n                     color = exercise, alpha = alev)) +\n  # scale_alpha_discrete(exercise$alev) + \n  geom_point(size = 4) + guides(alpha = FALSE) +\n  theme(text = element_text(size=tsize))"
+  },
+  {
+    "objectID": "multipleRegression.html#basic-ideas",
+    "href": "multipleRegression.html#basic-ideas",
+    "title": "4  Multiple Regression Models",
+    "section": "6.5 Basic Ideas",
+    "text": "6.5 Basic Ideas\n\nsimple regression analysis: 1 IV\n\n\\[Y_i = a + b_1 X_i + e_i\\]\n\nmultiple regression: 2 + IVs\n\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + \\dots + b_k X_{ki} + e_i\\]\n\nto find \\(b_k\\) (i.e., \\(b_1, b_2, \\dots, b_k\\)) so that \\(\\Sigma{e^2}\\) [i.e. \\(\\Sigma (Y - \\hat{Y})^2\\)] is minimal (least squares principle)."
+  },
+  {
+    "objectID": "multipleRegression.html#four-reasons-for-conducting-multiple-regression-analysis",
+    "href": "multipleRegression.html#four-reasons-for-conducting-multiple-regression-analysis",
+    "title": "4  Multiple Regression Models",
+    "section": "6.6 Four Reasons for Conducting Multiple Regression Analysis",
+    "text": "6.6 Four Reasons for Conducting Multiple Regression Analysis\n\nTo explain how much variance in \\(Y\\) can be accounted for by \\(X_1\\) and \\(X_2\\). For example, how much variation in Reading Achievement ( \\(Y\\) ) can be accounted for by Verbal Aptitude( \\(X_1\\) ) and Achievement Motivation ( \\(X_2\\) )?\nTo test whether the obtained sample regression coefficients (\\(b_1\\) an \\(b_2\\)) are statistically different from zero. For example, is it reasonable that these sample coefficients have occurred due to sampling error alone (“by chance”)?\nIllustration of an added independent variable ( \\(X_3\\) ) explains additional variance in \\(Y\\) above the other regressors.\nTo evaluate the relative importance of the independent variables in explaining variation in \\(Y\\)."
+  },
+  {
+    "objectID": "multipleRegression.html#obtaining-simple-and-multiple-regression-models",
+    "href": "multipleRegression.html#obtaining-simple-and-multiple-regression-models",
+    "title": "4  Multiple Regression Models",
+    "section": "6.7 Obtaining Simple and Multiple Regression Models",
+    "text": "6.7 Obtaining Simple and Multiple Regression Models\nGive this a try\n\n6.7.1 R code\n\nexercise <- read.csv(\"data/exercise.csv\", header = TRUE)\nmod_exer <- lm(wtloss ~ exercise, data = exercise)\nmod_food <- lm(wtloss ~ food, data = exercise)\nmod_exer_food <- lm(wtloss ~ exercise + food, \n                    data = exercise)"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-simple-and-multiple-regression-models",
+    "href": "multipleRegression.html#comparing-simple-and-multiple-regression-models",
+    "title": "4  Multiple Regression Models",
+    "section": "6.8 Comparing Simple and Multiple Regression Models",
+    "text": "6.8 Comparing Simple and Multiple Regression Models\nlibrary(texreg)\nhtmlreg(list(mod_exer, mod_food, mod_exer_food), doctype = FALSE,\n          custom.model.names = c(\"exercise\", \"food\", \"both\"),\n       caption = \"Models Predicting Weight Loss\")\n\n\n\nModels Predicting Weight Loss\n\n\n\n\n \n\n\nexercise\n\n\nfood\n\n\nboth\n\n\n\n\n\n\n(Intercept)\n\n\n4.00**\n\n\n7.14*\n\n\n6.00**\n\n\n\n\n \n\n\n(0.91)\n\n\n(2.92)\n\n\n(1.27)\n\n\n\n\nexercise\n\n\n1.75**\n\n\n \n\n\n2.00***\n\n\n\n\n \n\n\n(0.36)\n\n\n \n\n\n(0.33)\n\n\n\n\nfood\n\n\n \n\n\n0.07\n\n\n-0.50\n\n\n\n\n \n\n\n \n\n\n(0.54)\n\n\n(0.25)\n\n\n\n\nR2\n\n\n0.75\n\n\n0.00\n\n\n0.84\n\n\n\n\nAdj. R2\n\n\n0.71\n\n\n-0.12\n\n\n0.79\n\n\n\n\nNum. obs.\n\n\n10\n\n\n10\n\n\n10\n\n\n\n\n\n\n***p < 0.001; **p < 0.01; *p < 0.05\n\n\n\n\n\n\n6.8.1 Raw Regression Coefficients ( \\(b\\)s ) vs Standardized Regression Coefficients ( \\(\\beta\\)s )\n\nAs if things were not confusing enough, \\(\\beta\\), in addition to representing the population parameter, is also often used to represent the standardized regression coefficient"
+  },
+  {
+    "objectID": "multipleRegression.html#relationship-between-b-and-beta",
+    "href": "multipleRegression.html#relationship-between-b-and-beta",
+    "title": "4  Multiple Regression Models",
+    "section": "6.9 Relationship Between \\(b\\) and \\(\\beta\\)",
+    "text": "6.9 Relationship Between \\(b\\) and \\(\\beta\\)\n\\(b_k = \\beta_k \\frac{s_y}{s_k}\\), where \\(k\\) indicates the \\(k\\)th IV \\(X_k\\) and \\(s\\) is the standard deviation.\n\\(\\beta_k = b_k \\frac{s_k}{s_y}\\)\nWith 1 IV, \\(\\beta = r_{xy}\\)"
+  },
+  {
+    "objectID": "multipleRegression.html#standardized-coefficients-in-r",
+    "href": "multipleRegression.html#standardized-coefficients-in-r",
+    "title": "4  Multiple Regression Models",
+    "section": "6.10 Standardized Coefficients in R",
+    "text": "6.10 Standardized Coefficients in R\n\nlibrary(parameters)\nparameters(mod_exer_food, standardize = \"smart\")\n\nParameter   | Std. Coef. |   SE |        95% CI |  t(7) |      p\n----------------------------------------------------------------\n(Intercept) |       0.00 | 0.00 | [ 0.00, 0.00] |  4.71 | 0.002 \nexercise    |       0.99 | 0.16 | [ 0.60, 1.38] |  6.00 | < .001\nfood        |      -0.33 | 0.16 | [-0.72, 0.06] | -1.98 | 0.088"
+  },
+  {
+    "objectID": "multipleRegression.html#standardized-coefficients-in-r-1",
+    "href": "multipleRegression.html#standardized-coefficients-in-r-1",
+    "title": "4  Multiple Regression Models",
+    "section": "6.11 Standardized Coefficients in R",
+    "text": "6.11 Standardized Coefficients in R\n\nzmod_exer_food <- lm(scale(wtloss) ~ scale(exercise) + \n                     scale(food), \n                     data = exercise)\nprint(summary(zmod_exer_food), digits = 5)\n\n\nCall:\nlm(formula = scale(wtloss) ~ scale(exercise) + scale(food), data = exercise)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.60455 -0.30228  0.00000  0.30228  0.60455 \n\nCoefficients:\n                   Estimate  Std. Error t value  Pr(>|t|)    \n(Intercept)      8.2400e-17  1.4452e-01  0.0000 1.0000000    \nscale(exercise)  9.8723e-01  1.6454e-01  6.0000 0.0005423 ***\nscale(food)     -3.2649e-01  1.6454e-01 -1.9843 0.0876228 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.457 on 7 degrees of freedom\nMultiple R-squared:  0.83756,   Adjusted R-squared:  0.79115 \nF-statistic: 18.047 on 2 and 7 DF,  p-value: 0.0017274"
+  },
+  {
+    "objectID": "multipleRegression.html#unstandardized-and-standardized-coefficients",
+    "href": "multipleRegression.html#unstandardized-and-standardized-coefficients",
+    "title": "4  Multiple Regression Models",
+    "section": "6.12 Unstandardized and Standardized Coefficients",
+    "text": "6.12 Unstandardized and Standardized Coefficients\nzmod_exer <- lm(scale(wtloss) ~ scale(exercise), data = exercise)\nzmod_food <- lm(scale(wtloss) ~ scale(food), data = exercise)\nnames(zmod_exer$coefficients) <- names(mod_exer$coefficients)\nnames(zmod_food$coefficients) <- names(mod_food$coefficients)\nnames(zmod_exer_food$coefficients) <- names(mod_exer_food$coefficients)\n\n# htmlreg(list(mod_exer_food, zmod_exer_food),\n#        custom.model.names = c(\"unstandardized\", \"standardized\"))\nhtmlreg(list(mod_exer, zmod_exer, mod_food, zmod_food, mod_exer_food, zmod_exer_food),\n       custom.model.names = rep(c(\"unstand.\", \"stand.\"), 3), scalebox = .8, doctype = FALSE,\n       caption = \"Comparing unstandardized and standardized models of weight loss\")\n\n\n\nComparing unstandardized and standardized models of weight loss\n\n\n\n\n \n\n\nunstand.\n\n\nstand.\n\n\nunstand.\n\n\nstand.\n\n\nunstand.\n\n\nstand.\n\n\n\n\n\n\n(Intercept)\n\n\n4.00**\n\n\n0.00\n\n\n7.14*\n\n\n0.00\n\n\n6.00**\n\n\n0.00\n\n\n\n\n \n\n\n(0.91)\n\n\n(0.17)\n\n\n(2.92)\n\n\n(0.34)\n\n\n(1.27)\n\n\n(0.14)\n\n\n\n\nexercise\n\n\n1.75**\n\n\n0.86**\n\n\n \n\n\n \n\n\n2.00***\n\n\n0.99***\n\n\n\n\n \n\n\n(0.36)\n\n\n(0.18)\n\n\n \n\n\n \n\n\n(0.33)\n\n\n(0.16)\n\n\n\n\nfood\n\n\n \n\n\n \n\n\n0.07\n\n\n0.05\n\n\n-0.50\n\n\n-0.33\n\n\n\n\n \n\n\n \n\n\n \n\n\n(0.54)\n\n\n(0.35)\n\n\n(0.25)\n\n\n(0.16)\n\n\n\n\nR2\n\n\n0.75\n\n\n0.75\n\n\n0.00\n\n\n0.00\n\n\n0.84\n\n\n0.84\n\n\n\n\nAdj. R2\n\n\n0.71\n\n\n0.71\n\n\n-0.12\n\n\n-0.12\n\n\n0.79\n\n\n0.79\n\n\n\n\nNum. obs.\n\n\n10\n\n\n10\n\n\n10\n\n\n10\n\n\n10\n\n\n10\n\n\n\n\n\n\n***p < 0.001; **p < 0.01; *p < 0.05"
+  },
+  {
+    "objectID": "multipleRegression.html#basic-ideas-r2",
+    "href": "multipleRegression.html#basic-ideas-r2",
+    "title": "4  Multiple Regression Models",
+    "section": "6.13 Basic Ideas: \\(R^2\\)",
+    "text": "6.13 Basic Ideas: \\(R^2\\)\n\\[\nY_i = a + b_1 X_i + e_i\n\\]\n\\(r^2_{yx}\\) is the proportion of variance in \\(Y\\) accounted for by \\(X\\).\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + e_i\\]\n\\(r^2_{y12} = r^2_{\\hat{Y}Y} = R^2\\) is the proportion of variance in \\(Y\\) accounted for by \\(X_1\\) and \\(X_2\\) combined\nwhen \\(r_{12} = 0, \\quad r^2_{y12} = r^2_{y1} + r^2_{y2}\\)\nwhen \\(r^2_{12} \\neq 0\\), see next slide"
+  },
+  {
+    "objectID": "multipleRegression.html#r2-represented-graphically",
+    "href": "multipleRegression.html#r2-represented-graphically",
+    "title": "4  Multiple Regression Models",
+    "section": "6.14 \\(R^2\\) Represented Graphically",
+    "text": "6.14 \\(R^2\\) Represented Graphically\n\n#include_graphics(\"products/slides/figures/venn.jpg\")"
+  },
+  {
+    "objectID": "multipleRegression.html#multiple-regression-with-correlated-predictors",
+    "href": "multipleRegression.html#multiple-regression-with-correlated-predictors",
+    "title": "4  Multiple Regression Models",
+    "section": "6.15 Multiple Regression with correlated predictors",
+    "text": "6.15 Multiple Regression with correlated predictors\nWhen independent variables are correlated, it is possible that:\n\nthe test of the overall model (test of \\(R^2\\)) is statistically significant and practically meaningful, but NONE of the individual regression coefficients are statistically significant (a seemingly contradictory finding).\na statistically non-significant \\(b_k\\) does not necessarily mean that the variable \\(X_k\\) is NOT a meaningful predictor of \\(Y\\) by itself. As a matter of fact, \\(X_k\\) may be correlated substantially with \\(Y\\) and by itself, may account for substantial variance in \\(Y\\)."
+  },
+  {
+    "objectID": "multipleRegression.html#squared-multiple-correlation-coefficient",
+    "href": "multipleRegression.html#squared-multiple-correlation-coefficient",
+    "title": "4  Multiple Regression Models",
+    "section": "6.16 Squared Multiple Correlation Coefficient",
+    "text": "6.16 Squared Multiple Correlation Coefficient\n\\[R^2 = \\frac{SS_{reg}}{SS_{total}}\\]\n\\[R^2 = r^2_{Y,\\hat{Y}}\\]\n\\[R^2 = \\frac{r^2_{y1} + r^2_{y2} - 2r_{y1}r_{y2}r_{12}}{1 - r^2_{12}}\\]\nwhen \\(r_{12} = 0\\): \\(R^2 = r^2_{y1} + r^2_{y2}\\)"
+  },
+  {
+    "objectID": "multipleRegression.html#tests-of-significance-and-interpretation",
+    "href": "multipleRegression.html#tests-of-significance-and-interpretation",
+    "title": "4  Multiple Regression Models",
+    "section": "6.17 Tests of Significance and Interpretation",
+    "text": "6.17 Tests of Significance and Interpretation\n\n6.17.1 Test of \\(R^2\\)\n\\[F_{(df1, df2)} = \\frac{R^2/k}{(1 - R^2)/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]\n\n\n6.17.2 Test of \\(SS_{reg}\\)\n\\[F_{(df1, df2)} = \\frac{SS_{reg}/k}{SS_{error}/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]"
+  },
+  {
+    "objectID": "multipleRegression.html#tests-of-significance-and-interpretation-1",
+    "href": "multipleRegression.html#tests-of-significance-and-interpretation-1",
+    "title": "4  Multiple Regression Models",
+    "section": "6.18 Tests of Significance and Interpretation",
+    "text": "6.18 Tests of Significance and Interpretation\n\nin simple regression analysis, test for the only regression coefficient \\(b\\) is the same as the test of \\(R^2\\) and the same as test of \\(SS_{reg}\\).\nin multiple regression analysis, test of \\(R^2\\) and test of \\(SS_{reg}\\) is a test of all regression coefficients simultaneously.\nin multiple regression analysis, the test of individual regression coefficient \\(b_k\\) is testing the unique contribution of \\(X_k\\), given all other independent variables are already in the model (contribution of \\(X_k\\) over and beyond other independent variables)."
+  },
+  {
+    "objectID": "multipleRegression.html#relative-importance-of-predictors",
+    "href": "multipleRegression.html#relative-importance-of-predictors",
+    "title": "4  Multiple Regression Models",
+    "section": "6.19 Relative Importance of Predictors",
+    "text": "6.19 Relative Importance of Predictors\n\nthe magnitude of \\(b_k\\) is affected by the scale of measurement\n\nNOT ideal for inferring substantive or statistical meaningfulness\nNOT ideal for inferring relative importance across variables in model\nfor different populations, can be used for assessing the importance of the same variable across populations.\n\n\\(\\beta\\) is on a standardized scale (in standard deviation units: a \\(z\\) score)\n\nbetter for assessing relative importance across variables in model (though we will find that there are problems with this)\nmagnitude impacted by group \\(s\\), thus less suitable for comparisons across populations."
+  },
+  {
+    "objectID": "multipleRegression.html#waffle-houses-and-divorce-rates",
+    "href": "multipleRegression.html#waffle-houses-and-divorce-rates",
+    "title": "4  Multiple Regression Models",
+    "section": "7.1 Waffle Houses and Divorce Rates",
+    "text": "7.1 Waffle Houses and Divorce Rates\n\nggplot(divorce, aes(whm, Divorce)) + geom_point() + \n  geom_text(aes(label = ifelse(Divorce > 11 | WaffleHouses > 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +\n  geom_smooth(method = \"lm\") +\n  xlab(\"Waffle Houses per million\") + ylab(\"Divorce rate\")"
+  },
+  {
+    "objectID": "multipleRegression.html#waffle-houses-and-divorce-rates-simple-regression-table",
+    "href": "multipleRegression.html#waffle-houses-and-divorce-rates-simple-regression-table",
+    "title": "4  Multiple Regression Models",
+    "section": "7.2 Waffle Houses and Divorce Rates: Simple Regression Table",
+    "text": "7.2 Waffle Houses and Divorce Rates: Simple Regression Table\nmod <- lm(Divorce ~ whm, data = divorce)\nhtmlreg(mod, custom.coef.names = c(\"(Intercept\", \"Waffle houses/million\"), doctype = FALSE,\n        custom.model.names = \"Simple Regression\")\n\n\n\nStatistical models\n\n\n\n\n \n\n\nSimple Regression\n\n\n\n\n\n\n(Intercept\n\n\n9.32***\n\n\n\n\n \n\n\n(0.28)\n\n\n\n\nWaffle houses/million\n\n\n0.07**\n\n\n\n\n \n\n\n(0.03)\n\n\n\n\nR2\n\n\n0.13\n\n\n\n\nAdj. R2\n\n\n0.12\n\n\n\n\nNum. obs.\n\n\n50\n\n\n\n\n\n\n***p < 0.001; **p < 0.01; *p < 0.05"
+  },
+  {
+    "objectID": "multipleRegression.html#spurious-association",
+    "href": "multipleRegression.html#spurious-association",
+    "title": "4  Multiple Regression Models",
+    "section": "7.3 Spurious Association",
+    "text": "7.3 Spurious Association\n\n\n\n\n\n\n\n## Divorce and Marriage\n\n\n\n\n  Variable M SD 1 2\n\n\n\n     1. c1read      36.40    9.80                          \n\n\n\n     2. c1genk      24.03    7.40 .49**                    \n\n                                  [.47, .51]               \n\n\n\n     3. c5read     133.39   26.21 .53**        .61**       \n\n                                  [.52, .55]   [.59, .62]  \n\nTable: Real data"
+  },
+  {
+    "objectID": "multipleRegression.html#eclsk-simulated-data",
+    "href": "multipleRegression.html#eclsk-simulated-data",
+    "title": "4  Multiple Regression Models",
+    "section": "7.4 ECLSK simulated data",
+    "text": "7.4 ECLSK simulated data\npandoc.table(tab2[[3]], caption = \"Simulated data\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]"
+  },
+  {
+    "objectID": "multipleRegression.html#title",
+    "href": "multipleRegression.html#title",
+    "title": "4  Multiple Regression Models",
+    "section": "7.5 Title",
+    "text": "7.5 Title\n\ng1 <- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"k Reading and 5th Reading\")\n      g2 <- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"k General Know. and 5th Reading\")\n    \ngrid.arrange(g1, g2, nrow = 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#three-models",
+    "href": "multipleRegression.html#three-models",
+    "title": "4  Multiple Regression Models",
+    "section": "7.6 Three Models",
+    "text": "7.6 Three Models\nrmodread <- lm(c5read ~ c1read, ach3)\nrmodgenk <- lm(c5read ~ c1genk, ach3)\nrmodML <- lm(c5read ~ c1read + c1genk, ach3)\nhtmlreg(list(rmodread, rmodgenk, rmodML), doctype = FALSE)\n\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\n\n\n\n\n(Intercept)\n\n\n81.42***\n\n\n81.62***\n\n\n64.28***\n\n\n\n\n \n\n\n(1.08)\n\n\n(0.90)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.43***\n\n\n \n\n\n0.83***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.15***\n\n\n1.62***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p < 0.001; **p < 0.01; *p < 0.05"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-real-and-simulated-data",
+    "href": "multipleRegression.html#comparing-real-and-simulated-data",
+    "title": "4  Multiple Regression Models",
+    "section": "7.7 Comparing Real and Simulated Data",
+    "text": "7.7 Comparing Real and Simulated Data\n\ng1 <- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n\ng2 <- ggplot(simach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-real-and-simulated-data-1",
+    "href": "multipleRegression.html#comparing-real-and-simulated-data-1",
+    "title": "4  Multiple Regression Models",
+    "section": "7.8 Comparing Real and Simulated Data",
+    "text": "7.8 Comparing Real and Simulated Data\n\ng1 <- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n    \ng2 <- ggplot(simach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-real-and-simulated-data-2",
+    "href": "multipleRegression.html#comparing-real-and-simulated-data-2",
+    "title": "4  Multiple Regression Models",
+    "section": "7.9 Comparing Real and Simulated Data",
+    "text": "7.9 Comparing Real and Simulated Data\n\ng1 <- ggplot(ach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Real Data\")\n\ng2 <- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-two-simulated-data-sets",
+    "href": "multipleRegression.html#comparing-two-simulated-data-sets",
+    "title": "4  Multiple Regression Models",
+    "section": "7.10 Comparing Two Simulated Data Sets",
+    "text": "7.10 Comparing Two Simulated Data Sets\ntab <- apaTables::apa.cor.table(data = simach3)\ntab2 <- apaTables::apa.cor.table(data = simach3orthogonal)\npandoc.table(tab[[3]], caption = \"Simulated data 1\",\n              justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 1\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-two-simulated-data-sets-1",
+    "href": "multipleRegression.html#comparing-two-simulated-data-sets-1",
+    "title": "4  Multiple Regression Models",
+    "section": "7.11 Comparing Two Simulated Data Sets",
+    "text": "7.11 Comparing Two Simulated Data Sets\npandoc.table(tab2[[3]], caption = \"Simulated data 2\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 2\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.62\n9.80\n\n\n\n\n\n2. c1genk\n24.11\n7.42\n.00\n\n\n\n\n\n\n\n[-.02, .03]\n\n\n\n\n3. c5read\n134.09\n26.22\n.54**\n.60**\n\n\n\n\n\n\n[.52, .56]\n[.58, .62]"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-two-simulated-data-sets-2",
+    "href": "multipleRegression.html#comparing-two-simulated-data-sets-2",
+    "title": "4  Multiple Regression Models",
+    "section": "7.12 Comparing Two Simulated Data Sets",
+    "text": "7.12 Comparing Two Simulated Data Sets\n\ng1 <- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Simulated Data 1\")\n\ng2 <- ggplot(simach3orthogonal, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data 2\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+  },
+  {
+    "objectID": "multipleRegression.html#comparing-models",
+    "href": "multipleRegression.html#comparing-models",
+    "title": "4  Multiple Regression Models",
+    "section": "7.13 Comparing Models",
+    "text": "7.13 Comparing Models\nmod1 <- lm(c5read ~ c1read, data = simach3orthogonal)\nmod2 <- update(mod1, . ~ c1genk)\nmod3 <- update(mod1, . ~ . + c1genk)\nmod4 <- lm(c5read ~ c1read + c1genk, data = simach3)\nhtmlreg(list(mod1, mod2, mod3, mod4), doctype = FALSE)\n\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\nModel 4\n\n\n\n\n\n\n(Intercept)\n\n\n81.27***\n\n\n82.89***\n\n\n30.19***\n\n\n63.64***\n\n\n\n\n \n\n\n(1.09)\n\n\n(0.90)\n\n\n(0.99)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.44***\n\n\n \n\n\n1.44***\n\n\n0.84***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.02)\n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.12***\n\n\n2.12***\n\n\n1.61***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.03)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p < 0.001; **p < 0.01; *p < 0.05"
   }
 ]
