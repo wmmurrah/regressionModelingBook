@@ -2,3 +2,214 @@
 title: "Moderated Regression"
 ---
 
+```{r, include=FALSE, warning=FALSE}
+# Some customization.  You can alter or delete as desired (if you know what you are doing).
+
+
+
+# knitr settings to control how R chunks work.
+library(knitr)
+# opts_knit$set(root.dir = "../../../")
+opts_chunk$set(
+  echo = TRUE,
+  tidy=FALSE,     # display code as typed
+  size="small",    # slightly smaller font for code
+  comment = NULL,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(mosaic)
+library(pander)
+suppressPackageStartupMessages(library(tidyverse))
+library(gridExtra)
+library(xtable)
+library(ztable)
+library(texreg)
+library(apaTables)
+library(MASS)
+library(psych)
+library(grid)
+library(ggfortify)
+library(GGally)
+library(texreg)
+options(ztable.type = "html")
+options(xtable.comment = FALSE)
+# Set ggplot default font size
+theme_update(text = element_text(size = 18))
+# This changes the default colors in lattice plots.
+trellis.par.set(theme=theme.mosaic())  
+tsize = 30
+```
+
+```{r, include=FALSE}
+# Don't delete this chunk if you are using the mosaic package
+# This loads the mosaic and dplyr packages
+library(mosaic)
+library(pander)
+# suppressPackageStartupMessages(library(tidyverse))
+library(gridExtra)
+library(car)
+library(effects)
+library(emmeans)
+library(psych)
+
+```
+
+
+## Interactions in Linear Models
+
+Does the relation between one predictor and the outcome depend on the value of another predictor?
+
+
+### Runner's Data
+
+* Time - 5-kilometer race time in minutes
+* Age - runners age in years
+* Miles - typical miles run per week training for 5-kilometer race
+
+```{r}
+runners <- read.csv("data/runners.csv", 
+                    header = TRUE)
+headTail(runners) # from psych package
+```
+
+
+
+### Explore Univariae Distributions of the Variables
+
+
+```{r, fig.asp = .4}
+hist(runners$Time)
+hist(runners$Age)
+```
+
+
+```{r, fig.asp = .5}
+hist(runners$Miles)
+
+describe(runners, fast = TRUE)
+```
+
+
+### Visualize the Bivariate Relations Between Variables
+
+```{r, fig.asp = .80}
+plot(Time ~ Age, runners)
+abline(reg = lm(Time ~ Age, runners), 
+       col = "red")
+```
+
+```{r, fig.asp = .80}
+plot(Time ~ Miles, runners)
+abline(reg = lm(Time ~ Miles, runners), 
+       col = "red")
+```
+
+
+### Quantifying Bivariate Relations
+
+```{r, fig.asp = .80}
+plot(Age ~ Miles, runners)
+abline(reg = lm(Age ~ Miles, runners), col = "red")
+```
+
+
+```{r}
+print(cor(runners), digits = 2)
+```
+
+### Multiple Regression: Additive Model
+
+```{r}
+additivemod <- lm(Time ~ Age + Miles, data = runners)
+summary(additivemod)
+```
+
+
+### Centering Predictors
+
+```{r}
+runners$Age40 <- runners$Age - 40
+runners$Miles30 <- runners$Miles - 30
+```
+
+
+#### Multiple Regression: Additive Model (Centered)
+
+```{r}
+centaddmod <- lm(Time ~ Age40 + Miles30, data = runners)
+summary(centaddmod)
+```
+
+
+#### Does the Effect of Training Miles Depend on Runner's Age?
+
+```{r}
+interactionmod <- lm(Time ~ Age + Miles + Age:Miles, data = runners)
+summary(interactionmod)
+```
+
+
+### Model Comparison
+  
+```{r}
+anova(centaddmod, interactionmod)
+```
+
+
+### Plotting the Interaction Model Predicted Values
+  
+```{r, eval=FALSE}
+plot(
+  predictorEffects(mod = interactionmod,
+                   predictors = ~ Age, 
+                   xlevels = list(Miles = c(10, 30, 50))),
+  ylim = c(10, 40),
+  lines = list(multiline = TRUE)
+)
+
+```
+
+```{r, echo=FALSE}
+plot(
+  predictorEffects(mod = interactionmod,
+                   predictors = ~ Age, 
+                   xlevels = list(Miles = c(10, 30, 50))),
+  ylim = c(10, 40),
+  lines = list(multiline = TRUE)
+)
+
+```
+
+### Interpreting Coefficients in Models with Interactions
+
+#### Additive Model
+
+* The coefficient is the expected change in the outcome (Y) for a one unit change in this predictor (X1) holding the other predictor (X2) constant
+* This effect of X1 is the same no matter what the value of X2
+
+#### Moderation Model (with Interaction)
+
+* For variables included in the interaction term, the coefficient is interpreted as the effect of a one unit change in that predictor (X1) on the outcome (Y) when the other predictor in the interaction (X2) is zero.
+
+* The size of the effect of X1 on Y changes depending on the value of X2.
+
+
+
+#### Let's use the centered variables
+
+```{r}
+cintmod <- lm(Time ~ Age40 + Miles30 + Age40:Miles30, 
+              data = runners)
+summary(cintmod)
+```
+
+
+
+```{r, echo=FALSE, results='asis'}
+htmlreg(list(additivemod, centaddmod, interactionmod, cintmod), digits = 3,
+        custom.model.names = c("additive", "centered additive.", "moderation", "center moderation"))
+```
+
+

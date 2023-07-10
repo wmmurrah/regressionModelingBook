@@ -7,19 +7,40 @@ editor:
 
 ## A little philosophy of science
 
+There are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. 
+I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend.
+I do this for at least two reason.
+First, I think it does help readers to know where an author is coming from, when explaining methodological implications.
+Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. 
+I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic's misunderstanding of quantitative methods. 
+
+
+
+What follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things.
+I will necessarily be cursory, to keep from going to far afield.
+Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.
+
 To me, reality consists of all that exists.
 This includes, physical objects and processes as well as things like ideas, feeling, and beliefs.
 So, to me, reality is unitary by definition -- there is one reality.
-But it is extremely complicated.
+But I am convinced that this unitary reality is extremely complicated.
 I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.
-
 Does this mean we can understand reality at all?
 I don't think so.
 I don't fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won't start.
 When we can't fully understand something, we are left to build an model of that process.
-I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system.
+I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.
+
+### What is the nature of reality?
+
+
+### How do we come to know things?
+
 
 ## Modeling in Science
+
+Models are not optional, but can there is variability on how well we understand and articulate the models underlying our work.
+Models are not independent, they depend on an context and purpose. 
 
 ### Modeling Workflow (McElreath, 2023)
 
@@ -33,12 +54,24 @@ I will talk more about models below, but for now think of a model as an oversimp
 
 ### Exploratory to Confirmatory Data Analysis Continuum
 
-see[@Fife2022Understandingexploratory/confirmatorydata]
+see [@Fife2022Understandingexploratory/confirmatorydata]
 
 A p-value cannot be used for exploratory analyses.
 
 If your theoretical framework does not suggest a causal graph, you are very likely not ready for a confirmatory data analysis.
 
+### Strong Inference
+
+see [@Platt1964Stronginference]
+
 ## Ethics in Science
 
+### Incentives in Science
+
 ### Pat and Sam
+
+
+## Complexity
+
+we need models to be simple as possible. 
+To the extent that our simulations are usefule, the complexity remains in the data.

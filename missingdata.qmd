@@ -1,0 +1,31 @@
+---
+title: "Modeling with Missing Data"
+---
+
+Missing data are ubiquitous in many research fields, particularly education and the social sciences.
+We often find that many of our survey participants did not complete all items on the survey, participants may have dropped out of your experiment, or, our instruments may have malfunctioned, to name just a few sources of missing data.
+The causes of this missing data are important, and need consideration as we model our theories and data.
+
+Much of the argument for modeling I have presented so far is born out in the development of missing data techniques used to deal with the bias that can be induced by how we handle incomplete data. 
+The development of these methods has progressed to focus more on the substantive models underlying the research, and we will benefit from the use of much of our knowledge about modeling.
+
+In this chapter
+
+
+## Traditional Methods (and Why The Should Be Avoided)
+
+
+## Modern Methods
+
+### Full Information Maximum Likelihood
+
+### Multiple Imputation
+
+#### Joint Modeling
+
+#### Fully Conditional Specification
+
+#### Model-Bases Imputation
+
+## Multilevel Multiple Imputation
+

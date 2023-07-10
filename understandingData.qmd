@@ -1,0 +1,30 @@
+---
+title: "Understanding Data"
+---
+
+
+## The Structure of Data
+
+```{r}
+data(iris)
+summary(iris)
+```
+
+
+```{r}
+library(car)
+data("Davis")
+```
+
+```{r}
+data(mtcars)
+
+summary(mtcars)
+```
+
+```{r}
+summary(Davis)
+```
+
+
+

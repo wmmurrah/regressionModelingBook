@@ -1,9 +1,0 @@
----
-title: "Simulation in R"
-execute:
-  echo: true
----
-
-
-
-

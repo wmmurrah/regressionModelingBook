@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Design and Analysis: A Computational Model-Based Approach - 3&nbsp; Simple Regression Models</title>
+<title>Research Design and Analysis: A Computational Model-Based Approach - 5&nbsp; Simple Linear Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,9 +17,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -46,48 +47,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -101,8 +73,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -113,7 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./multipleRegression.html" rel="next">
-<link href="./simulation.html" rel="prev">
+<link href="./dgp.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -143,19 +114,26 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple Regression Models</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./simpleModels.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Linear Models</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -163,87 +141,115 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Design and Analysis: A Computational Model-Based Approach</a> 
+      <a href="./">Research Design and Analysis: A Computational Model-Based Approach</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./simulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulation in R</span></a>
+  <a href="./introR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./simpleModels.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple Regression Models</span></a>
+  <a href="./understandingData.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multipleRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multiple Regression Models</span></a>
+  <a href="./dgp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Generating Processes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./moderatedRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Moderated Regression</span></a>
+  <a href="./simpleModels.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Linear Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./multipleRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate Linear Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./structuralRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Structural Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statisticalthinkinglink.html" class="sidebar-item-text sidebar-link"></a><a href="https://www.statistical-thinking.com/">return to statistical-thinking.com</a>
+  <a href="./moderatedRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Moderated Regression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./missingdata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling with Missing Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statisticalthinkinglink.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"></span></a><a href="https://www.statistical-thinking.com/">return to statistical-thinking.com</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#variances-covariances-and-correlations" id="toc-variances-covariances-and-correlations" class="nav-link active" data-scroll-target="#variances-covariances-and-correlations"><span class="toc-section-number">3.1</span>  Variances, Covariances, and Correlations</a>
+  <li><a href="#variances-covariances-and-correlations" id="toc-variances-covariances-and-correlations" class="nav-link active" data-scroll-target="#variances-covariances-and-correlations"><span class="header-section-number">5.1</span> Variances, Covariances, and Correlations</a>
   <ul class="collapse">
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance"><span class="toc-section-number">3.1.1</span>  Variance</a></li>
-  <li><a href="#bivariate-relationship" id="toc-bivariate-relationship" class="nav-link" data-scroll-target="#bivariate-relationship"><span class="toc-section-number">3.1.2</span>  Bivariate Relationship</a></li>
-  <li><a href="#covariance" id="toc-covariance" class="nav-link" data-scroll-target="#covariance"><span class="toc-section-number">3.1.3</span>  Covariance</a></li>
-  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation"><span class="toc-section-number">3.1.4</span>  Correlation</a></li>
+  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance"><span class="header-section-number">5.1.1</span> Variance</a></li>
+  <li><a href="#bivariate-relationship" id="toc-bivariate-relationship" class="nav-link" data-scroll-target="#bivariate-relationship"><span class="header-section-number">5.1.2</span> Bivariate Relationship</a></li>
+  <li><a href="#covariance" id="toc-covariance" class="nav-link" data-scroll-target="#covariance"><span class="header-section-number">5.1.3</span> Covariance</a></li>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation"><span class="header-section-number">5.1.4</span> Correlation</a></li>
   </ul></li>
-  <li><a href="#conceptual-demonstration-of-simple-regression" id="toc-conceptual-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#conceptual-demonstration-of-simple-regression"><span class="toc-section-number">3.2</span>  Conceptual Demonstration of Simple Regression</a>
+  <li><a href="#conceptual-demonstration-of-simple-regression" id="toc-conceptual-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#conceptual-demonstration-of-simple-regression"><span class="header-section-number">5.2</span> Conceptual Demonstration of Simple Regression</a>
   <ul class="collapse">
-  <li><a href="#graphical-demonstration-of-simple-regression" id="toc-graphical-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#graphical-demonstration-of-simple-regression"><span class="toc-section-number">3.2.1</span>  Graphical Demonstration of Simple Regression</a></li>
-  <li><a href="#interpreting-output-from-simple-regression" id="toc-interpreting-output-from-simple-regression" class="nav-link" data-scroll-target="#interpreting-output-from-simple-regression"><span class="toc-section-number">3.2.2</span>  Interpreting Output from Simple Regression</a></li>
-  <li><a href="#exploratory-study" id="toc-exploratory-study" class="nav-link" data-scroll-target="#exploratory-study"><span class="toc-section-number">3.2.3</span>  Exploratory Study</a></li>
-  <li><a href="#rough-confirmatory-study" id="toc-rough-confirmatory-study" class="nav-link" data-scroll-target="#rough-confirmatory-study"><span class="toc-section-number">3.2.4</span>  Rough Confirmatory Study</a></li>
-  <li><a href="#strict-confirmatory-study" id="toc-strict-confirmatory-study" class="nav-link" data-scroll-target="#strict-confirmatory-study"><span class="toc-section-number">3.2.5</span>  Strict Confirmatory Study</a></li>
+  <li><a href="#graphical-demonstration-of-simple-regression" id="toc-graphical-demonstration-of-simple-regression" class="nav-link" data-scroll-target="#graphical-demonstration-of-simple-regression"><span class="header-section-number">5.2.1</span> Graphical Demonstration of Simple Regression</a></li>
+  <li><a href="#interpreting-output-from-simple-regression" id="toc-interpreting-output-from-simple-regression" class="nav-link" data-scroll-target="#interpreting-output-from-simple-regression"><span class="header-section-number">5.2.2</span> Interpreting Output from Simple Regression</a></li>
+  <li><a href="#exploratory-study" id="toc-exploratory-study" class="nav-link" data-scroll-target="#exploratory-study"><span class="header-section-number">5.2.3</span> Exploratory Study</a></li>
+  <li><a href="#rough-confirmatory-study" id="toc-rough-confirmatory-study" class="nav-link" data-scroll-target="#rough-confirmatory-study"><span class="header-section-number">5.2.4</span> Rough Confirmatory Study</a></li>
+  <li><a href="#strict-confirmatory-study" id="toc-strict-confirmatory-study" class="nav-link" data-scroll-target="#strict-confirmatory-study"><span class="header-section-number">5.2.5</span> Strict Confirmatory Study</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -253,7 +259,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple Regression Models</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Linear Models</span></h1>
 </div>
 
 
@@ -268,8 +274,8 @@ div.csl-indent {
 
 </header>
 
-<section id="variances-covariances-and-correlations" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="variances-covariances-and-correlations"><span class="header-section-number">3.1</span> Variances, Covariances, and Correlations</h2>
+<section id="variances-covariances-and-correlations" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="variances-covariances-and-correlations"><span class="header-section-number">5.1</span> Variances, Covariances, and Correlations</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -278,8 +284,8 @@ div.csl-indent {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Davis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="variance" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="variance"><span class="header-section-number">3.1.1</span> Variance</h3>
+<section id="variance" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="variance"><span class="header-section-number">5.1.1</span> Variance</h3>
 <p>for ( <span class="math inline">\(n\)</span> = 1,000, <span class="math inline">\(\bar{X}\)</span> = 100)</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -310,19 +316,16 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 </section>
-<section id="bivariate-relationship" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="bivariate-relationship"><span class="header-section-number">3.1.2</span> Bivariate Relationship</h3>
-<div class="cell">
-
-</div>
+<section id="bivariate-relationship" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="bivariate-relationship"><span class="header-section-number">5.1.2</span> Bivariate Relationship</h3>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="simpleModels_files/figure-html/unnamed-chunk-6-1.png" style="height:100.0%" width="672"></p>
 </div>
 </div>
 </section>
-<section id="covariance" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="covariance"><span class="header-section-number">3.1.3</span> Covariance</h3>
+<section id="covariance" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="covariance"><span class="header-section-number">5.1.3</span> Covariance</h3>
 <p>The covariance of two variables is defined as</p>
 <p><span class="math display">\[
   s_{xy} = \frac{\sum{(X - \overline{X})(Y - \overline{Y})}}{N - 1} = \frac{\sum{xy}}{N - 1}. \tag{2.3}
@@ -346,7 +349,7 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat[ ,<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"$d_x$"</span>, <span class="st">"$d_x^2$"</span>, <span class="st">"Y"</span>, <span class="st">"$d_y$"</span>, <span class="st">"$d_y^2$"</span>)]</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(dat, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">X</th>
@@ -608,15 +611,15 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
   \frac{\sum{xy}}{N - 1} = \frac{133.17}{9} =12.11.
 \]</span></p>
 </section>
-<section id="correlation" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="correlation"><span class="header-section-number">3.1.4</span> Correlation</h3>
+<section id="correlation" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="correlation"><span class="header-section-number">5.1.4</span> Correlation</h3>
 <p><span class="math display">\[r_{XY} = \frac{\text{Cov}(XY)}{s_{X}s_{Y}} =
   \frac{12.11}{3.66 \times 3.37} =
   \frac{12.11}{12.35} = 0.98.\]</span></p>
 </section>
 </section>
-<section id="conceptual-demonstration-of-simple-regression" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="conceptual-demonstration-of-simple-regression"><span class="header-section-number">3.2</span> Conceptual Demonstration of Simple Regression</h2>
+<section id="conceptual-demonstration-of-simple-regression" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="conceptual-demonstration-of-simple-regression"><span class="header-section-number">5.2</span> Conceptual Demonstration of Simple Regression</h2>
 <p>Let’s say we were about to conduct a large study and needed to know the participants heights. But it is very expensive to directly measure each participants height. We could just ask participants to report their height. So, we want to know how accurate people are at reporting their height. To evaluate that we could ask a random sample of people from the study population to report their height and then obtain direct measures of their height and see how strongly those are related. We want to see how well reported height predicts measured height.</p>
 <p>Below are statistical models of the relationship between measured height (<span class="math inline">\(Y\)</span>) and reported height (<span class="math inline">\(X\)</span>).</p>
 <p>Population Model:</p>
@@ -628,7 +631,7 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> dat[ ,<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>)]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">X</th>
@@ -697,12 +700,12 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 <pre><code>[1] 0.9804921</code></pre>
 </div>
 </div>
-<section id="data-summary" class="level4" data-number="3.2.0.1">
-<h4 data-number="3.2.0.1" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">3.2.0.1</span> Data Summary</h4>
+<section id="data-summary" class="level4" data-number="5.2.0.1">
+<h4 data-number="5.2.0.1" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">5.2.0.1</span> Data Summary</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(psych<span class="sc">::</span><span class="fu">describe</span>(df, <span class="at">fast =</span> <span class="cn">TRUE</span>), <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -744,8 +747,8 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 </section>
-<section id="graphical-demonstration-of-simple-regression" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="graphical-demonstration-of-simple-regression"><span class="header-section-number">3.2.1</span> Graphical Demonstration of Simple Regression</h3>
+<section id="graphical-demonstration-of-simple-regression" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="graphical-demonstration-of-simple-regression"><span class="header-section-number">5.2.1</span> Graphical Demonstration of Simple Regression</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Y <span class="sc">~</span> X, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -791,7 +794,7 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">X</th>
@@ -880,7 +883,7 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">X</th>
@@ -977,8 +980,8 @@ s_x^2 = \frac{\sum{(X - \overline{X}})^2}{N - 1} = \frac{\sum{x^2}}{N - 1} \tag{
 </div>
 </div>
 </section>
-<section id="interpreting-output-from-simple-regression" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="interpreting-output-from-simple-regression"><span class="header-section-number">3.2.2</span> Interpreting Output from Simple Regression</h3>
+<section id="interpreting-output-from-simple-regression" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="interpreting-output-from-simple-regression"><span class="header-section-number">5.2.2</span> Interpreting Output from Simple Regression</h3>
 <p>We need to be able to interpret the coefficients, and determine their implications for our research question. We can look at a summary of the results of the simple regression in R as follows:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1106,10 +1109,10 @@ F-statistic: 248.8 on 1 and 10 DF,  p-value: 2.153e-08</code></pre>
 </div>
 <p>To review what we learned about statistical inference first we will consider our three scenarios.</p>
 </section>
-<section id="exploratory-study" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="exploratory-study"><span class="header-section-number">3.2.3</span> Exploratory Study</h3>
+<section id="exploratory-study" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="exploratory-study"><span class="header-section-number">5.2.3</span> Exploratory Study</h3>
 <p>Recall that if we have no idea about what to expect between variables in this data then we are engaging in an <strong>exploratory</strong> study which includes looking for relations between height and gender.</p>
-<p>The appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group’s heights <span class="citation" data-cites="Fife2022Understandingexploratory/confirmatorydata">(<a href="references.html#ref-Fife2022Understandingexploratory/confirmatorydata" role="doc-biblioref">Fife and Rodgers 2022</a>)</span>.</p>
+<p>The appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group’s heights <span class="citation" data-cites="Fife2022Understandingexploratory/confirmatorydata">(<a href="references.html#ref-Fife2022Understandingexploratory/confirmatorydata" role="doc-biblioref">Fife &amp; Rodgers, 2022</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>ht.gender_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span>nhanesAdult)</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Height_in <span class="sc">~</span> Gender, <span class="at">data =</span> nhanesAdult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1165,8 +1168,8 @@ Gendermale   5.306584  5.570939</code></pre>
 </div>
 </div>
 </section>
-<section id="rough-confirmatory-study" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="rough-confirmatory-study"><span class="header-section-number">3.2.4</span> Rough Confirmatory Study</h3>
+<section id="rough-confirmatory-study" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="rough-confirmatory-study"><span class="header-section-number">5.2.4</span> Rough Confirmatory Study</h3>
 <p>If originally we suspected that there is a relation between height and gender, possibly among other relations of interest, and we want to know if heights are different between the populations of adult women and men, this study could be considered a <strong>rough confirmatory</strong> study.</p>
 <p>In that situation it would also be appropriate to use graphs, means, and effect sizes, along with confidence intervals. All of the output we obtained above could be used. The difference is that you may emphasize the confidence intervals of the linear model coefficients</p>
 <div class="cell">
@@ -1179,8 +1182,8 @@ Gendermale   5.306584  5.570939</code></pre>
 </div>
 <p>Such studies should be followed by strict confirmatory studies if there is support for any of the hypotheses. All analyses and exploratory techniques should be reported transparently.</p>
 </section>
-<section id="strict-confirmatory-study" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="strict-confirmatory-study"><span class="header-section-number">3.2.5</span> Strict Confirmatory Study</h3>
+<section id="strict-confirmatory-study" class="level3" data-number="5.2.5">
+<h3 data-number="5.2.5" class="anchored" data-anchor-id="strict-confirmatory-study"><span class="header-section-number">5.2.5</span> Strict Confirmatory Study</h3>
 <p>This study requires that specific hypotheses related to theory are posited before the data are collected. Then those, and only those hypotheses should be tested and interpreted in the manner that follows. Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above. This includes adding any sub-group analyses. If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis. Such an error is known as <strong>HARK</strong>ing, which stands for <strong>H</strong>ypothesizing <strong>A</strong>fter the <strong>R</strong>esults are <strong>K</strong>nown. It’s bad. Really bad.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ht.gender_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1208,9 +1211,9 @@ F-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-Fife2022Understandingexploratory/confirmatorydata" class="csl-entry" role="doc-biblioentry">
-Fife, Dustin A., and Joseph Lee Rodgers. 2022. <span>“Understanding the Exploratory/Confirmatory Data Analysis Continuum: Moving Beyond the <span>“</span>Replication Crisis<span>”</span>.”</span> <em>American Psychologist</em> 77 (3): 453–66. <a href="https://doi.org/10.1037/amp0000886">https://doi.org/10.1037/amp0000886</a>.
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Fife2022Understandingexploratory/confirmatorydata" class="csl-entry" role="listitem">
+Fife, D. A., &amp; Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the <span>“</span>replication crisis<span>”</span>. <em>American Psychologist</em>, <em>77</em>(3), 453–466. <a href="https://doi.org/10.1037/amp0000886">https://doi.org/10.1037/amp0000886</a>
 </div>
 </div>
 </section>
@@ -1244,9 +1247,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1311,6 +1328,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1352,13 +1455,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./simulation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulation in R</span></span>
+      <a href="./dgp.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Generating Processes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./multipleRegression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multiple Regression Models</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate Linear Models</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1366,6 +1469,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><em>Design and Analysis: A Computational Model-Based Approach</em> was written by William M. Murrah III.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">Return to <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.</div>
   </div>
 </footer>

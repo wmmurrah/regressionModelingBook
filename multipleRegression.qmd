@@ -1,8 +1,11 @@
 ---
-title: "Multiple Regression Models"
+title: "Multivariate Linear Models"
+tbl-colwidths: [75,25]
 ---
 ```{r}
 #| echo: false
+#| warning: false
+#| message: false
 # Some customization.  You can alter or delete as desired (if you know what you are doing).
 library(mosaic)
 # This changes the default colors in lattice plots.
@@ -19,7 +22,9 @@ opts_chunk$set(
   warning = FALSE,
   message = FALSE
 )
-
+library(apaTables)
+library(kableExtra)
+library(gridExtra)
 ```
 
 ## Assumptions of Linear Models
@@ -149,91 +154,6 @@ mod.cage <- lm(Weight ~ cAge, data = mswt)
 summary(mod.cage)
 ```
 
-# Exercise Example
-
-## Exercise Data
-
-**wtloss**   - Average weekly weight loss
-
-**food**     - average daily caloric intake above minimum 1000, in 100s of calories 
-
-**exercise**  - average weekly hours of exercise
-
-* What relation should we expect between amount of food consumed and weight loss?
-
-## Exercise Data
-
-```{r}
-#| results: asis
-library(dplyr)
-library(ggplot2)
-library(knitr)
-
-# Set ggplot default font size
-theme_update(text = element_text(size = 18))
-tsize = 30
-options(scipen=5)
-
-exercise <- read.csv("data/exercise.csv", header = TRUE)
-exer <- exercise %>% 
-  select(exercise, food, wtloss)
-exer <- as.data.frame(exer)
-kable(exer)
-```
-## Assessing the Shape of Variable Distributions
-    
-```{r}
-library(gridExtra)
-h1 <- ggplot(exercise, aes(factor(wtloss))) + geom_bar() +
-  xlab("Wt Loss(100's gr/wk.)") + ylim(0, 4)
-h2 <- ggplot(exercise, aes(factor(exercise))) + geom_bar() +
-     xlab("Exericise(hrs./wk.)") + ylab(NULL) + ylim(0, 4)
-h3 <- ggplot(exercise, aes(factor(food))) + geom_bar() + 
-      xlab("food (100's cal. over min.)") + ylab(NULL) + ylim(0, 4)
-grid.arrange(h1, h2, h3, nrow= 1)
-```
-
-## Correlations Between Predictors (APA style table)
-
-```{r}
-library(apaTables)
-library(kableExtra)
-tab <- apa.cor.table(exer, )
-kable(tab[[3]], justify = 'left', caption = "Table 1: Means, standard deviations, and correlations with confidence intervals") %>% 
-  add_footnote("Note. M and SD are used to represent mean and standard deviation, respectively. Values in square brackets indicate the 95% confidence interval. The confidence interval is a plausible range of population correlations that could have caused the sample correlation (Cumming, 2014). \n\n* indicates p < .05. ** indicates p < .01.",notation = "none", threeparttable = TRUE )
-
-```
-
-### The Effect of Food Intake on Weight Loss is Confounded by Exercise
-
-```{r, results = 'asis', fig.height=6}
-exercise <- within(exercise, exercise <- factor(exercise))
-ggplot(exercise, aes(x = food, y = wtloss)) +
-  geom_point(size = 4) + 
-  theme(text = element_text(size=tsize))
-```
-
-### The Effect of Food Intake on Weight Loss is Confounded by Exercise
-
-```{r, fig.height=7}
-
-ggplot(exercise, aes(x = food, y = wtloss, shape = exercise, 
-                     color = exercise)) +
-  geom_point(size = 4) + 
-  theme(text = element_text(size=tsize))
-```
-
-### The Effect of Food Intake on Weight Loss is Confounded by Exercise
-
-```{r}
-
-exercise$alev <- dplyr::recode(exercise$exercise, `0`= 0L, `2` = 2L, `4` = 0L)
-ggplot(exercise, aes(x = food, y = wtloss, shape = exercise, 
-                     color = exercise, alpha = alev)) +
-  # scale_alpha_discrete(exercise$alev) + 
-  geom_point(size = 4) + guides(alpha = FALSE) +
-  theme(text = element_text(size=tsize))
-```
 
 ## Basic Ideas
 
@@ -288,9 +208,6 @@ htmlreg(list(mod_exer, mod_food, mod_exer_food), doctype = FALSE,
 * As if things were not confusing enough, $\beta$, in addition to representing the population parameter, is also often used to represent the standardized regression coefficient
 
 
-
-
-
 ## Relationship Between $b$ and $\beta$
     
 $b_k = \beta_k \frac{s_y}{s_k}$,
@@ -317,20 +234,6 @@ print(summary(zmod_exer_food), digits = 5)
 ```
 
 ## Unstandardized and Standardized Coefficients
-
-```{r, results = 'asis'}
-zmod_exer <- lm(scale(wtloss) ~ scale(exercise), data = exercise)
-zmod_food <- lm(scale(wtloss) ~ scale(food), data = exercise)
-names(zmod_exer$coefficients) <- names(mod_exer$coefficients)
-names(zmod_food$coefficients) <- names(mod_food$coefficients)
-names(zmod_exer_food$coefficients) <- names(mod_exer_food$coefficients)
-
-# htmlreg(list(mod_exer_food, zmod_exer_food),
-#        custom.model.names = c("unstandardized", "standardized"))
-htmlreg(list(mod_exer, zmod_exer, mod_food, zmod_food, mod_exer_food, zmod_exer_food),
-       custom.model.names = rep(c("unstand.", "stand."), 3), scalebox = .8, doctype = FALSE,
-       caption = "Comparing unstandardized and standardized models of weight loss")
-```
 
 ## Basic Ideas: $R^2$
 
@@ -644,3 +547,54 @@ mod3 <- update(mod1, . ~ . + c1genk)
 mod4 <- lm(c5read ~ c1read + c1genk, data = simach3)
 htmlreg(list(mod1, mod2, mod3, mod4), doctype = FALSE)
 ```
+
+# Issues in Multiple Regression
+
+```{r}
+# Matrix A from Table 1 of Gordon (1968, p. 597)
+matrixA <- matrix(c(1.0, 0.8, 0.8, 0.2, 0.2, 0.6,
+                    0.8, 1.0, 0.8, 0.2, 0.2, 0.6,
+                    0.8, 0.8, 1.0, 0.2, 0.2, 0.6,
+                    0.2, 0.2, 0.2, 1.0, 0.8, 0.6,
+                    0.2, 0.2, 0.2, 0.8, 1.0, 0.6,
+                    0.6, 0.6, 0.6, 0.6, 0.6, 1.0),
+                  nrow = 6)
+```
+
+```{r}
+#| label: tbl-matA
+#| tbl-cap: "Correlation Matrix A from Table 1 in Gordon (1968)"
+kable(matrixA)
+```
+
+
+
+
+
+```{r}
+matrixB <- matrix(
+  c(1.0, 0.8, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2,
+    0.8, 1.0, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, 
+    0.8, 0.8, 1.0, 0.8, 0.2, 0.2, 0.2, 0.2,
+    0.8, 0.8, 0.8, 1.0, 0.2, 0.2, 0.2, 0.2, 
+    0.2, 0.2, 0.2, 0.2, 1.0, 0.8, 0.8, 0.2,
+    0.2, 0.2, 0.2, 0.2, 0.8, 1.0, 0.8, 0.2, 
+    0.2, 0.2, 0.2, 0.2, 0.8, 0.8, 1.0, 0.2,
+    0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 1.0),
+  nrow = 8)
+```
+
+```{r}
+matrixC <- matrix(
+  c(1.0, 0.8, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6,
+    0.8, 1.0, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6, 
+    0.8, 0.8, 1.0, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6, 
+    0.8, 0.8, 0.8, 1.0, 0.2, 0.2, 0.2, 0.2, 0.6, 
+    0.2, 0.2, 0.2, 0.2, 1.0, 0.8, 0.8, 0.2, 0.6,
+    0.2, 0.2, 0.2, 0.2, 0.8, 1.0, 0.8, 0.2, 0.6, 
+    0.2, 0.2, 0.2, 0.2, 0.8, 0.8, 1.0, 0.2, 0.6,
+    0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 1.0, 0.6, 
+    0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 1.0),
+  nrow = 9)
+```
+

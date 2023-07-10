@@ -1,5 +1,5 @@
 ---
-title: "Simple Regression Models"
+title: "Simple Linear Models"
 editor: 
   markdown: 
     wrap: sentence

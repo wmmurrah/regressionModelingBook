@@ -89,4 +89,56 @@
   publisher = {American Psychological Association ({APA})},
 }
 
+@Article{Judd1995DataanalysisContinuing,
+  author    = {Judd, Charles M. and McClelland, Gary H. and Culhane, Sara E.},
+  journal   = {Annual review of psychology},
+  title     = {Data analysis: Continuing issues in the everyday analysis of psychological data},
+  year      = {1995},
+  number    = {1},
+  pages     = {433--465},
+  volume    = {46},
+  file      = {:Files/1995/Judd1995DataanalysisContinuing.pdf:PDF},
+  owner     = {wmmurrah},
+  publisher = {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA},
+}
+
+Zotero automatically redirected your request to www.jstor.org through the proxy at spot.lib.auburn.edu.
+Don’t Proxy This Site
+Proxy Settings
+✕
+@Article{Tukey1991philosophymultiplecomparisons,
+  author    = {Tukey, John W.},
+  journal   = {Statistical science},
+  title     = {The philosophy of multiple comparisons},
+  year      = {1991},
+  pages     = {100--116},
+  file      = {:/Users/wmm0017/Library/CloudStorage/Dropbox/References/Files/1991/Tukey1991philosophymultiplecomparisons.pdf:PDF},
+  owner     = {wmmurrah},
+  publisher = {JSTOR},
+}
+
+@Article{Platt1964Stronginference,
+  author    = {Platt, John R.},
+  journal   = {science},
+  title     = {Strong inference},
+  year      = {1964},
+  number    = {3642},
+  pages     = {347--353},
+  volume    = {146},
+  file      = {:Files/1964/Platt1964Stronginference.pdf:PDF},
+  groups    = {Inference, Methods},
+  owner     = {wmmurrah},
+  publisher = {JSTOR},
+}
+
+@InCollection{West2002Systemsratestrength,
+  author    = {S West, V King, T.S. Carey K.N. Lohr N. McKoy S.F. Sutton and Lux, L.},
+  booktitle = {AHRQ Evidence Report Summaries},
+  publisher = {NIH},
+  title     = {Systems to rate the strength of scientific evidence},
+  year      = {2002},
+  file      = {:/Users/wmm0017/Library/CloudStorage/Dropbox/References/Files/2002/West2002Systemsratestrength.pdf:PDF},
+  owner     = {wmmurrah},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

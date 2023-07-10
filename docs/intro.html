@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Design and Analysis: A Computational Model-Based Approach - 1&nbsp; Introduction to Scientific Modeling</title>
+<title>Research Design and Analysis: A Computational Model-Based Approach - 1&nbsp; Introduction to Scientific Modeling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./simulation.html" rel="next">
+<link href="./introR.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -81,17 +81,23 @@ div.csl-indent {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -99,86 +105,121 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Design and Analysis: A Computational Model-Based Approach</a> 
+      <a href="./">Research Design and Analysis: A Computational Model-Based Approach</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./simulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulation in R</span></a>
+  <a href="./introR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./simpleModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple Regression Models</span></a>
+  <a href="./understandingData.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multipleRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multiple Regression Models</span></a>
+  <a href="./dgp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Generating Processes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./moderatedRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Moderated Regression</span></a>
+  <a href="./simpleModels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Linear Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./multipleRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate Linear Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./structuralRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Structural Regression</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statisticalthinkinglink.html" class="sidebar-item-text sidebar-link"></a><a href="https://www.statistical-thinking.com/">return to statistical-thinking.com</a>
+  <a href="./moderatedRegression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Moderated Regression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./missingdata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling with Missing Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statisticalthinkinglink.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"></span></a><a href="https://www.statistical-thinking.com/">return to statistical-thinking.com</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#a-little-philosophy-of-science" id="toc-a-little-philosophy-of-science" class="nav-link active" data-scroll-target="#a-little-philosophy-of-science"><span class="toc-section-number">1.1</span>  A little philosophy of science</a></li>
-  <li><a href="#modeling-in-science" id="toc-modeling-in-science" class="nav-link" data-scroll-target="#modeling-in-science"><span class="toc-section-number">1.2</span>  Modeling in Science</a>
+  <li><a href="#a-little-philosophy-of-science" id="toc-a-little-philosophy-of-science" class="nav-link active" data-scroll-target="#a-little-philosophy-of-science"><span class="header-section-number">1.1</span> A little philosophy of science</a>
   <ul class="collapse">
-  <li><a href="#modeling-workflow-mcelreath-2023" id="toc-modeling-workflow-mcelreath-2023" class="nav-link" data-scroll-target="#modeling-workflow-mcelreath-2023"><span class="toc-section-number">1.2.1</span>  Modeling Workflow (McElreath, 2023)</a></li>
+  <li><a href="#what-is-the-nature-of-reality" id="toc-what-is-the-nature-of-reality" class="nav-link" data-scroll-target="#what-is-the-nature-of-reality"><span class="header-section-number">1.1.1</span> What is the nature of reality?</a></li>
+  <li><a href="#how-do-we-come-to-know-things" id="toc-how-do-we-come-to-know-things" class="nav-link" data-scroll-target="#how-do-we-come-to-know-things"><span class="header-section-number">1.1.2</span> How do we come to know things?</a></li>
   </ul></li>
-  <li><a href="#research-design-and-analysis" id="toc-research-design-and-analysis" class="nav-link" data-scroll-target="#research-design-and-analysis"><span class="toc-section-number">1.3</span>  Research Design and Analysis</a>
+  <li><a href="#modeling-in-science" id="toc-modeling-in-science" class="nav-link" data-scroll-target="#modeling-in-science"><span class="header-section-number">1.2</span> Modeling in Science</a>
   <ul class="collapse">
-  <li><a href="#exploratory-to-confirmatory-data-analysis-continuum" id="toc-exploratory-to-confirmatory-data-analysis-continuum" class="nav-link" data-scroll-target="#exploratory-to-confirmatory-data-analysis-continuum"><span class="toc-section-number">1.3.1</span>  Exploratory to Confirmatory Data Analysis Continuum</a></li>
+  <li><a href="#modeling-workflow-mcelreath-2023" id="toc-modeling-workflow-mcelreath-2023" class="nav-link" data-scroll-target="#modeling-workflow-mcelreath-2023"><span class="header-section-number">1.2.1</span> Modeling Workflow (McElreath, 2023)</a></li>
   </ul></li>
-  <li><a href="#ethics-in-science" id="toc-ethics-in-science" class="nav-link" data-scroll-target="#ethics-in-science"><span class="toc-section-number">1.4</span>  Ethics in Science</a>
+  <li><a href="#research-design-and-analysis" id="toc-research-design-and-analysis" class="nav-link" data-scroll-target="#research-design-and-analysis"><span class="header-section-number">1.3</span> Research Design and Analysis</a>
   <ul class="collapse">
-  <li><a href="#pat-and-sam" id="toc-pat-and-sam" class="nav-link" data-scroll-target="#pat-and-sam"><span class="toc-section-number">1.4.1</span>  Pat and Sam</a></li>
+  <li><a href="#exploratory-to-confirmatory-data-analysis-continuum" id="toc-exploratory-to-confirmatory-data-analysis-continuum" class="nav-link" data-scroll-target="#exploratory-to-confirmatory-data-analysis-continuum"><span class="header-section-number">1.3.1</span> Exploratory to Confirmatory Data Analysis Continuum</a></li>
+  <li><a href="#strong-inference" id="toc-strong-inference" class="nav-link" data-scroll-target="#strong-inference"><span class="header-section-number">1.3.2</span> Strong Inference</a></li>
   </ul></li>
+  <li><a href="#ethics-in-science" id="toc-ethics-in-science" class="nav-link" data-scroll-target="#ethics-in-science"><span class="header-section-number">1.4</span> Ethics in Science</a>
+  <ul class="collapse">
+  <li><a href="#incentives-in-science" id="toc-incentives-in-science" class="nav-link" data-scroll-target="#incentives-in-science"><span class="header-section-number">1.4.1</span> Incentives in Science</a></li>
+  <li><a href="#pat-and-sam" id="toc-pat-and-sam" class="nav-link" data-scroll-target="#pat-and-sam"><span class="header-section-number">1.4.2</span> Pat and Sam</a></li>
+  </ul></li>
+  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity"><span class="header-section-number">1.5</span> Complexity</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +228,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Scientific Modeling</span></h1>
 </div>
 
 
@@ -204,11 +245,19 @@ div.csl-indent {
 
 <section id="a-little-philosophy-of-science" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-little-philosophy-of-science"><span class="header-section-number">1.1</span> A little philosophy of science</h2>
-<p>To me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But it is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us.</p>
-<p>Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified representation of a much more complex system.</p>
+<p>There are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend. I do this for at least two reason. First, I think it does help readers to know where an author is coming from, when explaining methodological implications. Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic’s misunderstanding of quantitative methods.</p>
+<p>What follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things. I will necessarily be cursory, to keep from going to far afield. Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.</p>
+<p>To me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But I am convinced that this unitary reality is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us. Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.</p>
+<section id="what-is-the-nature-of-reality" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="what-is-the-nature-of-reality"><span class="header-section-number">1.1.1</span> What is the nature of reality?</h3>
+</section>
+<section id="how-do-we-come-to-know-things" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="how-do-we-come-to-know-things"><span class="header-section-number">1.1.2</span> How do we come to know things?</h3>
+</section>
 </section>
 <section id="modeling-in-science" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="modeling-in-science"><span class="header-section-number">1.2</span> Modeling in Science</h2>
+<p>Models are not optional, but can there is variability on how well we understand and articulate the models underlying our work. Models are not independent, they depend on an context and purpose.</p>
 <section id="modeling-workflow-mcelreath-2023" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="modeling-workflow-mcelreath-2023"><span class="header-section-number">1.2.1</span> Modeling Workflow (McElreath, 2023)</h3>
 <ol type="1">
@@ -224,23 +273,37 @@ div.csl-indent {
 <h2 data-number="1.3" class="anchored" data-anchor-id="research-design-and-analysis"><span class="header-section-number">1.3</span> Research Design and Analysis</h2>
 <section id="exploratory-to-confirmatory-data-analysis-continuum" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="exploratory-to-confirmatory-data-analysis-continuum"><span class="header-section-number">1.3.1</span> Exploratory to Confirmatory Data Analysis Continuum</h3>
-<p>see<span class="citation" data-cites="Fife2022Understandingexploratory/confirmatorydata">(<a href="references.html#ref-Fife2022Understandingexploratory/confirmatorydata" role="doc-biblioref">Fife and Rodgers 2022</a>)</span></p>
+<p>see <span class="citation" data-cites="Fife2022Understandingexploratory/confirmatorydata">(<a href="references.html#ref-Fife2022Understandingexploratory/confirmatorydata" role="doc-biblioref">Fife &amp; Rodgers, 2022</a>)</span></p>
 <p>A p-value cannot be used for exploratory analyses.</p>
 <p>If your theoretical framework does not suggest a causal graph, you are very likely not ready for a confirmatory data analysis.</p>
+</section>
+<section id="strong-inference" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="strong-inference"><span class="header-section-number">1.3.2</span> Strong Inference</h3>
+<p>see <span class="citation" data-cites="Platt1964Stronginference">(<a href="references.html#ref-Platt1964Stronginference" role="doc-biblioref">Platt, 1964</a>)</span></p>
 </section>
 </section>
 <section id="ethics-in-science" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="ethics-in-science"><span class="header-section-number">1.4</span> Ethics in Science</h2>
-<section id="pat-and-sam" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="pat-and-sam"><span class="header-section-number">1.4.1</span> Pat and Sam</h3>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-Fife2022Understandingexploratory/confirmatorydata" class="csl-entry" role="doc-biblioentry">
-Fife, Dustin A., and Joseph Lee Rodgers. 2022. <span>“Understanding the Exploratory/Confirmatory Data Analysis Continuum: Moving Beyond the <span>“</span>Replication Crisis<span>”</span>.”</span> <em>American Psychologist</em> 77 (3): 453–66. <a href="https://doi.org/10.1037/amp0000886">https://doi.org/10.1037/amp0000886</a>.
-</div>
-</div>
+<section id="incentives-in-science" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="incentives-in-science"><span class="header-section-number">1.4.1</span> Incentives in Science</h3>
 </section>
+<section id="pat-and-sam" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="pat-and-sam"><span class="header-section-number">1.4.2</span> Pat and Sam</h3>
+</section>
+</section>
+<section id="complexity" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="complexity"><span class="header-section-number">1.5</span> Complexity</h2>
+<p>we need models to be simple as possible. To the extent that our simulations are usefule, the complexity remains in the data.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Fife2022Understandingexploratory/confirmatorydata" class="csl-entry" role="listitem">
+Fife, D. A., &amp; Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the <span>“</span>replication crisis<span>”</span>. <em>American Psychologist</em>, <em>77</em>(3), 453–466. <a href="https://doi.org/10.1037/amp0000886">https://doi.org/10.1037/amp0000886</a>
+</div>
+<div id="ref-Platt1964Stronginference" class="csl-entry" role="listitem">
+Platt, J. R. (1964). Strong inference. <em>Science</em>, <em>146</em>(3642), 347–353.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -271,9 +334,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -338,6 +415,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -384,8 +547,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./simulation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulation in R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./introR.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -393,6 +556,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><em>Design and Analysis: A Computational Model-Based Approach</em> was written by William M. Murrah III.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">Return to <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.</div>
   </div>
 </footer>
