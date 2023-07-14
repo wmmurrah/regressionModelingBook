@@ -27,4 +27,19 @@ summary(Davis)
 ```
 
 
+```{r}
+getwd()
+source("code/import_cogexp.R")
+cogexp1 <- import_cogexp(folder = "data/snarc_experiment/exp1_data/")
+```
+
+
+```{r}
+library(tidyverse, quietly = TRUE)
+```
+```{r}
+ggplot(cogexp1[cogexp1$id %in% 1:5, ], aes(y = rt, x = trial, group = factor(id),
+                                         color = factor(id))) +
+  geom_line() + facet_grid(block ~ program)
+```
 
