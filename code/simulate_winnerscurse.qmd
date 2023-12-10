@@ -1,0 +1,66 @@
+---
+title: "Research Design"
+---
+
+```{r}
+n_D <- 1e6
+n_d <- 50
+set.seed(1234)
+
+mat <- data.frame(
+  D = rnorm(n_D, 0, .25))
+mat$d <- mat$D + rnorm(nrow(mat), 0, .25)
+
+
+
+```
+
+```{r}
+plot(D ~ d, data = mat, ylim = c(-1.2, 1.2))
+```
+
+
+```{r}
+mat_D <- mat[round(mat$D, 1) == .6, ]
+mean(mat_D$d - mat_D$D)
+```
+
+```{r}
+hist(mat_D$d - mat_D$D, breaks = "fd")
+abline(v = 0, col = "red", lwd = 3) 
+```
+
+
+```{r}
+mat_d <- mat[round(mat$d, 1) == .6, ]
+mean(mat_d$d - mat_d$D)
+```
+
+
+
+```{r}
+hist(mat_d$d - mat_d$D , breaks = "fd")
+abline(v = 0, col = "red", lwd = 3)
+```
+
+```{r}
+d <- mean(mat_D$d)
+hist(mat_D$d, breaks = "fd", main = "d conditional on delta = .6", 
+     xlab = "d")
+abline(v = .6, col = "red", lwd = 3)
+text(1.2, 600, "Mean d = .59", col = "red")
+```
+
+```{r}
+hist(mat_d$D, breaks = 'fd', main = "delta conditional on d = .6",
+     xlab = "delta")
+abline(v = .6, col = "red")
+abline(v = .3, col = "blue")
+text(-.2, 900, paste0(" mean delta = ", round(mean(mat_d$D),2)))
+```
+
+```{r}
+delta_neg <- ifelse(mat_d$D < 0, 1, 0)
+prop.table(table(delta_neg))
+```
+

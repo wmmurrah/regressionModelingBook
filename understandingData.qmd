@@ -30,7 +30,7 @@ summary(Davis)
 ```{r}
 getwd()
 source("code/import_cogexp.R")
-cogexp1 <- import_cogexp(folder = "data/snarc_experiment/exp1_data/")
+cogexp1 <- import_cogexp(folder = "projects/snarc_experiment/exp1_data/")
 ```
 
 

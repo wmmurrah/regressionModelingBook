@@ -170,4 +170,31 @@ Proxy Settings
   publisher = {Springer Science and Business Media {LLC}},
 }
 
+@Article{Angrist2009effectshighstakes,
+  author    = {Angrist, Joshua and Lavy, Victor},
+  journal   = {American Economic Review},
+  title     = {The effects of high stakes high school achievement awards: evidence from a randomized trial},
+  year      = {2009},
+  month     = {aug},
+  number    = {4},
+  pages     = {1384--1414},
+  volume    = {99},
+  doi       = {10.1257/aer.99.4.1384},
+  owner     = {wmmurrah},
+  publisher = {American Economic Association},
+}
+
+@Article{Templeman2021randomizedcontrolledtrial,
+  author    = {Templeman, Iain and Smith, Harry Alex and Chowdhury, Enhad and Chen, Yung-Chih and Carroll, Harriet and Johnson-Bonson, Drusus and Hengist, Aaron and Smith, Rowan and Creighton, Jade and Clayton, David and Varley, Ian and Karagounis, Leonidas Georgios and Wilhelmsen, Andrew and Tsintzas, Kostas and Reeves, Sue and Walhin, Jean-Philippe and Gonzalez, Javier Thomas and Thompson, Dylan and Betts, James Alexander},
+  journal   = {Science Translational Medicine},
+  title     = {A randomized controlled trial to isolate the effects of fasting and energy restriction on weight loss and metabolic health in lean adults},
+  year      = {2021},
+  month     = {jun},
+  number    = {598},
+  volume    = {13},
+  doi       = {10.1126/scitranslmed.abd8034},
+  owner     = {wmmurrah},
+  publisher = {American Association for the Advancement of Science ({AAAS})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

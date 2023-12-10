@@ -1,0 +1,69 @@
+---
+title: "Test Python"
+---
+
+```{python}
+y = 3
+x = 4
+z = y*x
+print(z)
+```
+
+
+Using the Python script `ball.py`.
+
+```{python}
+from math import atan, pi
+
+x = 10.0             # Horizontal position
+y = 10.0             # Vertical position
+
+angle = atan(y/x)        
+
+print((angle/pi)*180)
+
+```
+
+
+in R:
+
+```{R}
+x <- 10.0            # Horizontal position
+y <- 10.0            # Vertical position
+
+angle <- atan(y/x)
+print((angle/pi)*180)
+```
+
+```{python}
+17 // 5
+```
+```{r}
+17 %/% 5
+```
+
+## Mathematical Notation
+
+$$
+y = v_0t - 0.5gt^2
+$$
+
+```{python}
+v0 = 5; g = 9.81; t = 0.6
+
+y = v0*t - 0.5*g*t**2
+y
+```
+
+```{r}
+v0 = 5; g = 9.81; t = 0.6
+
+y = v0*t - 0.5*g*t^2
+y
+```
+
+```{python}
+2 == 1 + 1
+```
+
+

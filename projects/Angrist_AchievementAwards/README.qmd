@@ -1,0 +1,88 @@
+---
+title: "README"
+---
+
+This project was downloaded from:
+
+# Original readme.doc content:
+
+## The Effects of High Stakes High School Achievement Awards 
+By Angrist and Lavy
+
+Instructions for data and replication package (Prepared by Yannay Spitzer, completed August 27, 2008)
+
+### CONTENTS    
+Data files:
+base99.dta	Stata data files
+base00.dta	
+base01.dta	
+base02.dta	
+base00.sas7bdat	SAS data files used for tables 1 and A3
+base01.sas7bdat	
+base_ns.sas7bdat	SAS data file with college outcomes from National Insurance (the cohorts of 2000 and 2001 are pulled), used for table 8
+
+Programs:   
+table2.do	Stata programs creating the results in the corresponding tables   
+table3.do	    
+table4.do	    
+table5.do	    
+table6.do	    
+table7.do	    
+tableA1.do	    
+tableA2.do	    
+tableA4.do	    
+tableA5.do	    
+table1.sas	SAS program creating table 1    
+table8_linear_half.sas	SAS program creating table 8, held in a separate folder (table 8)   
+table8_linear_quart.sas	
+table8_logit_half.sas	
+table8_logit_quart.sas	
+BatchTableA3.sas	 SAS batch program creating table A3, using the 6 programs below. This program, together with the 6 programs that it operates and the two auxiliary programs (brl.sas and dummy.sas), is held in a separate folder (table A3).    
+brl_se00.sas	SAS programs manipulated by BatchTableA3.sas to create table A3   
+brl_se01.sas	
+micro00.sas	    
+micro01.sas	    
+2step00.sas	    
+2step01.sas	    
+
+Auxiliary programs:   
+brl.sas	SAS programs used by the programs creating table A3   
+Dummy.sas	    
+brl.ado	Stata ado file used by some of the Stata program. Copy this file into the corresponding ado folder (e.g., Program Files\Stata9\ado\updates\b)     
+
+ 
+INSTRUCTIONS
+
+* Create a data folder and insert the data files into it        
+* Create a log folder   
+* Add the Stata brl.ado file to the ado folder    
+* Before running the STATA programs, change the path of the data and logs  correspondingly. This is explained at the top of the programs.    
+* Before running the SAS files, read the corresponding readme files (ReadmeTable8.txt and ReadmeTableA3.txt) and the instructions at the top of the programs to see how the paths should be changed.    
+* Note that table A3 is created by a single SAS batch file that manipulates 6 different programs, while Table 8 is created by 4 different SAS files that should be ran separately.    
+
+### NOTES   
+* The fictitious student id was assigned separately in each file, so student don't necessarily have the same student id in the STATA files as in the SAS files, or in the SAS file that contains the National Insurance college outcomes.   
+* Results don't necessarily appear in the same order as in the tables in the paper, and the programs produce many non-reported figures. The main confusion may be in the results produced by the SAS programs, so additional explanations were added to the readme files.    
+ 
+### CODEBOOK 
+
+Variable name     |	Type	  | Contents
+------------------|-------  |---------
+Treated           | Dummy	  | Indicates treatment group
+Pair 	            | Integer	| Number of treatment pair (from 1 to 19, not including 6; 7 is a triple)
+m_ahim.           | Integer	| Number of siblings
+Boy	              | Dummy	  | Indicates sex
+ole5	            | Dummy	  | Indicates immigrants
+Educav	          | Integer	| Father's education
+Educem	          | Integer	| Mother's education
+zakaibag	        | Dummy	  | Indicates for Bagrut status
+lagscore	        | Float.  |	Lagged Bagrut score
+Semrel	          | Dummy	  | Indicates religious schools
+semarab	          | Dummy	  | Indicates Arab schools
+att#	            | Dummy	  | Indicates attempted # of Bagrut units
+awr#	            | Dummy	  | Indicates awarded # of Bagrut units
+achv_math/eng/hib	| Dummy	  | Indicates satisfaction of the requirements in Math, English and Hebrew
+Year	            | Integer	| Cohort year
+Student_id	      | Integer | Fictitious individual identification number
+School_id	        | Integer	| Fictitious school identification number
+

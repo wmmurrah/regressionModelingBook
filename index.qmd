@@ -34,3 +34,13 @@ I prioritized articles that provide access to raw data and computer code, as thi
 I have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.
 
 I have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process. 
+
+## Integration
+
+This book integrates information on:
+
+* Model Selection
+* Simulation
+* Directed Acyclic Graphs
+* Exploratory Data Analysis through graphing data
+* Continuum of research designs and their statistical models from exploratory to confirmatory
