@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research Design and Analysis: A Computational Model-Based Approach - 7&nbsp; Structural Regression</title>
+<title>Modeling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,174 +23,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./moderatedRegression.html" rel="next">
-<link href="./multipleRegression.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 20,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
-  }
-}</script>
+<script src="modeling_files/libs/clipboard/clipboard.min.js"></script>
+<script src="modeling_files/libs/quarto-html/quarto.js"></script>
+<script src="modeling_files/libs/quarto-html/popper.min.js"></script>
+<script src="modeling_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="modeling_files/libs/quarto-html/anchor.min.js"></script>
+<link href="modeling_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="modeling_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="modeling_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="modeling_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="modeling_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./structuralRegression.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Structural Regression</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Research Design and Analysis: A Computational Model-Based Approach</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Research Design and Analysis</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./introR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./understandingData.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding Data</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dgp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Generating Processes</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./simpleModels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Simple Linear Models</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./multipleRegression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate Linear Models</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./structuralRegression.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Structural Regression</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./moderatedRegression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Moderated Regression</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./missingdata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling with Missing Data</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./statisticalthinkinglink.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"></span></a><a href="https://www.statistical-thinking.com/">return to statistical-thinking.com</a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#dags" id="toc-dags" class="nav-link active" data-scroll-target="#dags"><span class="header-section-number">7.1</span> DAGS</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Structural Regression</span></h1>
+<h1 class="title">Modeling</h1>
 </div>
 
 
@@ -205,13 +60,39 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="dags" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="dags"><span class="header-section-number">7.1</span> DAGS</h2>
-
-
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<ol type="1">
+<li><p>Statement of problem and limitations of solutions:<br>
+replication crisis - many studies do not replicate<br>
+in part due to “systematic” procedures of hypothesis testing.<br>
+Many proposed solutions to crisis seem to be aimed at removing, not enhancing, researcher judgement.<br>
+</p></li>
+<li><p>Philosophical issues<br>
+Modeling vs.&nbsp;NHST<br>
+No “true” models<br>
+transparency not one-size-fits-all procedures<br>
+researcher incentives</p></li>
+<li><p>Design Issues Role of theory Causal thinking regardless of study design DAGs to elucidate assumptions and select candidate models Continuum of designs from exploratory to confirmatory</p></li>
+<li><p>Analysis Issues EDA/graphing data Model selection - issues with p values and large datasets Multimodel inference</p></li>
+<li><p>Interpretation/Reporting multiple models uncertainty</p>
+<p>Design, analysis, and interpretation</p></li>
+</ol>
+<p>Models are oversimplification of reality for a particular purpose.</p>
+</section>
+<section id="map-analogy" class="level2">
+<h2 class="anchored" data-anchor-id="map-analogy">Map Analogy</h2>
+<p>Models do not accurately represent reality. This is not a limitation of models but a feature. The analogy of a map will help this point. Maps are models: they are oversimplification of reality designed for a specific purpose. Imagine you come out of a subway into an unfamiliar city and you need to get to the museum. You see a news stand and walk over to buy a street map. As the salesperson hands you the map, another person approaches from the street an states that he has a more accurate map. In fact, the map is perfectly accurate. He pulls out a pair of virtual reality goggles and hands them to you, claiming that they contain a full scale 3d map that has all the details of the city, updated instantaneously. You notice immediately the the “virtual reality” goggles are just a pair of glasses with no</p>
+<p>The point of this analogy is that the oversimplification of a map is an important feature, and not a limitation. It is needed to get a sense of the “bigger picture” of our reality. The same goes for models: their simplicity is not a limitation but a feature needed to get a sense of the “bigger picture.”</p>
+<ol type="1">
+<li>establish a candidate set of models.</li>
+</ol>
+<p>I do believe that much of what is written about the replication crisis says to the student “your judgement can lead you astray”, which seems intentional in this work. But I fear the predominant conclusion these students draw is “so, do not rely on you judgement”, when instead the message should be “so, hone your skills in scientific judgement, as they are essential to this process.”</p>
+<p>Because models capture the assumptions and expected relations between abstract constructs, they also help with replication. A focus on comparing and refining models is better than simply rejecting (null) hypotheses. Models promote the accumulation of evidence.</p>
 </section>
 
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -445,28 +326,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./multipleRegression.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate Linear Models</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./moderatedRegression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Moderated Regression</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left"><em>Design and Analysis: A Computational Model-Based Approach</em> was written by William M. Murrah III.</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">Return to <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.</div>
-  </div>
-</footer>
 
 
 

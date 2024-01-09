@@ -1,0 +1,53 @@
+---
+title: "Estimation"
+---
+
+## Least Squares Estimation
+
+
+## Maximum Likelihood Estimation
+
+```{r}
+library(emdbook)
+library(ggplot2)
+data("ReedfrogPred")
+ReedfrogPred$density <- factor(ReedfrogPred$density)
+```
+
+```{r}
+ggplot(ReedfrogPred, aes(y = propsurv, fill = density, group = density)) + 
+  geom_boxplot() + facet_grid(size ~ pred)
+```
+
+```{r}
+aggregate(propsurv ~ density + size + pred, data = ReedfrogPred, mean)
+```
+
+
+The following is from Bolker (2008, p. 172):
+```{r}
+binomNLL1 <- function(p, k, N) {
+  -sum(dbinom(k, prob = p, size = N, log = TRUE))
+}
+```
+
+
+```{r}
+frog <- subset(ReedfrogPred, pred == "pred" & density == 10 & size == "small")
+k_j <- frog$surv # number of frogs that survived in each trial
+n_j <- 10       # number of frogs originally in each trial (samme for all here)
+J <- 4        # number of trials
+
+# Intermediate calculations
+K <- sum(k_j)  # how many survived acrass all trials?
+N <- n_j*J     # how many frogs were there in all the trials considered here?
+
+K/N               # the proportion of survivors across trials
+sum(k_j)/(n_j*J)  # the same calculation without the intermediate objects. 
+```
+We can find this with numeric optimization as follows:
+```{r}
+opt1 <- optim(fn = binomNLL1, par = c(p = 0.5), N = n_j, k = k_j, method = "BFGS")
+```
+## Bayesian Estimation
+

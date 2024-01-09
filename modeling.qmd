@@ -1,0 +1,63 @@
+---
+title: "Modeling"
+---
+
+
+## Outline
+
+1. Statement of problem and limitations of solutions:   
+   replication crisis - many studies do not replicate   
+   in part due to "systematic" procedures of hypothesis testing.    
+  Many proposed solutions to crisis seem to be aimed at removing, not enhancing, researcher judgement.    
+  
+2. Philosophical issues   
+   Modeling vs. NHST    
+   No "true" models   
+   transparency not one-size-fits-all procedures    
+   researcher incentives    
+   
+   
+3. Design Issues
+   Role of theory
+   Causal thinking regardless of study design
+   DAGs to elucidate assumptions and select candidate models
+   Continuum of designs from exploratory to confirmatory
+   
+   
+4. Analysis Issues
+   EDA/graphing data
+   Model selection - issues with p values and large datasets
+   Multimodel inference
+   
+5. Interpretation/Reporting
+   multiple models
+   uncertainty 
+   
+   
+
+   
+   
+Models are oversimplification of reality for a particular purpose.
+
+## Map Analogy
+
+Models do not accurately represent reality. This is not a limitation of models but a feature. The analogy of a map will help this point. Maps are models: they are oversimplification of reality designed for a specific purpose. Imagine you come out of a subway into an unfamiliar city and you need to get to the museum. You see a news stand and walk over to buy a street map. As the salesperson hands you the map, another person approaches from the street an states that he has a more accurate map. In fact, the map is perfectly accurate. He pulls out a pair of virtual reality goggles and hands them to you, claiming that they contain a full scale 3d map that has all the details of the city, updated instantaneously. You notice immediately the the "virtual reality" goggles are just a pair of glasses with no
+
+The point of this analogy is that the oversimplification of a map is an important feature, and not a limitation. It is needed to get a sense of the "bigger picture" of our reality. 
+The same goes for models: their simplicity is not a limitation but a feature needed to get a sense of the "bigger picture."
+
+A perfectly accurate map, one that contains all the information of reality would have to be as complex as reality (e.g. 3-dimensional, life size, constantly changing to reflect things like cars moving, etc.).
+
+Complaining that quantitative methods and therefore science is dehumanizing is equivalent to complaining that maps devalue buildings by flattening them. The purpose of most maps is not to accurately represent the height of buildings, but to let people know where they are relative to other things. 
+
+1.  establish a candidate set of models.
+
+
+I do believe that much of what is written about the replication crisis says to the student "your judgement can lead you astray", which seems intentional in this work. But I fear the predominant conclusion  these students draw is "so, do not rely on you judgement", when instead the message should be "so, hone your skills in scientific judgement, as they are essential to this process."
+
+
+Because models capture the assumptions and expected relations between abstract constructs, they also help with replication. 
+A focus on comparing and refining models is better than simply rejecting (null) hypotheses. Models promote the accumulation of evidence.
+
+
+The variance-bias trade-off is the statistical implementation of the principle of parsimony (Burnham, 2004).

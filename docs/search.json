@@ -42,39 +42,46 @@
     "text": "Integration\nThis book integrates information on:\n\nModel Selection\nSimulation\nDirected Acyclic Graphs\nExploratory Data Analysis through graphing data\nContinuum of research designs and their statistical models from exploratory to confirmatory"
   },
   {
-    "objectID": "intro.html#a-little-philosophy-of-science",
-    "href": "intro.html#a-little-philosophy-of-science",
-    "title": "1  Introduction to Scientific Modeling",
-    "section": "1.1 A little philosophy of science",
-    "text": "1.1 A little philosophy of science\nThere are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend. I do this for at least two reason. First, I think it does help readers to know where an author is coming from, when explaining methodological implications. Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic’s misunderstanding of quantitative methods.\nWhat follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things. I will necessarily be cursory, to keep from going to far afield. Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But I am convinced that this unitary reality is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us. Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.\n\n1.1.1 What is the nature of reality?\n\n\n1.1.2 How do we come to know things?"
+    "objectID": "intro.html#scientific-method-and-philosophical-foundations-of-modeling",
+    "href": "intro.html#scientific-method-and-philosophical-foundations-of-modeling",
+    "title": "1  Introduction to Research Design and Analysis",
+    "section": "1.1 Scientific Method and Philosophical Foundations of Modeling",
+    "text": "1.1 Scientific Method and Philosophical Foundations of Modeling\nThere are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend. I do this for at least two reason. First, I think it does help readers to know where an author is coming from, when explaining methodological implications. Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic’s misunderstanding of quantitative methods.\nWhat follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things. I will necessarily be cursory, to keep from going to far afield. Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But I am convinced that this unitary reality is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us. Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.\n\n1.1.1 What is the nature of reality?\n\n\n1.1.2 How do we come to know things?"
   },
   {
     "objectID": "intro.html#modeling-in-science",
     "href": "intro.html#modeling-in-science",
-    "title": "1  Introduction to Scientific Modeling",
+    "title": "1  Introduction to Research Design and Analysis",
     "section": "1.2 Modeling in Science",
-    "text": "1.2 Modeling in Science\nModels are not optional, but can there is variability on how well we understand and articulate the models underlying our work. Models are not independent, they depend on an context and purpose.\n\n1.2.1 Modeling Workflow (McElreath, 2023)\n\nDefine a generative model of the sample,\nDefine specific estimand,\nDefine statistical model to produce estimand,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
+    "text": "1.2 Modeling in Science\nModels are not optional, but can there is variability on how well we understand and articulate the models underlying our work. Models are not independent, they depend on an context and purpose.\n\n1.2.1 Modeling Workflow (McElreath, 2023)\n\nDefine a generative model of the sample,\nDefine specific estimands,\nDefine statistical model to produce estimands,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
   },
   {
     "objectID": "intro.html#research-design-and-analysis",
     "href": "intro.html#research-design-and-analysis",
-    "title": "1  Introduction to Scientific Modeling",
+    "title": "1  Introduction to Research Design and Analysis",
     "section": "1.3 Research Design and Analysis",
     "text": "1.3 Research Design and Analysis\n\n1.3.1 Exploratory to Confirmatory Data Analysis Continuum\nsee (Fife & Rodgers, 2022)\nA p-value cannot be used for exploratory analyses.\nIf your theoretical framework does not suggest a causal graph, you are very likely not ready for a confirmatory data analysis.\n\n\n1.3.2 Strong Inference\nsee (Platt, 1964)"
   },
   {
     "objectID": "intro.html#ethics-in-science",
     "href": "intro.html#ethics-in-science",
-    "title": "1  Introduction to Scientific Modeling",
+    "title": "1  Introduction to Research Design and Analysis",
     "section": "1.4 Ethics in Science",
-    "text": "1.4 Ethics in Science\n\n1.4.1 Incentives in Science\n\n\n1.4.2 Pat and Sam"
+    "text": "1.4 Ethics in Science\n\n1.4.1 Incentives in Science\n\n\n1.4.2 Pat and Sam\nCharacteristics of Pat 1. professional scientist, focused on promotion and status, therefore number of publications 2. partial and paternalistic with regard to personal theories (Chamberlin, 1890). Confirmation bias unchecked."
   },
   {
     "objectID": "intro.html#complexity",
     "href": "intro.html#complexity",
-    "title": "1  Introduction to Scientific Modeling",
+    "title": "1  Introduction to Research Design and Analysis",
     "section": "1.5 Complexity",
-    "text": "1.5 Complexity\nwe need models to be simple as possible. To the extent that our simulations are usefule, the complexity remains in the data.\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science, 146(3642), 347–353."
+    "text": "1.5 Complexity\nwe need models to be simple as possible. To the extent that our simulations are usefule, the complexity remains in the data."
+  },
+  {
+    "objectID": "intro.html#framework-for-research-design-and-analysis",
+    "href": "intro.html#framework-for-research-design-and-analysis",
+    "title": "1  Introduction to Research Design and Analysis",
+    "section": "1.6 Framework for Research Design and Analysis",
+    "text": "1.6 Framework for Research Design and Analysis\na few “continua” (continuous and discrete):\nexploratory to confirmatory\ndescription, prediction, explanation\ncorrelational to causal\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science, 146(3642), 347–353."
   },
   {
     "objectID": "introR.html#why-r-and-not-another-statistical-program",
@@ -165,7 +172,7 @@
     "href": "multipleRegression.html#simple-regression-model",
     "title": "6  Multivariate Linear Models",
     "section": "6.3 Simple Regression Model",
-    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-14.8563  -2.6493   0.0037   2.7084  16.3017 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.032477   0.039793  -0.816    0.414    \nrepht        0.999977   0.009883 101.184   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.979 on 9998 degrees of freedom\nMultiple R-squared:  0.5059,    Adjusted R-squared:  0.5059 \nF-statistic: 1.024e+04 on 1 and 9998 DF,  p-value: &lt; 2.2e-16"
+    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15.7693  -2.7039  -0.0157   2.6125  17.5803 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.027680   0.039340  -0.704    0.482    \nrepht        1.000818   0.009745 102.704   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.934 on 9998 degrees of freedom\nMultiple R-squared:  0.5134,    Adjusted R-squared:  0.5133 \nF-statistic: 1.055e+04 on 1 and 9998 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "multipleRegression.html#plotting-residuals",

@@ -1,0 +1,16 @@
+---
+title: "Model Selection"
+---
+
+
+```{r}
+data(NLSY, package = "heplots")
+```
+
+
+Kullback-Leibler Information
+
+$$
+I(f,g) = \int f(x)log \Big(\frac{f(x)}{g(x | \theta)}\Big) dx, 
+$$ {#eq-k-l}
+

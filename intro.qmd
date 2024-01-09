@@ -1,11 +1,11 @@
 ---
-title: Introduction to Scientific Modeling
+title: Introduction to Research Design and Analysis
 editor: 
   markdown: 
     wrap: sentence
 ---
 
-## A little philosophy of science
+## Scientific Method and Philosophical Foundations of Modeling
 
 There are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. 
 I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend.
@@ -45,8 +45,8 @@ Models are not independent, they depend on an context and purpose.
 ### Modeling Workflow (McElreath, 2023)
 
 1.  Define a generative model of the sample,
-2.  Define specific estimand,
-3.  Define statistical model to produce estimand,
+2.  Define specific estimands,
+3.  Define statistical model to produce estimands,
 4.  Test statistical model (3) using generative model (1),
 5.  Analyze and summarize sample.
 
@@ -70,8 +70,23 @@ see [@Platt1964Stronginference]
 
 ### Pat and Sam
 
+Characteristics of Pat
+1. professional scientist, focused on promotion and status, therefore number of publications
+2. partial and paternalistic with regard to personal theories (Chamberlin, 1890). Confirmation bias unchecked.
+
 
 ## Complexity
 
 we need models to be simple as possible. 
 To the extent that our simulations are usefule, the complexity remains in the data.
+
+## Framework for Research Design and Analysis
+
+
+a few "continua" (continuous and discrete):
+
+exploratory to confirmatory
+
+description, prediction, explanation
+
+correlational to causal
