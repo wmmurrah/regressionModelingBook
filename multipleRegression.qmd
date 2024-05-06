@@ -2,6 +2,7 @@
 title: "Multivariate Linear Models"
 tbl-colwidths: [75,25]
 ---
+
 ```{r}
 #| echo: false
 #| warning: false

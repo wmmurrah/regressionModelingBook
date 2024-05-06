@@ -4,482 +4,828 @@
     "href": "index.html",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "",
-    "text": "Preface\nThis book was created to:\nA traditional teaching method involves having student conduct simple statistical algorithms by hand, meaning working out the calculations step-by-step on paper, as to develop an intuition of the methods, and what they are doing. I take a computational approach in an attempt to achieve the same outcome, by encouraging readers to program the algorithms using the computer."
+    "text": "Preface\nThis book was created to:\nA traditional teaching method involves having student conduct simple statistical algorithms by hand, meaning working out the calculations step-by-step on paper, as to develop an intuition of the methods, and what they are doing. I take a computational approach in an attempt to achieve the same outcome, by encouraging readers to program the algorithms using the computer.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#model-based-approach",
     "href": "index.html#model-based-approach",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "Model-Based Approach",
-    "text": "Model-Based Approach\nA major goal of this book is that, after working through it, the researcher has a firm grasp of the general linear model, as a foundation to scientific modeling."
+    "text": "Model-Based Approach\nA major goal of this book is that, after working through it, the researcher has a firm grasp of the general linear model, as a foundation to scientific modeling.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#computational-approach",
     "href": "index.html#computational-approach",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "Computational Approach",
-    "text": "Computational Approach\nI use a programming language, not only to do statistics but as a tool to learn statistics.\nsimulation is used to develop intuitions about statistical methods."
+    "text": "Computational Approach\nI use a programming language, not only to do statistics but as a tool to learn statistics.\nsimulation is used to develop intuitions about statistical methods.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#project-based-approach",
     "href": "index.html#project-based-approach",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "Project-Based Approach",
-    "text": "Project-Based Approach\nProject-based examples,"
+    "text": "Project-Based Approach\nProject-based examples,",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#other-approaches-utilized-in-this-book",
     "href": "index.html#other-approaches-utilized-in-this-book",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "Other Approaches Utilized in this Book",
-    "text": "Other Approaches Utilized in this Book\nTo the extent possible, I have tried to use empirical studies and other published work when developing projects and research examples. I prioritized articles that provide access to raw data and computer code, as this not only helps readers see how information moves from raw data to peer reviewed publications, but also gives readers “hands-on” experience with the data interpretation process.\nI have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.\nI have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process."
+    "text": "Other Approaches Utilized in this Book\nTo the extent possible, I have tried to use empirical studies and other published work when developing projects and research examples. I prioritized articles that provide access to raw data and computer code, as this not only helps readers see how information moves from raw data to peer reviewed publications, but also gives readers “hands-on” experience with the data interpretation process.\nI have also utilized research studies of varied quality and challenge readers to evaluate the quality of the studies and give their justification.\nI have also scaffolded the various learning objective of the book. For example, I make the transition from the simulated/coceptual example, to the demonstrated empirical example to the empirical project fairly straight-forward early in the book, but less apparent as readers gain skill in this process.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#integration",
     "href": "index.html#integration",
     "title": "Research Design and Analysis: A Computational Model-Based Approach",
     "section": "Integration",
-    "text": "Integration\nThis book integrates information on:\n\nModel Selection\nSimulation\nDirected Acyclic Graphs\nExploratory Data Analysis through graphing data\nContinuum of research designs and their statistical models from exploratory to confirmatory"
+    "text": "Integration\nThis book integrates information on:\n\nModel Selection\nSimulation\nDirected Acyclic Graphs\nExploratory Data Analysis through graphing data\nContinuum of research designs and their statistical models from exploratory to confirmatory",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to Research Design and Analysis",
+    "section": "",
+    "text": "1.1 Scientific Method and Philosophical Foundations of Modeling\nThere are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend. I do this for at least two reason. First, I think it does help readers to know where an author is coming from, when explaining methodological implications. Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic’s misunderstanding of quantitative methods.\nWhat follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things. I will necessarily be cursory, to keep from going to far afield. Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But I am convinced that this unitary reality is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us. Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#scientific-method-and-philosophical-foundations-of-modeling",
     "href": "intro.html#scientific-method-and-philosophical-foundations-of-modeling",
     "title": "1  Introduction to Research Design and Analysis",
-    "section": "1.1 Scientific Method and Philosophical Foundations of Modeling",
-    "text": "1.1 Scientific Method and Philosophical Foundations of Modeling\nThere are numerous philosophical foundations for which the statistical and methodological structure modern quantitative methods can be built, and most textbooks on the topic avoid discussion of these foundations, presumably in part or whole, for this reason. I am no philosopher, but I will share some of my thoughts on the subject, breaking from the mentioned trend. I do this for at least two reason. First, I think it does help readers to know where an author is coming from, when explaining methodological implications. Second, there is much in recent literature that I think mischaracterized the typical quantitative methodologist. I am convinced that much of the criticism of current quantitative practices in the social and behavioral sciences, though not all, are due to the critic’s misunderstanding of quantitative methods.\nWhat follows is not meant to be a formal defense of my philosophical stance, but is meant to be a broad overview of how I see things. I will necessarily be cursory, to keep from going to far afield. Someone with stronger foundations in philosophy my also find some claims poorly defended and naive, but nonetheless, this is a brief exposition of how I think about the nature of reality and how our researh methods help us to understand that reality.\nTo me, reality consists of all that exists. This includes, physical objects and processes as well as things like ideas, feeling, and beliefs. So, to me, reality is unitary by definition – there is one reality. But I am convinced that this unitary reality is extremely complicated. I suspect that it is so complicated that we may never be able to fully comprehend it all, as a species, much less any one of us. Does this mean we can understand reality at all? I don’t think so. I don’t fully understand how my car works, but I do have basic ideas that allow me to problem solve issues such as when it won’t start. When we can’t fully understand something, we are left to build an model of that process. I will talk more about models below, but for now think of a model as an oversimplified purposeful representation of a much more complex system.\n\n1.1.1 What is the nature of reality?\n\n\n1.1.2 How do we come to know things?"
+    "section": "",
+    "text": "1.1.1 What is the nature of reality?\n\n\n1.1.2 How do we come to know things?",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#modeling-in-science",
     "href": "intro.html#modeling-in-science",
     "title": "1  Introduction to Research Design and Analysis",
     "section": "1.2 Modeling in Science",
-    "text": "1.2 Modeling in Science\nModels are not optional, but can there is variability on how well we understand and articulate the models underlying our work. Models are not independent, they depend on an context and purpose.\n\n1.2.1 Modeling Workflow (McElreath, 2023)\n\nDefine a generative model of the sample,\nDefine specific estimands,\nDefine statistical model to produce estimands,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample."
+    "text": "1.2 Modeling in Science\nModels are not optional, but can there is variability on how well we understand and articulate the models underlying our work. Models are not independent, they depend on an context and purpose.\n\n1.2.1 Modeling Workflow (McElreath, 2023)\n\nDefine a generative model of the sample,\nDefine specific estimands,\nDefine statistical model to produce estimands,\nTest statistical model (3) using generative model (1),\nAnalyze and summarize sample.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#research-design-and-analysis",
     "href": "intro.html#research-design-and-analysis",
     "title": "1  Introduction to Research Design and Analysis",
     "section": "1.3 Research Design and Analysis",
-    "text": "1.3 Research Design and Analysis\n\n1.3.1 Exploratory to Confirmatory Data Analysis Continuum\nsee (Fife & Rodgers, 2022)\nA p-value cannot be used for exploratory analyses.\nIf your theoretical framework does not suggest a causal graph, you are very likely not ready for a confirmatory data analysis.\n\n\n1.3.2 Strong Inference\nsee (Platt, 1964)"
+    "text": "1.3 Research Design and Analysis\n\n1.3.1 Exploratory to Confirmatory Data Analysis Continuum\nsee (Fife & Rodgers, 2022)\nA p-value cannot be used for exploratory analyses.\nIf your theoretical framework does not suggest a causal graph, you are very likely not ready for a confirmatory data analysis.\n\n\n1.3.2 Strong Inference\nsee (Platt, 1964)",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#ethics-in-science",
     "href": "intro.html#ethics-in-science",
     "title": "1  Introduction to Research Design and Analysis",
     "section": "1.4 Ethics in Science",
-    "text": "1.4 Ethics in Science\n\n1.4.1 Incentives in Science\n\n\n1.4.2 Pat and Sam\nCharacteristics of Pat 1. professional scientist, focused on promotion and status, therefore number of publications 2. partial and paternalistic with regard to personal theories (Chamberlin, 1890). Confirmation bias unchecked."
+    "text": "1.4 Ethics in Science\n\n1.4.1 Incentives in Science\n\n\n1.4.2 Pat and Sam\nCharacteristics of Pat 1. professional scientist, focused on promotion and status, therefore number of publications 2. partial and paternalistic with regard to personal theories (Chamberlin, 1890). Confirmation bias unchecked.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#complexity",
     "href": "intro.html#complexity",
     "title": "1  Introduction to Research Design and Analysis",
     "section": "1.5 Complexity",
-    "text": "1.5 Complexity\nwe need models to be simple as possible. To the extent that our simulations are usefule, the complexity remains in the data."
+    "text": "1.5 Complexity\nwe need models to be simple as possible. To the extent that our simulations are usefule, the complexity remains in the data.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
   },
   {
     "objectID": "intro.html#framework-for-research-design-and-analysis",
     "href": "intro.html#framework-for-research-design-and-analysis",
     "title": "1  Introduction to Research Design and Analysis",
     "section": "1.6 Framework for Research Design and Analysis",
-    "text": "1.6 Framework for Research Design and Analysis\na few “continua” (continuous and discrete):\nexploratory to confirmatory\ndescription, prediction, explanation\ncorrelational to causal\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science, 146(3642), 347–353."
+    "text": "1.6 Framework for Research Design and Analysis\na few “continua” (continuous and discrete):\nexploratory to confirmatory\ndescription, prediction, explanation\ncorrelational to causal\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science, 146(3642), 347–353.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Research Design and Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "introR.html",
+    "href": "introR.html",
+    "title": "2  Introduction to R and RStudio",
+    "section": "",
+    "text": "2.1 Why R and Not Another Statistical Program?\nThe breadth and complexity of statistical techniques continues to grow, making it difficult to learn details of all methods. Historically, techniques like analysis of variance (ANOVA) and regression, developed in separate fields, and only later were these techniques integrated into what is now the called the generalized linear model. Since then, multiple additional methods have developed, including those that relax assumptions of earlier methods. Traditional software that provides menus for selecting a specific method were useful when the number of methods were a reasonable size, but the continued development of additional methods make it very difficult to fit all in a reasonably navigable set of menus. The clicking of menus also poses problems for reproducibility. Most of the developing methods, continue to fit nicely into, or are extensions of, the generalized linear model. For example, methods such as machine learning and artificial intelligence build on this generalized linear model.\nSo, while it may not be as easy to get started learning statistics with a programming language, it will pay of in the long run.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
     "objectID": "introR.html#why-r-and-not-another-statistical-program",
     "href": "introR.html#why-r-and-not-another-statistical-program",
     "title": "2  Introduction to R and RStudio",
-    "section": "2.1 Why R and Not Another Statistical Program?",
-    "text": "2.1 Why R and Not Another Statistical Program?\nThe breadth and complexity of statistical techniques continues to grow, making it difficult to learn details of all methods. Historically, techniques like analysis of variance (ANOVA) and regression, developed in separate fields, and only later were these techniques integrated into what is now the called the generalized linear model. Since then, multiple additional methods have developed, including those that relax assumptions of earlier methods. Traditional software that provides menus for selecting a specific method were useful when the number of methods were a reasonable size, but the continued development of additional methods make it very difficult to fit all in a reasonably navigable set of menus. The clicking of menus also poses problems for reproducibility. Most of the developing methods, continue to fit nicely into, or are extensions of, the generalized linear model. For example, methods such as machine learning and artificial intelligence build on this generalized linear model.\nSo, while it may not be as easy to get started learning statistics with a programming language, it will pay of in the long run.\n\n2.1.1 Statistical Programs versus Statistical Programming Language\nHere are some qualities of menu based statistical programs and statistical programming languages.\n\nStatistical Programs\n\nfixed menus\nlimited procedures (at least in the menus)\nleads to compartmentalizing models (e.g. ANOVA, regression, GLM)\n\nStatistical Programming Languages (SPLs)\n\nTuring complete: if you can create an algorithm you can program it\nVery flexible\nIntegration of models: One model to rule them all!\n\n\nR is a statistical programming language, which means it is a programming language designed specifically to do statistics. It is widely used across many fields of science, it is free to use, and you can almost always find an implementation of a method using R. For these reasons, and many more, I teach statistics using R."
+    "section": "",
+    "text": "2.1.1 Statistical Programs versus Statistical Programming Language\nHere are some qualities of menu based statistical programs and statistical programming languages.\n\nStatistical Programs\n\nfixed menus\nlimited procedures (at least in the menus)\nleads to compartmentalizing models (e.g. ANOVA, regression, GLM)\n\nStatistical Programming Languages (SPLs)\n\nTuring complete: if you can create an algorithm you can program it\nVery flexible\nIntegration of models: One model to rule them all!\n\n\nR is a statistical programming language, which means it is a programming language designed specifically to do statistics. It is widely used across many fields of science, it is free to use, and you can almost always find an implementation of a method using R. For these reasons, and many more, I teach statistics using R.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
     "objectID": "introR.html#installing-r-and-rstudio",
     "href": "introR.html#installing-r-and-rstudio",
     "title": "2  Introduction to R and RStudio",
     "section": "2.2 Installing R and RStudio",
-    "text": "2.2 Installing R and RStudio\nThe goal of this chapter is to get you up and running with the R statistical programming language and the RStudio integrated development environment.\nIf you are reading this because you are taking one of my courses, you must decide how you want to use R and RStudio for the course. You have two basic options:\n\nyou can install them on your own computer, or\nyou can use Auburn Universities education virtual lab (VLab), online.\n\nIf you have a computer that you will be using consistently for this course, I recommend installing R and RStudio on that computer. Both are free and will be much easier to use if you install them directly on your computer. If you have decided to install the software on your computer you can skip to the following video. Note, that you must be a student within the university, and have DUO setup to use VLab. If you think you want to use the virtual lab, watch this video:\nUsing VLab to acces R/RStudio\n\n2.2.1 Installing R\nTo install R go to www.cran.r-project.org, select the appropriate operating system and follow the instructions to install R. You must have R install to use RStudio, so do this first.\n\n2.2.1.1 Installing R on Windows\nTo install R on Windows, click on the “Download R for Windows” link on the CRAN page. On the next page click “base” under the Subdirectories heading. On the next page you will see a link entitled “Download R-4.3.2 For Windows” (or the latest version). Click that link to download R, and install it the way you would most software on Windows. Note, this page is also a good resource if you have problems intalling R.\n\n\n2.2.1.2 Installing R on Mac\nTo install R on Mac, click the “Download R for macOS” link on the CRAN page. You will likely see two links toward the top of the page that look something similar to the following, one for each of the two types of processors available on macOS.\nM1 chip:\nR-4.3.2-arm64.pkg\nIntel:\nR-4.3.2.pkg\nSelect the one appropriate for your computer. If you do not know what type of chip you have, click on the apple icon in the top left corner of your mac and the click “About this Mac”. Under the processor heading you should see a string of characters. If in includes Intel you have an Intel chip, if not, you likely have an M1 chip. Newer computers are more likely to have M1 than older ones.\nHere is a video demonstrating the installation of R:\nInstall R\n\n\n\n2.2.2 Installing RStudio\nTo install RStudio go to www.posit.co and follow the links to download the free desktop version of RStudio.\nHere is a video demonstrating the installation of Rstudio:\nInstall RStudio"
+    "text": "2.2 Installing R and RStudio\nThe goal of this chapter is to get you up and running with the R statistical programming language and the RStudio integrated development environment.\nIf you are reading this because you are taking one of my courses, you must decide how you want to use R and RStudio for the course. You have two basic options:\n\nyou can install them on your own computer, or\nyou can use Auburn Universities education virtual lab (VLab), online.\n\nIf you have a computer that you will be using consistently for this course, I recommend installing R and RStudio on that computer. Both are free and will be much easier to use if you install them directly on your computer. If you have decided to install the software on your computer you can skip to the following video. Note, that you must be a student within the university, and have DUO setup to use VLab. If you think you want to use the virtual lab, watch this video:\nUsing VLab to acces R/RStudio\n\n2.2.1 Installing R\nTo install R go to www.cran.r-project.org, select the appropriate operating system and follow the instructions to install R. You must have R install to use RStudio, so do this first.\n\n2.2.1.1 Installing R on Windows\nTo install R on Windows, click on the “Download R for Windows” link on the CRAN page. On the next page click “base” under the Subdirectories heading. On the next page you will see a link entitled “Download R-4.4.0 For Windows” (or the latest version). Click that link to download R, and install it the way you would most software on Windows. Note, this page is also a good resource if you have problems intalling R.\n\n\n2.2.1.2 Installing R on Mac\nTo install R on Mac, click the “Download R for macOS” link on the CRAN page. You will likely see two links toward the top of the page that look something similar to the following, one for each of the two types of processors available on macOS.\nM1 chip:\nR-4.4.0-arm64.pkg\nIntel:\nR-4.4.0.pkg\nSelect the one appropriate for your computer. If you do not know what type of chip you have, click on the apple icon in the top left corner of your mac and the click “About this Mac”. Under the processor heading you should see a string of characters. If in includes Intel you have an Intel chip, if not, you likely have an M1 chip. Newer computers are more likely to have M1 than older ones.\nHere is a video demonstrating the installation of R:\nInstall R\n\n\n\n2.2.2 Installing RStudio\nTo install RStudio go to www.posit.co and follow the links to download the free desktop version of RStudio.\nHere is a video demonstrating the installation of Rstudio:\nInstall RStudio",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
     "objectID": "introR.html#a-brief-tour-of-rstudio",
     "href": "introR.html#a-brief-tour-of-rstudio",
     "title": "2  Introduction to R and RStudio",
     "section": "2.3 A brief Tour of RStudio",
-    "text": "2.3 A brief Tour of RStudio\nRStudio is a powerful tool, but it can be a little intimidating at first. The video below is a quick tour of the software:\nTour of RStudio"
+    "text": "2.3 A brief Tour of RStudio\nRStudio is a powerful tool, but it can be a little intimidating at first. The video below is a quick tour of the software:\nTour of RStudio",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
     "objectID": "introR.html#r-as-a-statistical-programming-language",
     "href": "introR.html#r-as-a-statistical-programming-language",
     "title": "2  Introduction to R and RStudio",
     "section": "2.4 R as a Statistical Programming Language",
-    "text": "2.4 R as a Statistical Programming Language\nTo help you understand R I describe some basic concepts important to understanding R as a statistical programming language (SPL). Such concepts will hopefully help you organize what you are learning. This is important because you will not be able to memorize all of the things you need to do to use R. But, having some general concepts should help you build a solid foundation of skills. This explanation will be a gross oversimplification of R, but it should be a good starting model you can build later.\n\n2.4.1 Elements of Statistical Programming\nAn object is a thing that has one or more states, and one or more behaviors. Take for example you cell phone. It has many states, such as on or off, and many behaviors, such as making phone calls, sending texts, or surfing the web. Everything in R is an object. Objects in R are very similar to objects like your cell phone, in that they have states and behaviors. Our goal is to learn how to use these objects to help us do science.\nThere are basically two types of objects in R: data objects and function objects. Data objects store information, while function objects process or manipulate information.\n\n2.4.1.1 Expressions\nWe use objects in R through expressions. An expression is simply a combination of objects that R can evaluate. So, we type something into R, R processes it and gives us the results. For example, if we type 1 + 2 into the R console, it will give us the result 3:\n\n1 + 2\n\n[1] 3\n\n\nSo, expressions are simply objects or combinations of objects submitted to R in a way R can evaluate them.\n\n\n2.4.1.2 Basic Elements of a Good SPL\n\na rich set of primitive expressions\nmechanisms for combining expressions into more complex expressions\nmeans of abstraction, which allow for naming and manipulating compound objects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.4.2 Primitive Expressions\n\nEverything in R is an object\nPrimitive objects are the simplest elements of a programming language, and include:\n\nprimitive data\nprimitive functions\n\nThey can be thought of as the basic building blocks for everything else in the language.\nAn expression is an input that the programming language can evaluate, and consists of function and data objects.\n\n\n\n2.4.3 Primitive Data Types:\nData objects are the primary means of storing information in R. R has a few basic data types:\n\nNumeric -\n\nnumeric\n\nint - integers (1,2)\nnum - real number (1.2, -3.1, 200.0)\n\n\ncharacter or string -\n\ncharacter\n\n\"Hello world!\", \"Ten\", 'Cat'\n\"This is a sentence, which is a string\"\n\"10\" ( in single or double quotes, as long as they match)\n\n\nBoolean or Logical\n\nlogical\n\nTRUE or FALSE (use operators such as or, and and not).\nThey will evaluate to numbers where FALSE evaluates to zero, and TRUE evaluates to one.\nFor example. if you enter TRUE + 1 you will get 2 in return.\n\n\n\n\nmode(TRUE)\n\n[1] \"logical\"\n\nTRUE + 1\n\n[1] 2\n\n\n\n\n2.4.4 Primitive Functions\nR uses functions to do all computations. When you open R it loads the base R functions. You can do lots of things with the base R functions. Primitive functions are built into R. Below are some of they types of primitive functions and examples.\n\n2.4.4.1 Operators\n\nArithmetic Operators\n\n+, -, *, /, ^\n\nComparison (also called Boolean, Logical or Predicate) Operators\n\n&lt;,&gt;,==, &lt;=, &gt;=, !=\nless than, greater than, equal to, less than or equal to, greater than or equal to, not equal to\nreturn TRUE or FALSE\n\nLogical Operator\n\n&, | ,!\nalso return TRUE or FALSE\n\nOther functions\n\nmode()\nlength()\nsum()\nsqrt()\nlog()\nexp()\n\nAssignment operators (assignment will be discussed below)\n\n&lt;- preferred assignment operator - always use this one\n= this will also work, but can be confusing (note different from ==, the comparison operator)\n-&gt; is also an assignment operator, but we will not use it.\n\n\n\n\n\n2.4.5 Programming Languages are Not Forgiving\n\n2.4.5.1 Syntactically valid expressions\nExpressions must be syntactically valid. This means they must be organized in a way that R understands.\n\nsyntax (form)\n\nEnglish: “cat dog boy” - not syntactically valid\nEnglish: “cat hugs boy” - syntactically valid\n\nprogramming language:\n\n\"hi\" 5 - not syntactically valid\n3.2*5 - syntactically valid\n\n\n\n\n2.4.5.2 Semantically valid expressions\nR statements must also be semantically valid. semantics has to do with meaning.\n\nEnglish: “I are hungry” - syntactically valid but semantic error\nprogramming language: - 3 + “hi” - semantic error (you can’t use addition on character strings)\nChomsky: “colorless green ideas sleep furiously”\n\nThis statement is syntactically valid, but does not make sense, so makes a semantic error.\nIn R you have to combine expressions in a way that R “understands” and this combination should be meaningful.\n\n\n\n2.4.6 Assignment\nWe will often want to save data in a variable. We can do that with assignment, which utilizes an assignment operator.\n\nx &lt;- 2\n\n\nx\n\n[1] 2\n\n\n\npet &lt;- \"dog\"\n\n\npet\n\n[1] \"dog\"\n\n\nAssignments are special expressions that are composed of three parts, a name, an assignment operator, and an expression.\nFor the following assignment,\n\nx &lt;- 1:10\n\nx is the name, &lt;- is the assignment operator, and 1:10 is an expression. Names in R can be anything that includes letters, numbers, a period (.) or an underscore (_), as long as it begins with either a letter or a period. Here are some valid, followed by invalid names\n\n# Valid\nIQ\nc3p0\nHeight_inches\nweight.lbs\n.hidden\n\n# Invalid (you will get an error message)\n_cat\n1dog\n%sales\nHeight-Inches\n\nThere are also some names that cannot be used because they are names of primitive R objects (e.g. if, for, else, in). Type ?reserved in the R console for a complete list.\nThere are at least two names that can, but should not be used. Namely the letters (T and F) which in R are short for TRUE and FALSE.\n\nT\n\n[1] TRUE\n\nF\n\n[1] FALSE\n\n\nThere are at least three assignment operators, as mentioned above, but it is commonly recommended that you use &lt;-, because it makes clear that you are taking some expression and putting it in an object. So we would say of the assignment of x &lt;- 1:10 that x gets the integers 1 through 10, suggesting that we are putting the integers into the object x.\nJust about any expression can be passed to a name with the assignment operator.\n\n\n2.4.7 Combining Expressions\n\n\n\n\n\n\n\n2.4.8 Complex Data Types\n\n2.4.8.1 Scalars, Vectors, Matrices, and Arrays\nA scalar is a single value such as:\n\n1\n\n[1] 1\n\n\nor\n\n\"cat\"\n\n[1] \"cat\"\n\n\nA vector is a one-dimensional series of values. For example, the integers 1 through 5 would be a vector of length 5. In R you can create a vector as follows:\n\nseries1_5 &lt;- c(1, 2, 3, 4, 5)\n\nNote in R there really are no scalars per se. To R a scalar is a vector of length one.\n\nx &lt;- 4\nis.vector(x)\n\n[1] TRUE\n\n\nthe is.vector() function tests if an object is a vector. The result lets us know the primitive object 4 is indeed a vector.\n\nlength(x)\n\n[1] 1\n\n\nAnd it’s length is one.\nLists are the most complex primitive type of data object. A list is a series of any type of object. For example, we might want to record some personal information.\n\npersonalInfo &lt;- list(\n  name = \"Rosalind\",\n  age = 6,\n  pet_names = c(\"Sparkles\", \"Mr. Bingo Clakerson\", \"scruffy\"),\n  favorite_colors = c(\"pink\", \"purple\")\n)\n\nDataframes are special types of lists, that have the same number of values in each of the series in the list. We will use these very often for data analysis. Each row in a data frame is a different unit and each column is a different variables. So, in a data frame each column has the same number of rows, and each row has the same number of columns.\n\nclass_info &lt;- data.frame(\n  name = c(\"Rosalind\", \"Emily\", \"Drake\"),\n  age = c(6, 7, 5),\n  height = c(46, 48, 44)\n  )\n\nclass_info\n\n      name age height\n1 Rosalind   6     46\n2    Emily   7     48\n3    Drake   5     44\n\n\nNotice that the data frame class_info is an object that contains other objects. If we want to use one of the objects inside a data frame we can do so by letting R know where to find that object using the $ operator. So, if we wanted to see the ages in the class_info data frame we could do so by:\n\nclass_info$age\n\n[1] 6 7 5\n\n\n\n\n\n2.4.9 Grouping Homogeneous Data Types\n\ncombining scalars\n\n\nc()\n\n\ncombining expressions\n\n\n{}\n\n\ncombining vectors\n\n\ncbind()\nrbind()\n\n\n\n2.4.10 Complex Functions\n\nVectorization\nNested Functions\nLoops and Conditional execution\n\n\n\n2.4.11 Abstraction\n\nAssignment\n\n\n\n\n2.4.12 Data Abstraction\n\n\n2.4.13 Functional Abstraction\n\n\n2.4.14 Anatomy of a Function\n\nname &lt;- function(arg_1, arg_2, ...) {\n    expression_1\n    expression_2\n    ...\n    output &lt;- expression_3\n    return(output)\n}"
+    "text": "2.4 R as a Statistical Programming Language\nTo help you understand R I describe some basic concepts important to understanding R as a statistical programming language (SPL). Such concepts will hopefully help you organize what you are learning. This is important because you will not be able to memorize all of the things you need to do to use R. But, having some general concepts should help you build a solid foundation of skills. This explanation will be a gross oversimplification of R, but it should be a good starting model you can build later.\n\n2.4.1 Elements of Statistical Programming\nAn object is a thing that has one or more states, and one or more behaviors. Take for example you cell phone. It has many states, such as on or off, and many behaviors, such as making phone calls, sending texts, or surfing the web. Everything in R is an object. Objects in R are very similar to objects like your cell phone, in that they have states and behaviors. Our goal is to learn how to use these objects to help us do science.\nThere are basically two types of objects in R: data objects and function objects. Data objects store information, while function objects process or manipulate information.\n\n2.4.1.1 Expressions\nWe use objects in R through expressions. An expression is simply a combination of objects that R can evaluate. So, we type something into R, R processes it and gives us the results. For example, if we type 1 + 2 into the R console, it will give us the result 3:\n\n1 + 2\n\n[1] 3\n\n\nSo, expressions are simply objects or combinations of objects submitted to R in a way R can evaluate them.\n\n\n2.4.1.2 Basic Elements of a Good SPL\n\na rich set of primitive expressions\nmechanisms for combining expressions into more complex expressions\nmeans of abstraction, which allow for naming and manipulating compound objects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.4.2 Primitive Expressions\n\nEverything in R is an object\nPrimitive objects are the simplest elements of a programming language, and include:\n\nprimitive data\nprimitive functions\n\nThey can be thought of as the basic building blocks for everything else in the language.\nAn expression is an input that the programming language can evaluate, and consists of function and data objects.\n\n\n\n2.4.3 Primitive Data Types:\nData objects are the primary means of storing information in R. R has a few basic data types:\n\nNumeric -\n\nnumeric\n\nint - integers (1,2)\nnum - real number (1.2, -3.1, 200.0)\n\n\ncharacter or string -\n\ncharacter\n\n\"Hello world!\", \"Ten\", 'Cat'\n\"This is a sentence, which is a string\"\n\"10\" ( in single or double quotes, as long as they match)\n\n\nBoolean or Logical\n\nlogical\n\nTRUE or FALSE (use operators such as or, and and not).\nThey will evaluate to numbers where FALSE evaluates to zero, and TRUE evaluates to one.\nFor example. if you enter TRUE + 1 you will get 2 in return.\n\n\n\n\nmode(TRUE)\n\n[1] \"logical\"\n\nTRUE + 1\n\n[1] 2\n\n\n\n\n2.4.4 Primitive Functions\nR uses functions to do all computations. When you open R it loads the base R functions. You can do lots of things with the base R functions. Primitive functions are built into R. Below are some of they types of primitive functions and examples.\n\n2.4.4.1 Operators\n\nArithmetic Operators\n\n+, -, *, /, ^\n\nComparison (also called Boolean, Logical or Predicate) Operators\n\n&lt;,&gt;,==, &lt;=, &gt;=, !=\nless than, greater than, equal to, less than or equal to, greater than or equal to, not equal to\nreturn TRUE or FALSE\n\nLogical Operator\n\n&, | ,!\nalso return TRUE or FALSE\n\nOther functions\n\nmode()\nlength()\nsum()\nsqrt()\nlog()\nexp()\n\nAssignment operators (assignment will be discussed below)\n\n&lt;- preferred assignment operator - always use this one\n= this will also work, but can be confusing (note different from ==, the comparison operator)\n-&gt; is also an assignment operator, but we will not use it.\n\n\n\n\n\n2.4.5 Programming Languages are Not Forgiving\n\n2.4.5.1 Syntactically valid expressions\nExpressions must be syntactically valid. This means they must be organized in a way that R understands.\n\nsyntax (form)\n\nEnglish: “cat dog boy” - not syntactically valid\nEnglish: “cat hugs boy” - syntactically valid\n\nprogramming language:\n\n\"hi\" 5 - not syntactically valid\n3.2*5 - syntactically valid\n\n\n\n\n2.4.5.2 Semantically valid expressions\nR statements must also be semantically valid. semantics has to do with meaning.\n\nEnglish: “I are hungry” - syntactically valid but semantic error\nprogramming language: - 3 + “hi” - semantic error (you can’t use addition on character strings)\nChomsky: “colorless green ideas sleep furiously”\n\nThis statement is syntactically valid, but does not make sense, so makes a semantic error.\nIn R you have to combine expressions in a way that R “understands” and this combination should be meaningful.\n\n\n\n2.4.6 Assignment\nWe will often want to save data in a variable. We can do that with assignment, which utilizes an assignment operator.\n\nx &lt;- 2\n\n\nx\n\n[1] 2\n\n\n\npet &lt;- \"dog\"\n\n\npet\n\n[1] \"dog\"\n\n\nAssignments are special expressions that are composed of three parts, a name, an assignment operator, and an expression.\nFor the following assignment,\n\nx &lt;- 1:10\n\nx is the name, &lt;- is the assignment operator, and 1:10 is an expression. Names in R can be anything that includes letters, numbers, a period (.) or an underscore (_), as long as it begins with either a letter or a period. Here are some valid, followed by invalid names\n\n# Valid\nIQ\nc3p0\nHeight_inches\nweight.lbs\n.hidden\n\n# Invalid (you will get an error message)\n_cat\n1dog\n%sales\nHeight-Inches\n\nThere are also some names that cannot be used because they are names of primitive R objects (e.g. if, for, else, in). Type ?reserved in the R console for a complete list.\nThere are at least two names that can, but should not be used. Namely the letters (T and F) which in R are short for TRUE and FALSE.\n\nT\n\n[1] TRUE\n\nF\n\n[1] FALSE\n\n\nThere are at least three assignment operators, as mentioned above, but it is commonly recommended that you use &lt;-, because it makes clear that you are taking some expression and putting it in an object. So we would say of the assignment of x &lt;- 1:10 that x gets the integers 1 through 10, suggesting that we are putting the integers into the object x.\nJust about any expression can be passed to a name with the assignment operator.\n\n\n2.4.7 Combining Expressions\n\n\n\n\n\n\n\n\n\n\n\n2.4.8 Complex Data Types\n\n2.4.8.1 Scalars, Vectors, Matrices, and Arrays\nA scalar is a single value such as:\n\n1\n\n[1] 1\n\n\nor\n\n\"cat\"\n\n[1] \"cat\"\n\n\nA vector is a one-dimensional series of values. For example, the integers 1 through 5 would be a vector of length 5. In R you can create a vector as follows:\n\nseries1_5 &lt;- c(1, 2, 3, 4, 5)\n\nNote in R there really are no scalars per se. To R a scalar is a vector of length one.\n\nx &lt;- 4\nis.vector(x)\n\n[1] TRUE\n\n\nthe is.vector() function tests if an object is a vector. The result lets us know the primitive object 4 is indeed a vector.\n\nlength(x)\n\n[1] 1\n\n\nAnd it’s length is one.\nLists are the most complex primitive type of data object. A list is a series of any type of object. For example, we might want to record some personal information.\n\npersonalInfo &lt;- list(\n  name = \"Rosalind\",\n  age = 6,\n  pet_names = c(\"Sparkles\", \"Mr. Bingo Clakerson\", \"scruffy\"),\n  favorite_colors = c(\"pink\", \"purple\")\n)\n\nDataframes are special types of lists, that have the same number of values in each of the series in the list. We will use these very often for data analysis. Each row in a data frame is a different unit and each column is a different variables. So, in a data frame each column has the same number of rows, and each row has the same number of columns.\n\nclass_info &lt;- data.frame(\n  name = c(\"Rosalind\", \"Emily\", \"Drake\"),\n  age = c(6, 7, 5),\n  height = c(46, 48, 44)\n  )\n\nclass_info\n\n      name age height\n1 Rosalind   6     46\n2    Emily   7     48\n3    Drake   5     44\n\n\nNotice that the data frame class_info is an object that contains other objects. If we want to use one of the objects inside a data frame we can do so by letting R know where to find that object using the $ operator. So, if we wanted to see the ages in the class_info data frame we could do so by:\n\nclass_info$age\n\n[1] 6 7 5\n\n\n\n\n\n2.4.9 Grouping Homogeneous Data Types\n\ncombining scalars\n\n\nc()\n\n\ncombining expressions\n\n\n{}\n\n\ncombining vectors\n\n\ncbind()\nrbind()\n\n\n\n2.4.10 Complex Functions\n\nVectorization\nNested Functions\nLoops and Conditional execution\n\n\n\n2.4.11 Abstraction\n\nAssignment\n\n\n\n\n2.4.12 Data Abstraction\n\n\n2.4.13 Functional Abstraction\n\n\n2.4.14 Anatomy of a Function\n\nname &lt;- function(arg_1, arg_2, ...) {\n    expression_1\n    expression_2\n    ...\n    output &lt;- expression_3\n    return(output)\n}",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
     "objectID": "introR.html#some-r-resources",
     "href": "introR.html#some-r-resources",
     "title": "2  Introduction to R and RStudio",
     "section": "2.5 Some R Resources",
-    "text": "2.5 Some R Resources\nBelow I give links to R resources if you desire to learn more about R.\nA good next step is Roger Peng’s book R Programming for Data Science, which can be read free online at https://bookdown.org/rdpeng/rprogdatascience/. You can also download a pdf or epub of the book at https://leanpub.com/rprogramming. Both these links also have links to purchase a printed copy if that works better for you."
+    "text": "2.5 Some R Resources\nBelow I give links to R resources if you desire to learn more about R.\nA good next step is Roger Peng’s book R Programming for Data Science, which can be read free online at https://bookdown.org/rdpeng/rprogdatascience/. You can also download a pdf or epub of the book at https://leanpub.com/rprogramming. Both these links also have links to purchase a printed copy if that works better for you.",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
   },
   {
-    "objectID": "understandingData.html#the-structure-of-data",
-    "href": "understandingData.html#the-structure-of-data",
+    "objectID": "understandingData.html",
+    "href": "understandingData.html",
     "title": "3  Understanding Data",
-    "section": "3.1 The Structure of Data",
-    "text": "3.1 The Structure of Data\n\ndata(iris)\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50  \n                \n                \n                \n\n\n\nlibrary(car)\n\nLoading required package: carData\n\ndata(\"Davis\")\n\n\ndata(mtcars)\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000  \n\n\n\nsummary(Davis)\n\n sex         weight          height          repwt            repht      \n F:112   Min.   : 39.0   Min.   : 57.0   Min.   : 41.00   Min.   :148.0  \n M: 88   1st Qu.: 55.0   1st Qu.:164.0   1st Qu.: 55.00   1st Qu.:160.5  \n         Median : 63.0   Median :169.5   Median : 63.00   Median :168.0  \n         Mean   : 65.8   Mean   :170.0   Mean   : 65.62   Mean   :168.5  \n         3rd Qu.: 74.0   3rd Qu.:177.2   3rd Qu.: 73.50   3rd Qu.:175.0  \n         Max.   :166.0   Max.   :197.0   Max.   :124.00   Max.   :200.0  \n                                         NA's   :17       NA's   :17     \n\n\n\ngetwd()\n\n[1] \"/Users/wmm0017/Projects/Books/RegressionModelingBook\"\n\nsource(\"code/import_cogexp.R\")\ncogexp1 &lt;- import_cogexp(folder = \"projects/snarc_experiment/exp1_data/\")\n\n\nlibrary(tidyverse, quietly = TRUE)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n✖ dplyr::recode() masks car::recode()\n✖ purrr::some()   masks car::some()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nggplot(cogexp1[cogexp1$id %in% 1:5, ], aes(y = rt, x = trial, group = factor(id),\n                                         color = factor(id))) +\n  geom_line() + facet_grid(block ~ program)"
+    "section": "",
+    "text": "3.1 The Structure of Data\ndata(iris)\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50\nlibrary(car)\n\nLoading required package: carData\n\ndata(\"Davis\")\ndata(mtcars)\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000\nsummary(Davis)\n\n sex         weight          height          repwt            repht      \n F:112   Min.   : 39.0   Min.   : 57.0   Min.   : 41.00   Min.   :148.0  \n M: 88   1st Qu.: 55.0   1st Qu.:164.0   1st Qu.: 55.00   1st Qu.:160.5  \n         Median : 63.0   Median :169.5   Median : 63.00   Median :168.0  \n         Mean   : 65.8   Mean   :170.0   Mean   : 65.62   Mean   :168.5  \n         3rd Qu.: 74.0   3rd Qu.:177.2   3rd Qu.: 73.50   3rd Qu.:175.0  \n         Max.   :166.0   Max.   :197.0   Max.   :124.00   Max.   :200.0  \n                                         NA's   :17       NA's   :17\ngetwd()\n\n[1] \"/Users/wmm0017/Projects/Books/regressionModelingBook\"\n\nsource(\"code/import_cogexp.R\")\ncogexp1 &lt;- import_cogexp(folder = \"projects/snarc_experiment/exp1_data/\")\nlibrary(tidyverse, quietly = TRUE)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n✖ dplyr::recode() masks car::recode()\n✖ purrr::some()   masks car::some()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nggplot(cogexp1[cogexp1$id %in% 1:5, ], aes(y = rt, x = trial, group = factor(id),\n                                         color = factor(id))) +\n  geom_line() + facet_grid(block ~ program)",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding Data</span>"
+    ]
+  },
+  {
+    "objectID": "dgp.html",
+    "href": "dgp.html",
+    "title": "4  Data Generating Processes",
+    "section": "",
+    "text": "4.1 Data Examples\nTo illustrate the concepts and techniques presented in this chapter will will use a set of hypothetical research projects that aim to predict height of adults. These projects will increase in complexity. The goal of t",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Generating Processes</span>"
+    ]
   },
   {
     "objectID": "dgp.html#data-examples",
     "href": "dgp.html#data-examples",
     "title": "4  Data Generating Processes",
-    "section": "4.1 Data Examples",
-    "text": "4.1 Data Examples\nTo illustrate the concepts and techniques presented in this chapter will will use a set of hypothetical research projects that aim to predict height of adults. These projects will increase in complexity. The goal of t\n\n4.1.1 Example 1: How well does Reported Height Predict Measured Height?\nWe will assume we know that the average height of an adult female is 5 feet 4.5 inches and the standard deviation is 2.5 inches. So that we are not dealing with two units of measurement, feet and inches, we will convert this to inches, so we have 64.5 inches as the mean height of an adult woman.\n\n# Create objects with the parameters needed for a normal distribution\nmean_female_height &lt;- 64.5\nsd_female_height &lt;- 2.5\nn_obs &lt;- 1e6\n\n# Create a vector of simulated female heights using the parameters.\nfemale_heights &lt;- rnorm(n = n_obs, \n                        mean = mean_female_height, \n                        sd = sd_female_height)\n\n# Plot the simulated distribution of female heights\nhist(female_heights, \n     breaks = \"fd\",  # This argument uses the Freedman-Diaconis algorithm \n                     # to calculate the number of bins.\n     main = \"Distribution of Simulated Female Heights\",\n     xlab = \"Female Height (in)\")"
+    "section": "",
+    "text": "4.1.1 Example 1: How well does Reported Height Predict Measured Height?\nWe will assume we know that the average height of an adult female is 5 feet 4.5 inches and the standard deviation is 2.5 inches. So that we are not dealing with two units of measurement, feet and inches, we will convert this to inches, so we have 64.5 inches as the mean height of an adult woman.\n\n# Create objects with the parameters needed for a normal distribution\nmean_female_height &lt;- 64.5\nsd_female_height &lt;- 2.5\nn_obs &lt;- 1e6\n\n# Create a vector of simulated female heights using the parameters.\nfemale_heights &lt;- rnorm(n = n_obs, \n                        mean = mean_female_height, \n                        sd = sd_female_height)\n\n# Plot the simulated distribution of female heights\nhist(female_heights, \n     breaks = \"fd\",  # This argument uses the Freedman-Diaconis algorithm \n                     # to calculate the number of bins.\n     main = \"Distribution of Simulated Female Heights\",\n     xlab = \"Female Height (in)\")",
+    "crumbs": [
+      "Introduction to Modeling",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Generating Processes</span>"
+    ]
+  },
+  {
+    "objectID": "simpleModels.html",
+    "href": "simpleModels.html",
+    "title": "5  Simple Linear Models",
+    "section": "",
+    "text": "5.1 Variances, Covariances, and Correlations\nlibrary(car)\nlibrary(dplyr)\nlibrary(knitr)\nlibrary(ggplot2)\nlibrary(gridExtra)\ndata(\"Davis\")",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Simple Linear Models</span>"
+    ]
   },
   {
     "objectID": "simpleModels.html#variances-covariances-and-correlations",
     "href": "simpleModels.html#variances-covariances-and-correlations",
     "title": "5  Simple Linear Models",
-    "section": "5.1 Variances, Covariances, and Correlations",
-    "text": "5.1 Variances, Covariances, and Correlations\n\nlibrary(car)\nlibrary(dplyr)\nlibrary(knitr)\nlibrary(ggplot2)\nlibrary(gridExtra)\ndata(\"Davis\")\n\n\n5.1.1 Variance\nfor ( \\(n\\) = 1,000, \\(\\bar{X}\\) = 100)\n\n\n\n\n\nThe sample variance is defined as:\n\\[\ns_x^2 = \\frac{\\sum{(X - \\overline{X}})^2}{N - 1} = \\frac{\\sum{x^2}}{N - 1} \\tag{2.1}\n\\]\nwhere \\(X\\) is the variable in question, \\(\\sum{\\mathit{x}^2}\\) is the sum of the squared deviations from the mean of \\(X\\), the latter symbolized as \\(\\overline{X}\\), and \\(N\\) the sample size.\nDefining \\(X\\) and computing the variance “by hand”:\n\nX &lt;- c(65, 69, 67.5, 75, 62.5, 68, 72, 67, 70, 72, 66.5, 68.5) # height\nN &lt;- length(X)\nXbar &lt;- mean(X)\nvar_x &lt;- sum((X - Xbar)^2)/(N - 1)\nvar_x\n\n[1] 11.35606\n\n\nor simply:\n\nvar(X)\n\n[1] 11.35606\n\n\n\n\n5.1.2 Bivariate Relationship\n\n\n\n\n\n\n\n5.1.3 Covariance\nThe covariance of two variables is defined as\n\\[\n  s_{xy} = \\frac{\\sum{(X - \\overline{X})(Y - \\overline{Y})}}{N - 1} = \\frac{\\sum{xy}}{N - 1}. \\tag{2.3}\n\\]\nNote that we can rewrite the variance equation as\n\\[\n  s_{xx} = \\frac{\\sum{(X - \\overline{X})(X - \\overline{X})}}{N - 1} = \\frac{\\sum{xx}}{N - 1},\n\\]\nsuggesting that the variance of a variable can be considered its covariance with itself.\n\ndat &lt;- studht[ ,1:2]\nnames(dat) &lt;- c(\"X\", \"Y\")\n\ndat &lt;- within(dat, {\n  `$d_x$` = X -  mean(X)\n  `$d_x^2$` = (X - mean(X))^2\n  `$d_y$` = Y - mean(Y)\n  `$d_y^2$` = (Y - mean(Y))^2\n})\n\ndat &lt;- dat[ ,c(\"X\", \"$d_x$\", \"$d_x^2$\", \"Y\", \"$d_y$\", \"$d_y^2$\")]\nkable(dat, digits = 2)\n\n\n\n\nX\n\\(d_x\\)\n\\(d_x^2\\)\nY\n\\(d_y\\)\n\\(d_y^2\\)\n\n\n\n\n64\n-3.83\n14.69\n65.0\n-3.58\n12.84\n\n\n68\n0.17\n0.03\n69.0\n0.42\n0.17\n\n\n66\n-1.83\n3.36\n67.5\n-1.08\n1.17\n\n\n75\n7.17\n51.36\n75.0\n6.42\n41.17\n\n\n61\n-6.83\n46.69\n62.5\n-6.08\n37.01\n\n\n68\n0.17\n0.03\n68.0\n-0.58\n0.34\n\n\n72\n4.17\n17.36\n72.0\n3.42\n11.67\n\n\n66\n-1.83\n3.36\n67.0\n-1.58\n2.51\n\n\n69\n1.17\n1.36\n70.0\n1.42\n2.01\n\n\n70\n2.17\n4.69\n72.0\n3.42\n11.67\n\n\n66\n-1.83\n3.36\n66.5\n-2.08\n4.34\n\n\n69\n1.17\n1.36\n68.5\n-0.08\n0.01\n\n\n\n\n\n\\(\\sum{X} = 814\\), \\(\\bar{X} = 67.83\\),\n\\(\\sum{Y} = 823\\), \\(\\bar{Y} = 68.58\\),\n\\(\\sum{d_x^2} = 147.67\\), \\(\\sum{d_y^2} = 124.92\\)\n\\[\n  s_x^2 = \\frac{\\sum{x^2}}{N - 1} = \\frac{147.67}{10 - 1} = 13.42  \n\\]\n\\[\n  s_x = \\sqrt{s_x^2} = 3.66\n\\]\n\\[\n  s_y^2 = \\frac{\\sum{y^2}}{N - 1} = \\frac{124.92}{10 - 1} = 11.36  \n\\]\n\\[\n  s_y = \\sqrt{s_y^2} = 3.37\n\\]\n\n\n\n\nX\n\\(d_x\\)\n\\(d_x^2\\)\nY\n\\(d_y\\)\n\\(d_y^2\\)\n\\(d_xd_y\\)\n\n\n\n\n64\n-3.83\n14.69\n65.0\n-3.58\n12.84\n13.74\n\n\n68\n0.17\n0.03\n69.0\n0.42\n0.17\n0.07\n\n\n66\n-1.83\n3.36\n67.5\n-1.08\n1.17\n1.99\n\n\n75\n7.17\n51.36\n75.0\n6.42\n41.17\n45.99\n\n\n61\n-6.83\n46.69\n62.5\n-6.08\n37.01\n41.57\n\n\n68\n0.17\n0.03\n68.0\n-0.58\n0.34\n-0.10\n\n\n72\n4.17\n17.36\n72.0\n3.42\n11.67\n14.24\n\n\n66\n-1.83\n3.36\n67.0\n-1.58\n2.51\n2.90\n\n\n69\n1.17\n1.36\n70.0\n1.42\n2.01\n1.65\n\n\n70\n2.17\n4.69\n72.0\n3.42\n11.67\n7.40\n\n\n66\n-1.83\n3.36\n66.5\n-2.08\n4.34\n3.82\n\n\n69\n1.17\n1.36\n68.5\n-0.08\n0.01\n-0.10\n\n\n\n\n\\(\\sum{X} = 814\\), \\(\\bar{X} = 67.83\\),\n\\(\\sum{Y} = 823\\), \\(\\bar{Y} = 68.58\\),\n\\(\\sum{d_xd_y} = 133.17\\)\n\\[\n  s_{xy} = \\frac{\\sum{(X - \\overline{X})(Y - \\overline{Y})}}{N - 1} =\n\\]\n\\[\n  \\frac{\\sum{xy}}{N - 1} = \\frac{133.17}{9} =12.11.\n\\]\n\n\n5.1.4 Correlation\n\\[r_{XY} = \\frac{\\text{Cov}(XY)}{s_{X}s_{Y}} =\n  \\frac{12.11}{3.66 \\times 3.37} =\n  \\frac{12.11}{12.35} = 0.98.\\]"
+    "section": "",
+    "text": "5.1.1 Variance\nfor ( \\(n\\) = 1,000, \\(\\bar{X}\\) = 100)\n\n\n\n\n\n\n\n\n\nThe sample variance is defined as:\n\\[\ns_x^2 = \\frac{\\sum{(X - \\overline{X}})^2}{N - 1} = \\frac{\\sum{x^2}}{N - 1} \\tag{2.1}\n\\]\nwhere \\(X\\) is the variable in question, \\(\\sum{\\mathit{x}^2}\\) is the sum of the squared deviations from the mean of \\(X\\), the latter symbolized as \\(\\overline{X}\\), and \\(N\\) the sample size.\nDefining \\(X\\) and computing the variance “by hand”:\n\nX &lt;- c(65, 69, 67.5, 75, 62.5, 68, 72, 67, 70, 72, 66.5, 68.5) # height\nN &lt;- length(X)\nXbar &lt;- mean(X)\nvar_x &lt;- sum((X - Xbar)^2)/(N - 1)\nvar_x\n\n[1] 11.35606\n\n\nor simply:\n\nvar(X)\n\n[1] 11.35606\n\n\n\n\n5.1.2 Bivariate Relationship\n\n\n\n\n\n\n\n\n\n\n\n5.1.3 Covariance\nThe covariance of two variables is defined as\n\\[\n  s_{xy} = \\frac{\\sum{(X - \\overline{X})(Y - \\overline{Y})}}{N - 1} = \\frac{\\sum{xy}}{N - 1}. \\tag{2.3}\n\\]\nNote that we can rewrite the variance equation as\n\\[\n  s_{xx} = \\frac{\\sum{(X - \\overline{X})(X - \\overline{X})}}{N - 1} = \\frac{\\sum{xx}}{N - 1},\n\\]\nsuggesting that the variance of a variable can be considered its covariance with itself.\n\ndat &lt;- studht[ ,1:2]\nnames(dat) &lt;- c(\"X\", \"Y\")\n\ndat &lt;- within(dat, {\n  `$d_x$` = X -  mean(X)\n  `$d_x^2$` = (X - mean(X))^2\n  `$d_y$` = Y - mean(Y)\n  `$d_y^2$` = (Y - mean(Y))^2\n})\n\ndat &lt;- dat[ ,c(\"X\", \"$d_x$\", \"$d_x^2$\", \"Y\", \"$d_y$\", \"$d_y^2$\")]\nkable(dat, digits = 2)\n\n\n\n\nX\n\\(d_x\\)\n\\(d_x^2\\)\nY\n\\(d_y\\)\n\\(d_y^2\\)\n\n\n\n\n64\n-3.83\n14.69\n65.0\n-3.58\n12.84\n\n\n68\n0.17\n0.03\n69.0\n0.42\n0.17\n\n\n66\n-1.83\n3.36\n67.5\n-1.08\n1.17\n\n\n75\n7.17\n51.36\n75.0\n6.42\n41.17\n\n\n61\n-6.83\n46.69\n62.5\n-6.08\n37.01\n\n\n68\n0.17\n0.03\n68.0\n-0.58\n0.34\n\n\n72\n4.17\n17.36\n72.0\n3.42\n11.67\n\n\n66\n-1.83\n3.36\n67.0\n-1.58\n2.51\n\n\n69\n1.17\n1.36\n70.0\n1.42\n2.01\n\n\n70\n2.17\n4.69\n72.0\n3.42\n11.67\n\n\n66\n-1.83\n3.36\n66.5\n-2.08\n4.34\n\n\n69\n1.17\n1.36\n68.5\n-0.08\n0.01\n\n\n\n\n\n\\(\\sum{X} = 814\\), \\(\\bar{X} = 67.83\\),\n\\(\\sum{Y} = 823\\), \\(\\bar{Y} = 68.58\\),\n\\(\\sum{d_x^2} = 147.67\\), \\(\\sum{d_y^2} = 124.92\\)\n\\[\n  s_x^2 = \\frac{\\sum{x^2}}{N - 1} = \\frac{147.67}{10 - 1} = 13.42  \n\\]\n\\[\n  s_x = \\sqrt{s_x^2} = 3.66\n\\]\n\\[\n  s_y^2 = \\frac{\\sum{y^2}}{N - 1} = \\frac{124.92}{10 - 1} = 11.36  \n\\]\n\\[\n  s_y = \\sqrt{s_y^2} = 3.37\n\\]\n\n\n\nX\n\\(d_x\\)\n\\(d_x^2\\)\nY\n\\(d_y\\)\n\\(d_y^2\\)\n\\(d_xd_y\\)\n\n\n\n\n64\n-3.83\n14.69\n65.0\n-3.58\n12.84\n13.74\n\n\n68\n0.17\n0.03\n69.0\n0.42\n0.17\n0.07\n\n\n66\n-1.83\n3.36\n67.5\n-1.08\n1.17\n1.99\n\n\n75\n7.17\n51.36\n75.0\n6.42\n41.17\n45.99\n\n\n61\n-6.83\n46.69\n62.5\n-6.08\n37.01\n41.57\n\n\n68\n0.17\n0.03\n68.0\n-0.58\n0.34\n-0.10\n\n\n72\n4.17\n17.36\n72.0\n3.42\n11.67\n14.24\n\n\n66\n-1.83\n3.36\n67.0\n-1.58\n2.51\n2.90\n\n\n69\n1.17\n1.36\n70.0\n1.42\n2.01\n1.65\n\n\n70\n2.17\n4.69\n72.0\n3.42\n11.67\n7.40\n\n\n66\n-1.83\n3.36\n66.5\n-2.08\n4.34\n3.82\n\n\n69\n1.17\n1.36\n68.5\n-0.08\n0.01\n-0.10\n\n\n\n\\(\\sum{X} = 814\\), \\(\\bar{X} = 67.83\\),\n\\(\\sum{Y} = 823\\), \\(\\bar{Y} = 68.58\\),\n\\(\\sum{d_xd_y} = 133.17\\)\n\\[\n  s_{xy} = \\frac{\\sum{(X - \\overline{X})(Y - \\overline{Y})}}{N - 1} =\n\\]\n\\[\n  \\frac{\\sum{xy}}{N - 1} = \\frac{133.17}{9} =12.11.\n\\]\n\n\n5.1.4 Correlation\n\\[r_{XY} = \\frac{\\text{Cov}(XY)}{s_{X}s_{Y}} =\n  \\frac{12.11}{3.66 \\times 3.37} =\n  \\frac{12.11}{12.35} = 0.98.\\]",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Simple Linear Models</span>"
+    ]
   },
   {
     "objectID": "simpleModels.html#conceptual-demonstration-of-simple-regression",
     "href": "simpleModels.html#conceptual-demonstration-of-simple-regression",
     "title": "5  Simple Linear Models",
     "section": "5.2 Conceptual Demonstration of Simple Regression",
-    "text": "5.2 Conceptual Demonstration of Simple Regression\nLet’s say we were about to conduct a large study and needed to know the participants heights. But it is very expensive to directly measure each participants height. We could just ask participants to report their height. So, we want to know how accurate people are at reporting their height. To evaluate that we could ask a random sample of people from the study population to report their height and then obtain direct measures of their height and see how strongly those are related. We want to see how well reported height predicts measured height.\nBelow are statistical models of the relationship between measured height (\\(Y\\)) and reported height (\\(X\\)).\nPopulation Model:\n\\[Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i\\]\n\\[ \\hat{Y_i} = \\beta_0 + \\beta_1 X_i\\]\nSample Model:\n\\[Y_i = b_0 + b_1 X_i + e_i\\] \\[\\hat{Y_i} = b_0 + b_1 X_i\\] Below is a data set of graduate students in a research methods class, were I asked them to report their height (\\(X\\)) and then we measured their height (\\(Y\\)). This data set is much smaller than we would need to adequately answer our research question, but we will use it to demonstrate some key principles of simple regression.\n\ndf &lt;- dat[ ,c(\"X\", \"Y\")]\nkable(df)\n\n\n\n\nX\nY\n\n\n\n\n64\n65.0\n\n\n68\n69.0\n\n\n66\n67.5\n\n\n75\n75.0\n\n\n61\n62.5\n\n\n68\n68.0\n\n\n72\n72.0\n\n\n66\n67.0\n\n\n69\n70.0\n\n\n70\n72.0\n\n\n66\n66.5\n\n\n69\n68.5\n\n\n\n\n\n\\[\n\\text{Cor}_{XY} = 0.98\n\\]\n\ncor(df$X, df$Y)\n\n[1] 0.9804921\n\n\n\n5.2.0.1 Data Summary\n\nkable(psych::describe(df, fast = TRUE), digits = 2)\n\n\n\n\n\nvars\nn\nmean\nsd\nmin\nmax\nrange\nse\n\n\n\n\nX\n1\n12\n67.83\n3.66\n61.0\n75\n14.0\n1.06\n\n\nY\n2\n12\n68.58\n3.37\n62.5\n75\n12.5\n0.97\n\n\n\n\n\n\n\n5.2.1 Graphical Demonstration of Simple Regression\n\nplot(Y ~ X, data = df)\n\n\n\n\n\n\n\n\n\n\nYbar &lt;- mean(df$Y)\n\nYbar\n\n[1] 68.58333\n\n# Empty Model\nemptyModel &lt;- lm(Y ~ 1, data = df)\n\ncoef(emptyModel)\n\n(Intercept) \n   68.58333 \n\n# Predicted value\npredict(emptyModel)\n\n       1        2        3        4        5        6        7        8 \n68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 \n       9       10       11       12 \n68.58333 68.58333 68.58333 68.58333 \n\n\n\n\n\n\n\n\ndf$d &lt;- df$Y - mean(df$Y)\n\n\n\n\n\n\nX\nY\nd\n\n\n\n\n64\n65.0\n-3.6\n\n\n68\n69.0\n0.4\n\n\n66\n67.5\n-1.1\n\n\n75\n75.0\n6.4\n\n\n61\n62.5\n-6.1\n\n\n68\n68.0\n-0.6\n\n\n72\n72.0\n3.4\n\n\n66\n67.0\n-1.6\n\n\n69\n70.0\n1.4\n\n\n70\n72.0\n3.4\n\n\n66\n66.5\n-2.1\n\n\n69\n68.5\n-0.1\n\n\n\n\n\n\n\n\n\n\n\nsimpleReg &lt;- lm(Y ~ X, data = df)\nprint(coef(simpleReg), digits = 2)\n\n(Intercept)           X \n        7.4         0.9 \n\ndf$resid &lt;- resid(simpleReg)\n\n\n\n\n\n\nX\nY\nd\nresid\n\n\n\n\n64\n65.0\n-3.6\n-0.1\n\n\n68\n69.0\n0.4\n0.3\n\n\n66\n67.5\n-1.1\n0.6\n\n\n75\n75.0\n6.4\n0.0\n\n\n61\n62.5\n-6.1\n0.1\n\n\n68\n68.0\n-0.6\n-0.7\n\n\n72\n72.0\n3.4\n-0.3\n\n\n66\n67.0\n-1.6\n0.1\n\n\n69\n70.0\n1.4\n0.4\n\n\n70\n72.0\n3.4\n1.5\n\n\n66\n66.5\n-2.1\n-0.4\n\n\n69\n68.5\n-0.1\n-1.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Interpreting Output from Simple Regression\nWe need to be able to interpret the coefficients, and determine their implications for our research question. We can look at a summary of the results of the simple regression in R as follows:\n\nsummary(mod)\n\n\nCall:\nlm(formula = Y ~ X)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.13544 -0.36315  0.01185  0.29091  1.46275 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  7.41084    3.88315   1.908   0.0854 .  \nX            0.90181    0.05717  15.774 2.15e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.6947 on 10 degrees of freedom\nMultiple R-squared:  0.9614,    Adjusted R-squared:  0.9575 \nF-statistic: 248.8 on 1 and 10 DF,  p-value: 2.153e-08\n\n\nThere is a lot of information contained in this output. First, note that the multiple R-squared is .96, which is an estimate of the proportion of measured height (\\(Y\\)) that can be explained by reported height (\\(X\\)). We can convert this proportion into a percentage by multiplying it by 100, and state that reported height explains about 96% of the variance in measured height.\nNext, we can look at the intercept under the Coefficients: heading of the output. This value is 7.4 (rounding to 1 decimal place). What does this tell us? The intercept is technically the predicted value of the outcome (\\(Y\\)) when the predictor is zero. I would interpret this to mean that, according to this model, someone who reported their height as zero, would be predicted to have a measured height of a little less than 7 and 1/2 inches. This value is not very meaningful because no graduate students reported a zero height. The intercept is outside the range of the observed data (and theoretical population). Later we will learn how to make the intercept more meaningful. Often, though, the intercept is not the important coefficient. The slope is often what we want to learn about. For this simple regression, the estimated slope is about 0.9. Technically, the slope is the expected change in the outcome for a one unit change in the predictor. For this example, that suggests that, according to this simple regression model, two graduate students who reported their heights as being different by one inch, would be predicted to differ in actual height by about 0.9 inches.\nWe set this up as ## Real Data Example\n\n#install.packages(\"NHANES)\nlibrary(NHANES)\nlibrary(effectsize)\ndata(NHANES)\n\nNext we will look at the variables available in the NHANES dataframe, which is a available in the NHANES package in R. To illustrate how we can make statistical inferences, we can assume we want to know if adult height differs between women and men. Admittedly, this is a ver trivial goal of research, but it will help us to review the topic of statistical inference. To do this we will consider three scenarios.\nFirst, we will pretend that we have no idea about what to expect between variables in this data and are engaging in an exploratory study which includes looking for relations between height and gender.\nSecond, we will pretend that we suspect that there is a relation between height and gender, possibly among other relations, and we want to know if heights are different between the populations of adult women and men. This is a rough confirmatory study.\nThird, we will pretend that a primary goal of our study is to test the hypothesis that men are taller than women. We have a compelling theoretical model that suggest this relation, and we decide to test this hypothesis before we collect or at least before we look at our data. This is a strict confirmatory study.\n\nnames(NHANES)\n\n [1] \"ID\"               \"SurveyYr\"         \"Gender\"           \"Age\"             \n [5] \"AgeDecade\"        \"AgeMonths\"        \"Race1\"            \"Race3\"           \n [9] \"Education\"        \"MaritalStatus\"    \"HHIncome\"         \"HHIncomeMid\"     \n[13] \"Poverty\"          \"HomeRooms\"        \"HomeOwn\"          \"Work\"            \n[17] \"Weight\"           \"Length\"           \"HeadCirc\"         \"Height\"          \n[21] \"BMI\"              \"BMICatUnder20yrs\" \"BMI_WHO\"          \"Pulse\"           \n[25] \"BPSysAve\"         \"BPDiaAve\"         \"BPSys1\"           \"BPDia1\"          \n[29] \"BPSys2\"           \"BPDia2\"           \"BPSys3\"           \"BPDia3\"          \n[33] \"Testosterone\"     \"DirectChol\"       \"TotChol\"          \"UrineVol1\"       \n[37] \"UrineFlow1\"       \"UrineVol2\"        \"UrineFlow2\"       \"Diabetes\"        \n[41] \"DiabetesAge\"      \"HealthGen\"        \"DaysPhysHlthBad\"  \"DaysMentHlthBad\" \n[45] \"LittleInterest\"   \"Depressed\"        \"nPregnancies\"     \"nBabies\"         \n[49] \"Age1stBaby\"       \"SleepHrsNight\"    \"SleepTrouble\"     \"PhysActive\"      \n[53] \"PhysActiveDays\"   \"TVHrsDay\"         \"CompHrsDay\"       \"TVHrsDayChild\"   \n[57] \"CompHrsDayChild\"  \"Alcohol12PlusYr\"  \"AlcoholDay\"       \"AlcoholYear\"     \n[61] \"SmokeNow\"         \"Smoke100\"         \"Smoke100n\"        \"SmokeAge\"        \n[65] \"Marijuana\"        \"AgeFirstMarij\"    \"RegularMarij\"     \"AgeRegMarij\"     \n[69] \"HardDrugs\"        \"SexEver\"          \"SexAge\"           \"SexNumPartnLife\" \n[73] \"SexNumPartYear\"   \"SameSex\"          \"SexOrientation\"   \"PregnantNow\"     \n\n\nThe names are helpful, but we will want to know more about each variable. Because this is a data set from an R package, you can learn more about it using R’s help system as follows:\n\n?NHANES\n\nYou should run the above command in RStudio and take a few minutes to read through the resulting help file, which will give you an idea of what is contained in the data, an what each variables captures.\nOne thing you might have noticed reading through the data description is that height was measured in centimeters (cm). Below I create a variable I call Height_in that converts from centimeters to inches.\n\nNHANES$Height_in &lt;- NHANES$Height/2.54\n\nLet’s look at the distribution of heights using this real data.\n\nhist(NHANES$Height_in, breaks = \"fd\")\n\n\n\n\nThe data do not look normally distributed. instead, there is a long tail on the left side of the distribution. What do you think is going on here? You may want to read back over the data description. To understand this, take a look at the distribution of the age variable.\n\nhist(NHANES$Age)\n\n\n\n\nThe data contain information on people from birth well into adulthood. Maybe the long left tail of the height distibution is a result of this age distribution. To explore this we can plot height against age.\n\nplot(Height_in ~ Age, NHANES)\n\n\n\n\nThis plot seems consistent with our hunch. From birth to the late teens we see a relation between height and age. For participants older than 18 or so, we don’t see a relation between height and age. Because we are interested in the height of adults we subset the data to only include those of the age of 18.\n\nnhanesAdult &lt;- NHANES[NHANES$Age &gt;= 18, ]\n\n\nplot(Height_in ~ Age, nhanesAdult)\n\n\n\n\nWe can now look at the distribution of heights among adults.\n\nhist(nhanesAdult$Height_in)\n\n\n\n\nThis looks more normally distributed, which is what we would expect from a random sample of adults.\nWe might expect there to be differences in the average heights between males and females. To explore this we can use a boxplot.\n\nboxplot(Height_in ~ Gender, nhanesAdult)\n\n\n\n\nWe do see that the median height of males is greater than that of females. The following code gives us the sample means for each gender category.\n\naggregate(Height_in ~ Gender, data = NHANES, FUN = mean)\n\n  Gender Height_in\n1 female  61.65979\n2   male  65.82336\n\n\nTo review what we learned about statistical inference first we will consider our three scenarios.\n\n\n5.2.3 Exploratory Study\nRecall that if we have no idea about what to expect between variables in this data then we are engaging in an exploratory study which includes looking for relations between height and gender.\nThe appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group’s heights (Fife & Rodgers, 2022).\n\nht.gender_model &lt;- lm(Height_in ~ Gender, data =nhanesAdult)\nboxplot(Height_in ~ Gender, data = nhanesAdult)\n\n\n\nsummary(ht.gender_model)\n\n\nCall:\nlm(formula = Height_in ~ Gender, data = nhanesAdult)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.8489  -1.9176  -0.0221   1.9070   9.6572 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 63.80166    0.04733 1348.00   &lt;2e-16 ***\nGendermale   5.43876    0.06743   80.66   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.905 on 7422 degrees of freedom\n  (57 observations deleted due to missingness)\nMultiple R-squared:  0.4671,    Adjusted R-squared:  0.467 \nF-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16\n\nconfint(ht.gender_model)\n\n                2.5 %    97.5 %\n(Intercept) 63.708878 63.894440\nGendermale   5.306584  5.570939\n\ncohens_d(Height_in ~ Gender, data =nhanesAdult)\n\nWarning: Missing values detected. NAs dropped.\n\n\nCohen's d |         95% CI\n--------------------------\n-1.87     | [-1.93, -1.82]\n\n- Estimated using pooled SD.\n\n\nIt is very important to note that a probabilistic interpretation is NOT appropriate for the p values. The p-value of less than .001 for the gender coefficient in the linear model output, should not be used as evidence against the null hypothesis. It would also be very important to report all the tests and comparisons conducted to be transparent about what was done in the study.\nYou should also explore the residuals of the model. We will talk about more sophisticated ways to explore residuals later, for now. Such studies should be followed collecting new data to use one of the other types of studies described below.\n\nhist(resid(ht.gender_model))\n\n\n\n\n\n\n5.2.4 Rough Confirmatory Study\nIf originally we suspected that there is a relation between height and gender, possibly among other relations of interest, and we want to know if heights are different between the populations of adult women and men, this study could be considered a rough confirmatory study.\nIn that situation it would also be appropriate to use graphs, means, and effect sizes, along with confidence intervals. All of the output we obtained above could be used. The difference is that you may emphasize the confidence intervals of the linear model coefficients\n\nconfint(ht.gender_model)\n\n                2.5 %    97.5 %\n(Intercept) 63.708878 63.894440\nGendermale   5.306584  5.570939\n\n\nSuch studies should be followed by strict confirmatory studies if there is support for any of the hypotheses. All analyses and exploratory techniques should be reported transparently.\n\n\n5.2.5 Strict Confirmatory Study\nThis study requires that specific hypotheses related to theory are posited before the data are collected. Then those, and only those hypotheses should be tested and interpreted in the manner that follows. Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above. This includes adding any sub-group analyses. If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis. Such an error is known as HARKing, which stands for Hypothesizing After the Results are Known. It’s bad. Really bad.\n\nsummary(ht.gender_model)\n\n\nCall:\nlm(formula = Height_in ~ Gender, data = nhanesAdult)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.8489  -1.9176  -0.0221   1.9070   9.6572 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 63.80166    0.04733 1348.00   &lt;2e-16 ***\nGendermale   5.43876    0.06743   80.66   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.905 on 7422 degrees of freedom\n  (57 observations deleted due to missingness)\nMultiple R-squared:  0.4671,    Adjusted R-squared:  0.467 \nF-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886"
+    "text": "5.2 Conceptual Demonstration of Simple Regression\nLet’s say we were about to conduct a large study and needed to know the participants heights. But it is very expensive to directly measure each participants height. We could just ask participants to report their height. So, we want to know how accurate people are at reporting their height. To evaluate that we could ask a random sample of people from the study population to report their height and then obtain direct measures of their height and see how strongly those are related. We want to see how well reported height predicts measured height.\nBelow are statistical models of the relationship between measured height (\\(Y\\)) and reported height (\\(X\\)).\nPopulation Model:\n\\[Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i\\]\n\\[ \\hat{Y_i} = \\beta_0 + \\beta_1 X_i\\]\nSample Model:\n\\[Y_i = b_0 + b_1 X_i + e_i\\] \\[\\hat{Y_i} = b_0 + b_1 X_i\\] Below is a data set of graduate students in a research methods class, were I asked them to report their height (\\(X\\)) and then we measured their height (\\(Y\\)). This data set is much smaller than we would need to adequately answer our research question, but we will use it to demonstrate some key principles of simple regression.\n\ndf &lt;- dat[ ,c(\"X\", \"Y\")]\nkable(df)\n\n\n\n\nX\nY\n\n\n\n\n64\n65.0\n\n\n68\n69.0\n\n\n66\n67.5\n\n\n75\n75.0\n\n\n61\n62.5\n\n\n68\n68.0\n\n\n72\n72.0\n\n\n66\n67.0\n\n\n69\n70.0\n\n\n70\n72.0\n\n\n66\n66.5\n\n\n69\n68.5\n\n\n\n\n\n\\[\n\\text{Cor}_{XY} = 0.98\n\\]\n\ncor(df$X, df$Y)\n\n[1] 0.9804921\n\n\n\n5.2.0.1 Data Summary\n\nkable(psych::describe(df, fast = TRUE), digits = 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvars\nn\nmean\nsd\nmedian\nmin\nmax\nrange\nskew\nkurtosis\nse\n\n\n\n\nX\n1\n12\n67.83\n3.66\n68.00\n61.0\n75\n14.0\n0.10\n-0.51\n1.06\n\n\nY\n2\n12\n68.58\n3.37\n68.25\n62.5\n75\n12.5\n0.13\n-0.72\n0.97\n\n\n\n\n\n\n\n5.2.1 Graphical Demonstration of Simple Regression\n\nplot(Y ~ X, data = df)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYbar &lt;- mean(df$Y)\n\nYbar\n\n[1] 68.58333\n\n# Empty Model\nemptyModel &lt;- lm(Y ~ 1, data = df)\n\ncoef(emptyModel)\n\n(Intercept) \n   68.58333 \n\n# Predicted value\npredict(emptyModel)\n\n       1        2        3        4        5        6        7        8 \n68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 68.58333 \n       9       10       11       12 \n68.58333 68.58333 68.58333 68.58333 \n\n\n\n\n\n\n\n\n\n\n\n\ndf$d &lt;- df$Y - mean(df$Y)\n\n\n\n\n\n\nX\nY\nd\n\n\n\n\n64\n65.0\n-3.6\n\n\n68\n69.0\n0.4\n\n\n66\n67.5\n-1.1\n\n\n75\n75.0\n6.4\n\n\n61\n62.5\n-6.1\n\n\n68\n68.0\n-0.6\n\n\n72\n72.0\n3.4\n\n\n66\n67.0\n-1.6\n\n\n69\n70.0\n1.4\n\n\n70\n72.0\n3.4\n\n\n66\n66.5\n-2.1\n\n\n69\n68.5\n-0.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsimpleReg &lt;- lm(Y ~ X, data = df)\nprint(coef(simpleReg), digits = 2)\n\n(Intercept)           X \n        7.4         0.9 \n\ndf$resid &lt;- resid(simpleReg)\n\n\n\n\n\n\nX\nY\nd\nresid\n\n\n\n\n64\n65.0\n-3.6\n-0.1\n\n\n68\n69.0\n0.4\n0.3\n\n\n66\n67.5\n-1.1\n0.6\n\n\n75\n75.0\n6.4\n0.0\n\n\n61\n62.5\n-6.1\n0.1\n\n\n68\n68.0\n-0.6\n-0.7\n\n\n72\n72.0\n3.4\n-0.3\n\n\n66\n67.0\n-1.6\n0.1\n\n\n69\n70.0\n1.4\n0.4\n\n\n70\n72.0\n3.4\n1.5\n\n\n66\n66.5\n-2.1\n-0.4\n\n\n69\n68.5\n-0.1\n-1.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Interpreting Output from Simple Regression\nWe need to be able to interpret the coefficients, and determine their implications for our research question. We can look at a summary of the results of the simple regression in R as follows:\n\nsummary(mod)\n\n\nCall:\nlm(formula = Y ~ X)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.13544 -0.36315  0.01185  0.29091  1.46275 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  7.41084    3.88315   1.908   0.0854 .  \nX            0.90181    0.05717  15.774 2.15e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.6947 on 10 degrees of freedom\nMultiple R-squared:  0.9614,    Adjusted R-squared:  0.9575 \nF-statistic: 248.8 on 1 and 10 DF,  p-value: 2.153e-08\n\n\nThere is a lot of information contained in this output. First, note that the multiple R-squared is .96, which is an estimate of the proportion of measured height (\\(Y\\)) that can be explained by reported height (\\(X\\)). We can convert this proportion into a percentage by multiplying it by 100, and state that reported height explains about 96% of the variance in measured height.\nNext, we can look at the intercept under the Coefficients: heading of the output. This value is 7.4 (rounding to 1 decimal place). What does this tell us? The intercept is technically the predicted value of the outcome (\\(Y\\)) when the predictor is zero. I would interpret this to mean that, according to this model, someone who reported their height as zero, would be predicted to have a measured height of a little less than 7 and 1/2 inches. This value is not very meaningful because no graduate students reported a zero height. The intercept is outside the range of the observed data (and theoretical population). Later we will learn how to make the intercept more meaningful. Often, though, the intercept is not the important coefficient. The slope is often what we want to learn about. For this simple regression, the estimated slope is about 0.9. Technically, the slope is the expected change in the outcome for a one unit change in the predictor. For this example, that suggests that, according to this simple regression model, two graduate students who reported their heights as being different by one inch, would be predicted to differ in actual height by about 0.9 inches.",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Simple Linear Models</span>"
+    ]
+  },
+  {
+    "objectID": "simpleModels.html#real-data-example",
+    "href": "simpleModels.html#real-data-example",
+    "title": "5  Simple Linear Models",
+    "section": "5.3 Real Data Example",
+    "text": "5.3 Real Data Example\n\n#install.packages(\"NHANES)\nlibrary(NHANES)\nlibrary(effectsize)\ndata(NHANES)\n\nNext we will look at the variables available in the NHANES dataframe, which is a available in the NHANES package in R. To illustrate how we can make statistical inferences, we can assume we want to know if adult height differs between women and men. Admittedly, this is a ver trivial goal of research, but it will help us to review the topic of statistical inference. To do this we will consider three scenarios.\nFirst, we will pretend that we have no idea about what to expect between variables in this data and are engaging in an exploratory study which includes looking for relations between height and gender.\nSecond, we will pretend that we suspect that there is a relation between height and gender, possibly among other relations, and we want to know if heights are different between the populations of adult women and men. This is a rough confirmatory study.\nThird, we will pretend that a primary goal of our study is to test the hypothesis that men are taller than women. We have a compelling theoretical model that suggest this relation, and we decide to test this hypothesis before we collect or at least before we look at our data. This is a strict confirmatory study.\n\nnames(NHANES)\n\n [1] \"ID\"               \"SurveyYr\"         \"Gender\"           \"Age\"             \n [5] \"AgeDecade\"        \"AgeMonths\"        \"Race1\"            \"Race3\"           \n [9] \"Education\"        \"MaritalStatus\"    \"HHIncome\"         \"HHIncomeMid\"     \n[13] \"Poverty\"          \"HomeRooms\"        \"HomeOwn\"          \"Work\"            \n[17] \"Weight\"           \"Length\"           \"HeadCirc\"         \"Height\"          \n[21] \"BMI\"              \"BMICatUnder20yrs\" \"BMI_WHO\"          \"Pulse\"           \n[25] \"BPSysAve\"         \"BPDiaAve\"         \"BPSys1\"           \"BPDia1\"          \n[29] \"BPSys2\"           \"BPDia2\"           \"BPSys3\"           \"BPDia3\"          \n[33] \"Testosterone\"     \"DirectChol\"       \"TotChol\"          \"UrineVol1\"       \n[37] \"UrineFlow1\"       \"UrineVol2\"        \"UrineFlow2\"       \"Diabetes\"        \n[41] \"DiabetesAge\"      \"HealthGen\"        \"DaysPhysHlthBad\"  \"DaysMentHlthBad\" \n[45] \"LittleInterest\"   \"Depressed\"        \"nPregnancies\"     \"nBabies\"         \n[49] \"Age1stBaby\"       \"SleepHrsNight\"    \"SleepTrouble\"     \"PhysActive\"      \n[53] \"PhysActiveDays\"   \"TVHrsDay\"         \"CompHrsDay\"       \"TVHrsDayChild\"   \n[57] \"CompHrsDayChild\"  \"Alcohol12PlusYr\"  \"AlcoholDay\"       \"AlcoholYear\"     \n[61] \"SmokeNow\"         \"Smoke100\"         \"Smoke100n\"        \"SmokeAge\"        \n[65] \"Marijuana\"        \"AgeFirstMarij\"    \"RegularMarij\"     \"AgeRegMarij\"     \n[69] \"HardDrugs\"        \"SexEver\"          \"SexAge\"           \"SexNumPartnLife\" \n[73] \"SexNumPartYear\"   \"SameSex\"          \"SexOrientation\"   \"PregnantNow\"     \n\n\nThe names are helpful, but we will want to know more about each variable. Because this is a data set from an R package, you can learn more about it using R’s help system as follows:\n\n?NHANES\n\nYou should run the above command in RStudio and take a few minutes to read through the resulting help file, which will give you an idea of what is contained in the data, an what each variables captures.\nOne thing you might have noticed reading through the data description is that height was measured in centimeters (cm). Below I create a variable I call Height_in that converts from centimeters to inches.\n\nNHANES$Height_in &lt;- NHANES$Height/2.54\n\nLet’s look at the distribution of heights using this real data.\n\nhist(NHANES$Height_in, breaks = \"fd\")\n\n\n\n\n\n\n\n\nThe data do not look normally distributed. instead, there is a long tail on the left side of the distribution. What do you think is going on here? You may want to read back over the data description. To understand this, take a look at the distribution of the age variable.\n\nhist(NHANES$Age)\n\n\n\n\n\n\n\n\nThe data contain information on people from birth well into adulthood. Maybe the long left tail of the height distibution is a result of this age distribution. To explore this we can plot height against age.\n\nplot(Height_in ~ Age, NHANES)\n\n\n\n\n\n\n\n\nThis plot seems consistent with our hunch. From birth to the late teens we see a relation between height and age. For participants older than 18 or so, we don’t see a relation between height and age. Because we are interested in the height of adults we subset the data to only include those of the age of 18.\n\nnhanesAdult &lt;- NHANES[NHANES$Age &gt;= 18, ]\n\n\nplot(Height_in ~ Age, nhanesAdult)\n\n\n\n\n\n\n\n\nWe can now look at the distribution of heights among adults.\n\nhist(nhanesAdult$Height_in)\n\n\n\n\n\n\n\n\nThis looks more normally distributed, which is what we would expect from a random sample of adults.\nWe might expect there to be differences in the average heights between males and females. To explore this we can use a boxplot.\n\nboxplot(Height_in ~ Gender, nhanesAdult)\n\n\n\n\n\n\n\n\nWe do see that the median height of males is greater than that of females. The following code gives us the sample means for each gender category.\n\naggregate(Height_in ~ Gender, data = NHANES, FUN = mean)\n\n  Gender Height_in\n1 female  61.65979\n2   male  65.82336\n\n\nTo review what we learned about statistical inference first we will consider our three scenarios.\n\n5.3.1 Exploratory Study\nRecall that if we have no idea about what to expect between variables in this data then we are engaging in an exploratory study which includes looking for relations between height and gender.\nThe appropriate comparisons to make are graphics, means, confidence intervals, and effect sizes of the two group’s heights (Fife & Rodgers, 2022).\n\nht.gender_model &lt;- lm(Height_in ~ Gender, data =nhanesAdult)\nboxplot(Height_in ~ Gender, data = nhanesAdult)\n\n\n\n\n\n\n\nsummary(ht.gender_model)\n\n\nCall:\nlm(formula = Height_in ~ Gender, data = nhanesAdult)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.8489  -1.9176  -0.0221   1.9070   9.6572 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 63.80166    0.04733 1348.00   &lt;2e-16 ***\nGendermale   5.43876    0.06743   80.66   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.905 on 7422 degrees of freedom\n  (57 observations deleted due to missingness)\nMultiple R-squared:  0.4671,    Adjusted R-squared:  0.467 \nF-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16\n\nconfint(ht.gender_model)\n\n                2.5 %    97.5 %\n(Intercept) 63.708878 63.894440\nGendermale   5.306584  5.570939\n\ncohens_d(Height_in ~ Gender, data =nhanesAdult)\n\nWarning: Missing values detected. NAs dropped.\n\n\nCohen's d |         95% CI\n--------------------------\n-1.87     | [-1.93, -1.82]\n\n- Estimated using pooled SD.\n\n\nIt is very important to note that a probabilistic interpretation is NOT appropriate for the p values. The p-value of less than .001 for the gender coefficient in the linear model output, should not be used as evidence against the null hypothesis. It would also be very important to report all the tests and comparisons conducted to be transparent about what was done in the study.\nYou should also explore the residuals of the model. We will talk about more sophisticated ways to explore residuals later, for now. Such studies should be followed collecting new data to use one of the other types of studies described below.\n\nhist(resid(ht.gender_model))\n\n\n\n\n\n\n\n\n\n\n5.3.2 Rough Confirmatory Study\nIf originally we suspected that there is a relation between height and gender, possibly among other relations of interest, and we want to know if heights are different between the populations of adult women and men, this study could be considered a rough confirmatory study.\nIn that situation it would also be appropriate to use graphs, means, and effect sizes, along with confidence intervals. All of the output we obtained above could be used. The difference is that you may emphasize the confidence intervals of the linear model coefficients\n\nconfint(ht.gender_model)\n\n                2.5 %    97.5 %\n(Intercept) 63.708878 63.894440\nGendermale   5.306584  5.570939\n\n\nSuch studies should be followed by strict confirmatory studies if there is support for any of the hypotheses. All analyses and exploratory techniques should be reported transparently.\n\n\n5.3.3 Strict Confirmatory Study\nThis study requires that specific hypotheses related to theory are posited before the data are collected. Then those, and only those hypotheses should be tested and interpreted in the manner that follows. Any additional analyses should be labeled as exploratory and interpreted as in the exploratory study section above. This includes adding any sub-group analyses. If you just happen to find another predictor, say a variable you entered as a covariate to reduce model error, that happens to have a small p-value, it is not appropriate to interpret that as evidence against a null hypothesis, because you did not posit that hypothesis. Such an error is known as HARKing, which stands for Hypothesizing After the Results are Known. It’s bad. Really bad.\n\nsummary(ht.gender_model)\n\n\nCall:\nlm(formula = Height_in ~ Gender, data = nhanesAdult)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.8489  -1.9176  -0.0221   1.9070   9.6572 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 63.80166    0.04733 1348.00   &lt;2e-16 ***\nGendermale   5.43876    0.06743   80.66   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.905 on 7422 degrees of freedom\n  (57 observations deleted due to missingness)\nMultiple R-squared:  0.4671,    Adjusted R-squared:  0.467 \nF-statistic:  6506 on 1 and 7422 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\n\nFife, D. A., & Rodgers, J. L. (2022). Understanding the exploratory/confirmatory data analysis continuum: Moving beyond the “replication crisis”. American Psychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Simple Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html",
     "href": "multipleRegression.html",
     "title": "6  Multivariate Linear Models",
     "section": "",
-    "text": "7 Multiple Regression\nlibrary(rethinking)\ndata(\"WaffleDivorce\")\ndivorce &lt;- WaffleDivorce\nrm(WaffleDivorce)\ndivorce$whm &lt;- divorce$WaffleHouses/divorce$Population\n# Matrix A from Table 1 of Gordon (1968, p. 597)\nmatrixA &lt;- matrix(c(1.0, 0.8, 0.8, 0.2, 0.2, 0.6,\n                    0.8, 1.0, 0.8, 0.2, 0.2, 0.6,\n                    0.8, 0.8, 1.0, 0.2, 0.2, 0.6,\n                    0.2, 0.2, 0.2, 1.0, 0.8, 0.6,\n                    0.2, 0.2, 0.2, 0.8, 1.0, 0.6,\n                    0.6, 0.6, 0.6, 0.6, 0.6, 1.0),\n                  nrow = 6)\nkable(matrixA)\n\n\n\nTable 9.1: Correlation Matrix A from Table 1 in Gordon (1968)\n\n\n1.0\n0.8\n0.8\n0.2\n0.2\n0.6\n\n\n0.8\n1.0\n0.8\n0.2\n0.2\n0.6\n\n\n0.8\n0.8\n1.0\n0.2\n0.2\n0.6\n\n\n0.2\n0.2\n0.2\n1.0\n0.8\n0.6\n\n\n0.2\n0.2\n0.2\n0.8\n1.0\n0.6\n\n\n0.6\n0.6\n0.6\n0.6\n0.6\n1.0\nmatrixB &lt;- matrix(\n  c(1.0, 0.8, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2,\n    0.8, 1.0, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, \n    0.8, 0.8, 1.0, 0.8, 0.2, 0.2, 0.2, 0.2,\n    0.8, 0.8, 0.8, 1.0, 0.2, 0.2, 0.2, 0.2, \n    0.2, 0.2, 0.2, 0.2, 1.0, 0.8, 0.8, 0.2,\n    0.2, 0.2, 0.2, 0.2, 0.8, 1.0, 0.8, 0.2, \n    0.2, 0.2, 0.2, 0.2, 0.8, 0.8, 1.0, 0.2,\n    0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 1.0),\n  nrow = 8)\nmatrixC &lt;- matrix(\n  c(1.0, 0.8, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6,\n    0.8, 1.0, 0.8, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6, \n    0.8, 0.8, 1.0, 0.8, 0.2, 0.2, 0.2, 0.2, 0.6, \n    0.8, 0.8, 0.8, 1.0, 0.2, 0.2, 0.2, 0.2, 0.6, \n    0.2, 0.2, 0.2, 0.2, 1.0, 0.8, 0.8, 0.2, 0.6,\n    0.2, 0.2, 0.2, 0.2, 0.8, 1.0, 0.8, 0.2, 0.6, \n    0.2, 0.2, 0.2, 0.2, 0.8, 0.8, 1.0, 0.2, 0.6,\n    0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 1.0, 0.6, \n    0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 1.0),\n  nrow = 9)"
+    "text": "6.1 Assumptions of Linear Models",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#assumptions-of-linear-models",
     "href": "multipleRegression.html#assumptions-of-linear-models",
     "title": "6  Multivariate Linear Models",
-    "section": "6.1 Assumptions of Linear Models",
-    "text": "6.1 Assumptions of Linear Models\n\nLinearity - Expected value of the response variable is a linear function of the explanatory variables.\nConstant Variance(Homogeneity of variance; Identically distributed) - The variance of the errors is constant across values of the explanatory variables.\nNormality - The errors (residuals) are normally distributed, with an expected mean of zero (unbiased).\nIndependence - The observations are sampled independently (the residuals are independent).\nNo measurement error in predictors - The predictors are measured without error. THIS IS AN IMPORTANT AND ALMOST ALWAYS VIOLATED ASSUMPTION.\nPredictors are not Invariant - No predictor is constant."
+    "section": "",
+    "text": "Linearity - Expected value of the response variable is a linear function of the explanatory variables.\nConstant Variance(Homogeneity of variance; Identically distributed) - The variance of the errors is constant across values of the explanatory variables.\nNormality - The errors (residuals) are normally distributed, with an expected mean of zero (unbiased).\nIndependence - The observations are sampled independently (the residuals are independent).\nNo measurement error in predictors - The predictors are measured without error. THIS IS AN IMPORTANT AND ALMOST ALWAYS VIOLATED ASSUMPTION.\nPredictors are not Invariant - No predictor is constant.",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#review-of-simple-regression-with-a-simulation",
     "href": "multipleRegression.html#review-of-simple-regression-with-a-simulation",
     "title": "6  Multivariate Linear Models",
     "section": "6.2 Review of Simple Regression with a Simulation",
-    "text": "6.2 Review of Simple Regression with a Simulation\n\\[\nY_i = b_0 + b_1 X_i + e_i\n\\]\n\\[\nheight_i = b_0 + b_1 repht_i + e_i\n\\]\n\nn &lt;- 10000\nmu &lt;- 67\nsigma &lt;- 4\n\nb0 &lt;- 0\nb1 &lt;- 1\n\nrepht &lt;- rnorm(n, b0, sigma)\n\nheight &lt;- b0 + b1*repht + rnorm(n, 0, sigma)\n\n\nplot(height ~ repht, col = \"grey\")\nabline(reg = lm(height ~ repht))"
+    "text": "6.2 Review of Simple Regression with a Simulation\n\\[\nY_i = b_0 + b_1 X_i + e_i\n\\]\n\\[\nheight_i = b_0 + b_1 repht_i + e_i\n\\]\n\nn &lt;- 10000\nmu &lt;- 67\nsigma &lt;- 4\n\nb0 &lt;- 0\nb1 &lt;- 1\n\nrepht &lt;- rnorm(n, b0, sigma)\n\nheight &lt;- b0 + b1*repht + rnorm(n, 0, sigma)\n\n\nplot(height ~ repht, col = \"grey\")\nabline(reg = lm(height ~ repht))",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#simple-regression-model",
     "href": "multipleRegression.html#simple-regression-model",
     "title": "6  Multivariate Linear Models",
     "section": "6.3 Simple Regression Model",
-    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15.7693  -2.7039  -0.0157   2.6125  17.5803 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.027680   0.039340  -0.704    0.482    \nrepht        1.000818   0.009745 102.704   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.934 on 9998 degrees of freedom\nMultiple R-squared:  0.5134,    Adjusted R-squared:  0.5133 \nF-statistic: 1.055e+04 on 1 and 9998 DF,  p-value: &lt; 2.2e-16"
+    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15.8362  -2.7001   0.0121   2.6521  15.4149 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  0.03968    0.04026   0.986    0.324    \nrepht        0.99350    0.01003  99.070   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.026 on 9998 degrees of freedom\nMultiple R-squared:  0.4954,    Adjusted R-squared:  0.4953 \nF-statistic:  9815 on 1 and 9998 DF,  p-value: &lt; 2.2e-16",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#plotting-residuals",
     "href": "multipleRegression.html#plotting-residuals",
     "title": "6  Multivariate Linear Models",
     "section": "6.4 Plotting Residuals",
-    "text": "6.4 Plotting Residuals\n\nplot(resid(mod.simple) ~ predict(mod.simple))\nabline(h = 0, col = \"red\")"
+    "text": "6.4 Plotting Residuals\n\nplot(resid(mod.simple) ~ predict(mod.simple))\nabline(h = 0, col = \"red\")",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#weight-data-from-chapter-6",
     "href": "multipleRegression.html#weight-data-from-chapter-6",
     "title": "6  Multivariate Linear Models",
     "section": "7.1 Weight Data from Chapter 6",
-    "text": "7.1 Weight Data from Chapter 6\n\nmswt &lt;- read.csv(\"data/middleschoolweight.csv\", header = TRUE)\nstr(mswt)\n\n'data.frame':   19 obs. of  5 variables:\n $ Name  : chr  \"Alfred\" \"Antonia\" \"Barbara\" \"Camella\" ...\n $ Sex   : chr  \"M\" \"F\" \"F\" \"F\" ...\n $ Age   : int  14 13 13 14 14 12 12 15 13 12 ...\n $ Height: num  69 56.5 65.3 62.8 63.5 57.3 59.8 62.5 62.5 59 ...\n $ Weight: num  112 84 98 102 102 ..."
+    "text": "7.1 Weight Data from Chapter 6\n\nmswt &lt;- read.csv(\"data/middleschoolweight.csv\", header = TRUE)\nstr(mswt)\n\n'data.frame':   19 obs. of  5 variables:\n $ Name  : chr  \"Alfred\" \"Antonia\" \"Barbara\" \"Camella\" ...\n $ Sex   : chr  \"M\" \"F\" \"F\" \"F\" ...\n $ Age   : int  14 13 13 14 14 12 12 15 13 12 ...\n $ Height: num  69 56.5 65.3 62.8 63.5 57.3 59.8 62.5 62.5 59 ...\n $ Weight: num  112 84 98 102 102 ...",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#look-at-some-of-the-data",
     "href": "multipleRegression.html#look-at-some-of-the-data",
     "title": "6  Multivariate Linear Models",
     "section": "7.2 Look at some of the data",
-    "text": "7.2 Look at some of the data\n\nlibrary(psych)\nheadTail(mswt) # in the psych package\n\n       Name  Sex Age Height Weight\n1    Alfred    M  14     69  112.5\n2   Antonia    F  13   56.5     84\n3   Barbara    F  13   65.3     98\n4   Camella    F  14   62.8  102.5\n...    &lt;NA&gt; &lt;NA&gt; ...    ...    ...\n16   Robert    M  12   64.8    128\n17   Sequan    M  15     67    133\n18   Thomas    M  11   57.5     85\n19  William    M  15   66.5    112"
+    "text": "7.2 Look at some of the data\n\nlibrary(psych)\nheadTail(mswt) # in the psych package\n\n       Name  Sex Age Height Weight\n1    Alfred    M  14     69  112.5\n2   Antonia    F  13   56.5     84\n3   Barbara    F  13   65.3     98\n4   Camella    F  14   62.8  102.5\n...    &lt;NA&gt; &lt;NA&gt; ...    ...    ...\n16   Robert    M  12   64.8    128\n17   Sequan    M  15     67    133\n18   Thomas    M  11   57.5     85\n19  William    M  15   66.5    112",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#visualizing-weight-versus-height",
     "href": "multipleRegression.html#visualizing-weight-versus-height",
     "title": "6  Multivariate Linear Models",
     "section": "7.3 Visualizing Weight versus Height",
-    "text": "7.3 Visualizing Weight versus Height\n\nlibrary(car)\nscatterplot(Weight ~ Height, \n            data = mswt, \n            regLine = FALSE, \n            smooth = FALSE, \n            id = list(labels = mswt$Name, \n                      n = 2),\n            boxplots = FALSE)\n\n\n\n\n Joyce Philip \n    11     15"
+    "text": "7.3 Visualizing Weight versus Height\n\nlibrary(car)\nscatterplot(Weight ~ Height, \n            data = mswt, \n            regLine = FALSE, \n            smooth = FALSE, \n            id = list(labels = mswt$Name, \n                      n = 2),\n            boxplots = FALSE)\n\n\n\n\n\n\n\n\n Joyce Philip \n    11     15",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#visualizing-weight-and-age",
     "href": "multipleRegression.html#visualizing-weight-and-age",
     "title": "6  Multivariate Linear Models",
     "section": "7.4 Visualizing Weight and Age",
-    "text": "7.4 Visualizing Weight and Age\n\nplot(Weight ~ Age, mswt)"
+    "text": "7.4 Visualizing Weight and Age\n\nplot(Weight ~ Age, mswt)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#scatterplot-matrix",
     "href": "multipleRegression.html#scatterplot-matrix",
     "title": "6  Multivariate Linear Models",
     "section": "7.5 Scatterplot Matrix",
-    "text": "7.5 Scatterplot Matrix\n\npairs(mswt[ ,-(1:3)])"
+    "text": "7.5 Scatterplot Matrix\n\npairs(mswt[ ,-(1:3)])",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#descriptive-statistics",
     "href": "multipleRegression.html#descriptive-statistics",
     "title": "6  Multivariate Linear Models",
     "section": "7.6 Descriptive Statistics",
-    "text": "7.6 Descriptive Statistics\n\ndescribe(mswt[ ,-(1:2)])\n\n       vars  n   mean    sd median trimmed   mad  min max range  skew kurtosis\nAge       1 19  13.32  1.49   13.0   13.29  1.48 11.0  16   5.0  0.05    -1.33\nHeight    2 19  62.34  5.13   62.8   62.42  5.49 51.3  72  20.7 -0.22    -0.67\nWeight    3 19 100.03 22.77   99.5  100.00 21.50 50.5 150  99.5  0.16    -0.11\n         se\nAge    0.34\nHeight 1.18\nWeight 5.22"
+    "text": "7.6 Descriptive Statistics\n\ndescribe(mswt[ ,-(1:2)])\n\n       vars  n   mean    sd median trimmed   mad  min max range  skew kurtosis\nAge       1 19  13.32  1.49   13.0   13.29  1.48 11.0  16   5.0  0.05    -1.33\nHeight    2 19  62.34  5.13   62.8   62.42  5.49 51.3  72  20.7 -0.22    -0.67\nWeight    3 19 100.03 22.77   99.5  100.00 21.50 50.5 150  99.5  0.16    -0.11\n         se\nAge    0.34\nHeight 1.18\nWeight 5.22",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#empty-model-of-weight",
     "href": "multipleRegression.html#empty-model-of-weight",
     "title": "6  Multivariate Linear Models",
     "section": "7.7 Empty Model of Weight",
-    "text": "7.7 Empty Model of Weight\n\nmod0 &lt;- lm(Weight ~ 1, data = mswt)\nsummary(mod0)\n\n\nCall:\nlm(formula = Weight ~ 1, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-49.526 -15.776  -0.526  12.224  49.974 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  100.026      5.225   19.14 2.05e-13 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 22.77 on 18 degrees of freedom"
+    "text": "7.7 Empty Model of Weight\n\nmod0 &lt;- lm(Weight ~ 1, data = mswt)\nsummary(mod0)\n\n\nCall:\nlm(formula = Weight ~ 1, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-49.526 -15.776  -0.526  12.224  49.974 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  100.026      5.225   19.14 2.05e-13 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 22.77 on 18 degrees of freedom",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#model-of-weight-on-age",
     "href": "multipleRegression.html#model-of-weight-on-age",
     "title": "6  Multivariate Linear Models",
     "section": "7.8 Model of Weight on Age",
-    "text": "7.8 Model of Weight on Age\n\nmod.height &lt;- lm(Weight ~ Age, data = mswt)\nsummary(mod.height)\n\n\nCall:\nlm(formula = Weight ~ Age, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  -50.493     33.290  -1.517 0.147706    \nAge           11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848"
+    "text": "7.8 Model of Weight on Age\n\nmod.height &lt;- lm(Weight ~ Age, data = mswt)\nsummary(mod.height)\n\n\nCall:\nlm(formula = Weight ~ Age, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  -50.493     33.290  -1.517 0.147706    \nAge           11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#centering-the-predictor",
     "href": "multipleRegression.html#centering-the-predictor",
     "title": "6  Multivariate Linear Models",
     "section": "7.9 Centering the Predictor",
-    "text": "7.9 Centering the Predictor\n\nmswt$cAge &lt;- mswt$Age - mean(mswt$Age)\nmod.cage &lt;- lm(Weight ~ cAge, data = mswt)\nsummary(mod.cage)\n\n\nCall:\nlm(formula = Weight ~ cAge, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  100.026      3.611  27.702 1.38e-15 ***\ncAge          11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848"
+    "text": "7.9 Centering the Predictor\n\nmswt$cAge &lt;- mswt$Age - mean(mswt$Age)\nmod.cage &lt;- lm(Weight ~ cAge, data = mswt)\nsummary(mod.cage)\n\n\nCall:\nlm(formula = Weight ~ cAge, data = mswt)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-23.349  -7.609  -5.260   7.945  42.847 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  100.026      3.611  27.702 1.38e-15 ***\ncAge          11.304      2.485   4.548 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.74 on 17 degrees of freedom\nMultiple R-squared:  0.5489,    Adjusted R-squared:  0.5224 \nF-statistic: 20.69 on 1 and 17 DF,  p-value: 0.0002848",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#basic-ideas",
     "href": "multipleRegression.html#basic-ideas",
     "title": "6  Multivariate Linear Models",
     "section": "7.10 Basic Ideas",
-    "text": "7.10 Basic Ideas\n\nsimple regression analysis: 1 IV\n\n\\[Y_i = a + b_1 X_i + e_i\\]\n\nmultiple regression: 2 + IVs\n\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + \\dots + b_k X_{ki} + e_i\\]\n\nto find \\(b_k\\) (i.e., \\(b_1, b_2, \\dots, b_k\\)) so that \\(\\Sigma{e^2}\\) [i.e. \\(\\Sigma (Y - \\hat{Y})^2\\)] is minimal (least squares principle)."
+    "text": "7.10 Basic Ideas\n\nsimple regression analysis: 1 IV\n\n\\[Y_i = a + b_1 X_i + e_i\\]\n\nmultiple regression: 2 + IVs\n\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + \\dots + b_k X_{ki} + e_i\\]\n\nto find \\(b_k\\) (i.e., \\(b_1, b_2, \\dots, b_k\\)) so that \\(\\Sigma{e^2}\\) [i.e. \\(\\Sigma (Y - \\hat{Y})^2\\)] is minimal (least squares principle).",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#four-reasons-for-conducting-multiple-regression-analysis",
     "href": "multipleRegression.html#four-reasons-for-conducting-multiple-regression-analysis",
     "title": "6  Multivariate Linear Models",
     "section": "7.11 Four Reasons for Conducting Multiple Regression Analysis",
-    "text": "7.11 Four Reasons for Conducting Multiple Regression Analysis\n\nTo explain how much variance in \\(Y\\) can be accounted for by \\(X_1\\) and \\(X_2\\). For example, how much variation in Reading Achievement ( \\(Y\\) ) can be accounted for by Verbal Aptitude( \\(X_1\\) ) and Achievement Motivation ( \\(X_2\\) )?\nTo test whether the obtained sample regression coefficients (\\(b_1\\) an \\(b_2\\)) are statistically different from zero. For example, is it reasonable that these sample coefficients have occurred due to sampling error alone (“by chance”)?\nIllustration of an added independent variable ( \\(X_3\\) ) explains additional variance in \\(Y\\) above the other regressors.\nTo evaluate the relative importance of the independent variables in explaining variation in \\(Y\\)."
+    "text": "7.11 Four Reasons for Conducting Multiple Regression Analysis\n\nTo explain how much variance in \\(Y\\) can be accounted for by \\(X_1\\) and \\(X_2\\). For example, how much variation in Reading Achievement ( \\(Y\\) ) can be accounted for by Verbal Aptitude( \\(X_1\\) ) and Achievement Motivation ( \\(X_2\\) )?\nTo test whether the obtained sample regression coefficients (\\(b_1\\) an \\(b_2\\)) are statistically different from zero. For example, is it reasonable that these sample coefficients have occurred due to sampling error alone (“by chance”)?\nIllustration of an added independent variable ( \\(X_3\\) ) explains additional variance in \\(Y\\) above the other regressors.\nTo evaluate the relative importance of the independent variables in explaining variation in \\(Y\\).",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#obtaining-simple-and-multiple-regression-models",
     "href": "multipleRegression.html#obtaining-simple-and-multiple-regression-models",
     "title": "6  Multivariate Linear Models",
     "section": "7.12 Obtaining Simple and Multiple Regression Models",
-    "text": "7.12 Obtaining Simple and Multiple Regression Models\nGive this a try\n\n7.12.1 R code\n\nexercise &lt;- read.csv(\"data/exercise.csv\", header = TRUE)\nmod_exer &lt;- lm(wtloss ~ exercise, data = exercise)\nmod_food &lt;- lm(wtloss ~ food, data = exercise)\nmod_exer_food &lt;- lm(wtloss ~ exercise + food, \n                    data = exercise)"
+    "text": "7.12 Obtaining Simple and Multiple Regression Models\nGive this a try\n\n7.12.1 R code\n\nexercise &lt;- read.csv(\"data/exercise.csv\", header = TRUE)\nmod_exer &lt;- lm(wtloss ~ exercise, data = exercise)\nmod_food &lt;- lm(wtloss ~ food, data = exercise)\nmod_exer_food &lt;- lm(wtloss ~ exercise + food, \n                    data = exercise)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-simple-and-multiple-regression-models",
     "href": "multipleRegression.html#comparing-simple-and-multiple-regression-models",
     "title": "6  Multivariate Linear Models",
     "section": "7.13 Comparing Simple and Multiple Regression Models",
-    "text": "7.13 Comparing Simple and Multiple Regression Models\nlibrary(texreg)\nhtmlreg(list(mod_exer, mod_food, mod_exer_food), doctype = FALSE,\n          custom.model.names = c(\"exercise\", \"food\", \"both\"),\n       caption = \"Models Predicting Weight Loss\")\n\n\n\nModels Predicting Weight Loss\n\n\n\n\n \n\n\nexercise\n\n\nfood\n\n\nboth\n\n\n\n\n\n\n(Intercept)\n\n\n4.00**\n\n\n7.14*\n\n\n6.00**\n\n\n\n\n \n\n\n(0.91)\n\n\n(2.92)\n\n\n(1.27)\n\n\n\n\nexercise\n\n\n1.75**\n\n\n \n\n\n2.00***\n\n\n\n\n \n\n\n(0.36)\n\n\n \n\n\n(0.33)\n\n\n\n\nfood\n\n\n \n\n\n0.07\n\n\n-0.50\n\n\n\n\n \n\n\n \n\n\n(0.54)\n\n\n(0.25)\n\n\n\n\nR2\n\n\n0.75\n\n\n0.00\n\n\n0.84\n\n\n\n\nAdj. R2\n\n\n0.71\n\n\n-0.12\n\n\n0.79\n\n\n\n\nNum. obs.\n\n\n10\n\n\n10\n\n\n10\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05\n\n\n\n\n\n\n7.13.1 Raw Regression Coefficients ( \\(b\\)s ) vs Standardized Regression Coefficients ( \\(\\beta\\)s )\n\nAs if things were not confusing enough, \\(\\beta\\), in addition to representing the population parameter, is also often used to represent the standardized regression coefficient"
+    "text": "7.13 Comparing Simple and Multiple Regression Models\nlibrary(texreg)\nhtmlreg(list(mod_exer, mod_food, mod_exer_food), doctype = FALSE,\n          custom.model.names = c(\"exercise\", \"food\", \"both\"),\n       caption = \"Models Predicting Weight Loss\")\n\n\nModels Predicting Weight Loss\n\n\n\n\n \n\n\nexercise\n\n\nfood\n\n\nboth\n\n\n\n\n\n\n(Intercept)\n\n\n4.00**\n\n\n7.14*\n\n\n6.00**\n\n\n\n\n \n\n\n(0.91)\n\n\n(2.92)\n\n\n(1.27)\n\n\n\n\nexercise\n\n\n1.75**\n\n\n \n\n\n2.00***\n\n\n\n\n \n\n\n(0.36)\n\n\n \n\n\n(0.33)\n\n\n\n\nfood\n\n\n \n\n\n0.07\n\n\n-0.50\n\n\n\n\n \n\n\n \n\n\n(0.54)\n\n\n(0.25)\n\n\n\n\nR2\n\n\n0.75\n\n\n0.00\n\n\n0.84\n\n\n\n\nAdj. R2\n\n\n0.71\n\n\n-0.12\n\n\n0.79\n\n\n\n\nNum. obs.\n\n\n10\n\n\n10\n\n\n10\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05\n\n\n\n\n\n7.13.1 Raw Regression Coefficients ( \\(b\\)s ) vs Standardized Regression Coefficients ( \\(\\beta\\)s )\n\nAs if things were not confusing enough, \\(\\beta\\), in addition to representing the population parameter, is also often used to represent the standardized regression coefficient",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#relationship-between-b-and-beta",
     "href": "multipleRegression.html#relationship-between-b-and-beta",
     "title": "6  Multivariate Linear Models",
     "section": "7.14 Relationship Between \\(b\\) and \\(\\beta\\)",
-    "text": "7.14 Relationship Between \\(b\\) and \\(\\beta\\)\n\\(b_k = \\beta_k \\frac{s_y}{s_k}\\), where \\(k\\) indicates the \\(k\\)th IV \\(X_k\\) and \\(s\\) is the standard deviation.\n\\(\\beta_k = b_k \\frac{s_k}{s_y}\\)\nWith 1 IV, \\(\\beta = r_{xy}\\)"
+    "text": "7.14 Relationship Between \\(b\\) and \\(\\beta\\)\n\\(b_k = \\beta_k \\frac{s_y}{s_k}\\), where \\(k\\) indicates the \\(k\\)th IV \\(X_k\\) and \\(s\\) is the standard deviation.\n\\(\\beta_k = b_k \\frac{s_k}{s_y}\\)\nWith 1 IV, \\(\\beta = r_{xy}\\)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#standardized-coefficients-in-r",
     "href": "multipleRegression.html#standardized-coefficients-in-r",
     "title": "6  Multivariate Linear Models",
     "section": "7.15 Standardized Coefficients in R",
-    "text": "7.15 Standardized Coefficients in R\n\nlibrary(parameters)\nparameters(mod_exer_food, standardize = \"smart\")\n\nParameter   | Std. Coef. |   SE |        95% CI |  t(7) |      p\n----------------------------------------------------------------\n(Intercept) |       0.00 | 0.00 | [ 0.00, 0.00] |  4.71 | 0.002 \nexercise    |       0.99 | 0.16 | [ 0.60, 1.38] |  6.00 | &lt; .001\nfood        |      -0.33 | 0.16 | [-0.72, 0.06] | -1.98 | 0.088"
+    "text": "7.15 Standardized Coefficients in R\n\nlibrary(parameters)\nparameters(mod_exer_food, standardize = \"smart\")\n\nParameter   | Std. Coef. |   SE |        95% CI |  t(7) |      p\n----------------------------------------------------------------\n(Intercept) |       0.00 | 0.00 | [ 0.00, 0.00] |  4.71 | 0.002 \nexercise    |       0.99 | 0.16 | [ 0.60, 1.38] |  6.00 | &lt; .001\nfood        |      -0.33 | 0.16 | [-0.72, 0.06] | -1.98 | 0.088",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#standardized-coefficients-in-r-1",
     "href": "multipleRegression.html#standardized-coefficients-in-r-1",
     "title": "6  Multivariate Linear Models",
     "section": "7.16 Standardized Coefficients in R",
-    "text": "7.16 Standardized Coefficients in R\n\nzmod_exer_food &lt;- lm(scale(wtloss) ~ scale(exercise) + \n                     scale(food), \n                     data = exercise)\nprint(summary(zmod_exer_food), digits = 5)\n\n\nCall:\nlm(formula = scale(wtloss) ~ scale(exercise) + scale(food), data = exercise)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.60455 -0.30228  0.00000  0.30228  0.60455 \n\nCoefficients:\n                   Estimate  Std. Error t value  Pr(&gt;|t|)    \n(Intercept)      8.2400e-17  1.4452e-01  0.0000 1.0000000    \nscale(exercise)  9.8723e-01  1.6454e-01  6.0000 0.0005423 ***\nscale(food)     -3.2649e-01  1.6454e-01 -1.9843 0.0876228 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.457 on 7 degrees of freedom\nMultiple R-squared:  0.83756,   Adjusted R-squared:  0.79115 \nF-statistic: 18.047 on 2 and 7 DF,  p-value: 0.0017274"
+    "text": "7.16 Standardized Coefficients in R\n\nzmod_exer_food &lt;- lm(scale(wtloss) ~ scale(exercise) + \n                     scale(food), \n                     data = exercise)\nprint(summary(zmod_exer_food), digits = 5)\n\n\nCall:\nlm(formula = scale(wtloss) ~ scale(exercise) + scale(food), data = exercise)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.60455 -0.30228  0.00000  0.30228  0.60455 \n\nCoefficients:\n                   Estimate  Std. Error t value  Pr(&gt;|t|)    \n(Intercept)      7.1031e-18  1.4452e-01  0.0000 1.0000000    \nscale(exercise)  9.8723e-01  1.6454e-01  6.0000 0.0005423 ***\nscale(food)     -3.2649e-01  1.6454e-01 -1.9843 0.0876228 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.457 on 7 degrees of freedom\nMultiple R-squared:  0.83756,   Adjusted R-squared:  0.79115 \nF-statistic: 18.047 on 2 and 7 DF,  p-value: 0.0017274",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#unstandardized-and-standardized-coefficients",
     "href": "multipleRegression.html#unstandardized-and-standardized-coefficients",
     "title": "6  Multivariate Linear Models",
     "section": "7.17 Unstandardized and Standardized Coefficients",
-    "text": "7.17 Unstandardized and Standardized Coefficients"
+    "text": "7.17 Unstandardized and Standardized Coefficients",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#basic-ideas-r2",
     "href": "multipleRegression.html#basic-ideas-r2",
     "title": "6  Multivariate Linear Models",
     "section": "7.18 Basic Ideas: \\(R^2\\)",
-    "text": "7.18 Basic Ideas: \\(R^2\\)\n\\[\nY_i = a + b_1 X_i + e_i\n\\]\n\\(r^2_{yx}\\) is the proportion of variance in \\(Y\\) accounted for by \\(X\\).\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + e_i\\]\n\\(r^2_{y12} = r^2_{\\hat{Y}Y} = R^2\\) is the proportion of variance in \\(Y\\) accounted for by \\(X_1\\) and \\(X_2\\) combined\nwhen \\(r_{12} = 0, \\quad r^2_{y12} = r^2_{y1} + r^2_{y2}\\)\nwhen \\(r^2_{12} \\neq 0\\), see next slide"
+    "text": "7.18 Basic Ideas: \\(R^2\\)\n\\[\nY_i = a + b_1 X_i + e_i\n\\]\n\\(r^2_{yx}\\) is the proportion of variance in \\(Y\\) accounted for by \\(X\\).\n\\[Y_i = a + b_1 X_{1i} + b_2 X_{2i} + e_i\\]\n\\(r^2_{y12} = r^2_{\\hat{Y}Y} = R^2\\) is the proportion of variance in \\(Y\\) accounted for by \\(X_1\\) and \\(X_2\\) combined\nwhen \\(r_{12} = 0, \\quad r^2_{y12} = r^2_{y1} + r^2_{y2}\\)\nwhen \\(r^2_{12} \\neq 0\\), see next slide",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#r2-represented-graphically",
     "href": "multipleRegression.html#r2-represented-graphically",
     "title": "6  Multivariate Linear Models",
     "section": "7.19 \\(R^2\\) Represented Graphically",
-    "text": "7.19 \\(R^2\\) Represented Graphically\n\n#include_graphics(\"products/slides/figures/venn.jpg\")"
+    "text": "7.19 \\(R^2\\) Represented Graphically\n\n#include_graphics(\"products/slides/figures/venn.jpg\")",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#multiple-regression-with-correlated-predictors",
     "href": "multipleRegression.html#multiple-regression-with-correlated-predictors",
     "title": "6  Multivariate Linear Models",
     "section": "7.20 Multiple Regression with correlated predictors",
-    "text": "7.20 Multiple Regression with correlated predictors\nWhen independent variables are correlated, it is possible that:\n\nthe test of the overall model (test of \\(R^2\\)) is statistically significant and practically meaningful, but NONE of the individual regression coefficients are statistically significant (a seemingly contradictory finding).\na statistically non-significant \\(b_k\\) does not necessarily mean that the variable \\(X_k\\) is NOT a meaningful predictor of \\(Y\\) by itself. As a matter of fact, \\(X_k\\) may be correlated substantially with \\(Y\\) and by itself, may account for substantial variance in \\(Y\\)."
+    "text": "7.20 Multiple Regression with correlated predictors\nWhen independent variables are correlated, it is possible that:\n\nthe test of the overall model (test of \\(R^2\\)) is statistically significant and practically meaningful, but NONE of the individual regression coefficients are statistically significant (a seemingly contradictory finding).\na statistically non-significant \\(b_k\\) does not necessarily mean that the variable \\(X_k\\) is NOT a meaningful predictor of \\(Y\\) by itself. As a matter of fact, \\(X_k\\) may be correlated substantially with \\(Y\\) and by itself, may account for substantial variance in \\(Y\\).",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#squared-multiple-correlation-coefficient",
     "href": "multipleRegression.html#squared-multiple-correlation-coefficient",
     "title": "6  Multivariate Linear Models",
     "section": "7.21 Squared Multiple Correlation Coefficient",
-    "text": "7.21 Squared Multiple Correlation Coefficient\n\\[R^2 = \\frac{SS_{reg}}{SS_{total}}\\]\n\\[R^2 = r^2_{Y,\\hat{Y}}\\]\n\\[R^2 = \\frac{r^2_{y1} + r^2_{y2} - 2r_{y1}r_{y2}r_{12}}{1 - r^2_{12}}\\]\nwhen \\(r_{12} = 0\\): \\(R^2 = r^2_{y1} + r^2_{y2}\\)"
+    "text": "7.21 Squared Multiple Correlation Coefficient\n\\[R^2 = \\frac{SS_{reg}}{SS_{total}}\\]\n\\[R^2 = r^2_{Y,\\hat{Y}}\\]\n\\[R^2 = \\frac{r^2_{y1} + r^2_{y2} - 2r_{y1}r_{y2}r_{12}}{1 - r^2_{12}}\\]\nwhen \\(r_{12} = 0\\): \\(R^2 = r^2_{y1} + r^2_{y2}\\)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#tests-of-significance-and-interpretation",
     "href": "multipleRegression.html#tests-of-significance-and-interpretation",
     "title": "6  Multivariate Linear Models",
     "section": "7.22 Tests of Significance and Interpretation",
-    "text": "7.22 Tests of Significance and Interpretation\n\n7.22.1 Test of \\(R^2\\)\n\\[F_{(df1, df2)} = \\frac{R^2/k}{(1 - R^2)/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]\n\n\n7.22.2 Test of \\(SS_{reg}\\)\n\\[F_{(df1, df2)} = \\frac{SS_{reg}/k}{SS_{error}/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]"
+    "text": "7.22 Tests of Significance and Interpretation\n\n7.22.1 Test of \\(R^2\\)\n\\[F_{(df1, df2)} = \\frac{R^2/k}{(1 - R^2)/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]\n\n\n7.22.2 Test of \\(SS_{reg}\\)\n\\[F_{(df1, df2)} = \\frac{SS_{reg}/k}{SS_{error}/(N - k - 1)}, \\quad df_1 = k, df_2 = N - k - 1.\\]",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#tests-of-significance-and-interpretation-1",
     "href": "multipleRegression.html#tests-of-significance-and-interpretation-1",
     "title": "6  Multivariate Linear Models",
     "section": "7.23 Tests of Significance and Interpretation",
-    "text": "7.23 Tests of Significance and Interpretation\n\nin simple regression analysis, test for the only regression coefficient \\(b\\) is the same as the test of \\(R^2\\) and the same as test of \\(SS_{reg}\\).\nin multiple regression analysis, test of \\(R^2\\) and test of \\(SS_{reg}\\) is a test of all regression coefficients simultaneously.\nin multiple regression analysis, the test of individual regression coefficient \\(b_k\\) is testing the unique contribution of \\(X_k\\), given all other independent variables are already in the model (contribution of \\(X_k\\) over and beyond other independent variables)."
+    "text": "7.23 Tests of Significance and Interpretation\n\nin simple regression analysis, test for the only regression coefficient \\(b\\) is the same as the test of \\(R^2\\) and the same as test of \\(SS_{reg}\\).\nin multiple regression analysis, test of \\(R^2\\) and test of \\(SS_{reg}\\) is a test of all regression coefficients simultaneously.\nin multiple regression analysis, the test of individual regression coefficient \\(b_k\\) is testing the unique contribution of \\(X_k\\), given all other independent variables are already in the model (contribution of \\(X_k\\) over and beyond other independent variables).",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#relative-importance-of-predictors",
     "href": "multipleRegression.html#relative-importance-of-predictors",
     "title": "6  Multivariate Linear Models",
     "section": "7.24 Relative Importance of Predictors",
-    "text": "7.24 Relative Importance of Predictors\n\nthe magnitude of \\(b_k\\) is affected by the scale of measurement\n\nNOT ideal for inferring substantive or statistical meaningfulness\nNOT ideal for inferring relative importance across variables in model\nfor different populations, can be used for assessing the importance of the same variable across populations.\n\n\\(\\beta\\) is on a standardized scale (in standard deviation units: a \\(z\\) score)\n\nbetter for assessing relative importance across variables in model (though we will find that there are problems with this)\nmagnitude impacted by group \\(s\\), thus less suitable for comparisons across populations."
+    "text": "7.24 Relative Importance of Predictors\n\nthe magnitude of \\(b_k\\) is affected by the scale of measurement\n\nNOT ideal for inferring substantive or statistical meaningfulness\nNOT ideal for inferring relative importance across variables in model\nfor different populations, can be used for assessing the importance of the same variable across populations.\n\n\\(\\beta\\) is on a standardized scale (in standard deviation units: a \\(z\\) score)\n\nbetter for assessing relative importance across variables in model (though we will find that there are problems with this)\nmagnitude impacted by group \\(s\\), thus less suitable for comparisons across populations.",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#waffle-houses-and-divorce-rates",
     "href": "multipleRegression.html#waffle-houses-and-divorce-rates",
     "title": "6  Multivariate Linear Models",
     "section": "8.1 Waffle Houses and Divorce Rates",
-    "text": "8.1 Waffle Houses and Divorce Rates\n\nggplot(divorce, aes(whm, Divorce)) + geom_point() + \n  geom_text(aes(label = ifelse(Divorce &gt; 11 | WaffleHouses &gt; 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +\n  geom_smooth(method = \"lm\") +\n  xlab(\"Waffle Houses per million\") + ylab(\"Divorce rate\")"
+    "text": "8.1 Waffle Houses and Divorce Rates\n\nggplot(divorce, aes(whm, Divorce)) + geom_point() + \n  geom_text(aes(label = ifelse(Divorce &gt; 11 | WaffleHouses &gt; 70, as.character(Loc), '' )), hjust = -.3, vjust = -.3) +\n  geom_smooth(method = \"lm\") +\n  xlab(\"Waffle Houses per million\") + ylab(\"Divorce rate\")",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#waffle-houses-and-divorce-rates-simple-regression-table",
     "href": "multipleRegression.html#waffle-houses-and-divorce-rates-simple-regression-table",
     "title": "6  Multivariate Linear Models",
     "section": "8.2 Waffle Houses and Divorce Rates: Simple Regression Table",
-    "text": "8.2 Waffle Houses and Divorce Rates: Simple Regression Table\nmod &lt;- lm(Divorce ~ whm, data = divorce)\nhtmlreg(mod, custom.coef.names = c(\"(Intercept\", \"Waffle houses/million\"), doctype = FALSE,\n        custom.model.names = \"Simple Regression\")\n\n\n\nStatistical models\n\n\n\n\n \n\n\nSimple Regression\n\n\n\n\n\n\n(Intercept\n\n\n9.32***\n\n\n\n\n \n\n\n(0.28)\n\n\n\n\nWaffle houses/million\n\n\n0.07**\n\n\n\n\n \n\n\n(0.03)\n\n\n\n\nR2\n\n\n0.13\n\n\n\n\nAdj. R2\n\n\n0.12\n\n\n\n\nNum. obs.\n\n\n50\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05"
+    "text": "8.2 Waffle Houses and Divorce Rates: Simple Regression Table\nmod &lt;- lm(Divorce ~ whm, data = divorce)\nhtmlreg(mod, custom.coef.names = c(\"(Intercept\", \"Waffle houses/million\"), doctype = FALSE,\n        custom.model.names = \"Simple Regression\")\n\n\nStatistical models\n\n\n\n\n \n\n\nSimple Regression\n\n\n\n\n\n\n(Intercept\n\n\n9.32***\n\n\n\n\n \n\n\n(0.28)\n\n\n\n\nWaffle houses/million\n\n\n0.07**\n\n\n\n\n \n\n\n(0.03)\n\n\n\n\nR2\n\n\n0.13\n\n\n\n\nAdj. R2\n\n\n0.12\n\n\n\n\nNum. obs.\n\n\n50\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#spurious-association",
     "href": "multipleRegression.html#spurious-association",
     "title": "6  Multivariate Linear Models",
     "section": "8.3 Spurious Association",
-    "text": "8.3 Spurious Association\n\n\n\n\n\n\n\n## Divorce and Marriage\n\n\n\n\n  Variable M SD 1 2\n\n\n\n     1. c1read      36.40    9.80                          \n\n\n\n     2. c1genk      24.03    7.40 .49**                    \n\n                                  [.47, .51]               \n\n\n\n     3. c5read     133.39   26.21 .53**        .61**       \n\n                                  [.52, .55]   [.59, .62]  \n\nTable: Real data"
+    "text": "8.3 Spurious Association\n\n\n\n\n\n\n\n## Divorce and Marriage\n\n\n\n\n  Variable M SD 1 2\n\n\n\n     1. c1read      36.40    9.80                          \n\n\n\n     2. c1genk      24.03    7.40 .49**                    \n\n                                  [.47, .51]               \n\n\n\n     3. c5read     133.39   26.21 .53**        .61**       \n\n                                  [.52, .55]   [.59, .62]  \n\nTable: Real data",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#eclsk-simulated-data",
     "href": "multipleRegression.html#eclsk-simulated-data",
     "title": "6  Multivariate Linear Models",
     "section": "8.4 ECLSK simulated data",
-    "text": "8.4 ECLSK simulated data\npandoc.table(tab2[[3]], caption = \"Simulated data\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]"
+    "text": "8.4 ECLSK simulated data\npandoc.table(tab2[[3]], caption = \"Simulated data\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#title",
     "href": "multipleRegression.html#title",
     "title": "6  Multivariate Linear Models",
     "section": "8.5 Title",
-    "text": "8.5 Title\n\ng1 &lt;- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"k Reading and 5th Reading\")\n      g2 &lt;- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"k General Know. and 5th Reading\")\n    \ngrid.arrange(g1, g2, nrow = 1)"
+    "text": "8.5 Title\n\ng1 &lt;- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"k Reading and 5th Reading\")\n      g2 &lt;- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  # geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"k General Know. and 5th Reading\")\n    \ngrid.arrange(g1, g2, nrow = 1)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#three-models",
     "href": "multipleRegression.html#three-models",
     "title": "6  Multivariate Linear Models",
     "section": "8.6 Three Models",
-    "text": "8.6 Three Models\nrmodread &lt;- lm(c5read ~ c1read, ach3)\nrmodgenk &lt;- lm(c5read ~ c1genk, ach3)\nrmodML &lt;- lm(c5read ~ c1read + c1genk, ach3)\nhtmlreg(list(rmodread, rmodgenk, rmodML), doctype = FALSE)\n\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\n\n\n\n\n(Intercept)\n\n\n81.42***\n\n\n81.62***\n\n\n64.28***\n\n\n\n\n \n\n\n(1.08)\n\n\n(0.90)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.43***\n\n\n \n\n\n0.83***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.15***\n\n\n1.62***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05"
+    "text": "8.6 Three Models\nrmodread &lt;- lm(c5read ~ c1read, ach3)\nrmodgenk &lt;- lm(c5read ~ c1genk, ach3)\nrmodML &lt;- lm(c5read ~ c1read + c1genk, ach3)\nhtmlreg(list(rmodread, rmodgenk, rmodML), doctype = FALSE)\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\n\n\n\n\n(Intercept)\n\n\n81.42***\n\n\n81.62***\n\n\n64.28***\n\n\n\n\n \n\n\n(1.08)\n\n\n(0.90)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.43***\n\n\n \n\n\n0.83***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.15***\n\n\n1.62***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.37\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-real-and-simulated-data",
     "href": "multipleRegression.html#comparing-real-and-simulated-data",
     "title": "6  Multivariate Linear Models",
     "section": "8.7 Comparing Real and Simulated Data",
-    "text": "8.7 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n\ng2 &lt;- ggplot(simach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+    "text": "8.7 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n\ng2 &lt;- ggplot(simach3, aes(c1read, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-real-and-simulated-data-1",
     "href": "multipleRegression.html#comparing-real-and-simulated-data-1",
     "title": "6  Multivariate Linear Models",
     "section": "8.8 Comparing Real and Simulated Data",
-    "text": "8.8 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n    \ng2 &lt;- ggplot(simach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+    "text": "8.8 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) + \n  ggtitle(\"Real Data\")\n    \ng2 &lt;- ggplot(simach3, aes(c1genk, c5read)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(40, 250) + xlim(-10, 130) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-real-and-simulated-data-2",
     "href": "multipleRegression.html#comparing-real-and-simulated-data-2",
     "title": "6  Multivariate Linear Models",
     "section": "8.9 Comparing Real and Simulated Data",
-    "text": "8.9 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Real Data\")\n\ng2 &lt;- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+    "text": "8.9 Comparing Real and Simulated Data\n\ng1 &lt;- ggplot(ach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Real Data\")\n\ng2 &lt;- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data\")\n\ngrid.arrange(g1, g2, nrow = 1)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-two-simulated-data-sets",
     "href": "multipleRegression.html#comparing-two-simulated-data-sets",
     "title": "6  Multivariate Linear Models",
     "section": "8.10 Comparing Two Simulated Data Sets",
-    "text": "8.10 Comparing Two Simulated Data Sets\ntab &lt;- apaTables::apa.cor.table(data = simach3)\ntab2 &lt;- apaTables::apa.cor.table(data = simach3orthogonal)\npandoc.table(tab[[3]], caption = \"Simulated data 1\",\n              justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 1\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]"
+    "text": "8.10 Comparing Two Simulated Data Sets\ntab &lt;- apaTables::apa.cor.table(data = simach3)\ntab2 &lt;- apaTables::apa.cor.table(data = simach3orthogonal)\npandoc.table(tab[[3]], caption = \"Simulated data 1\",\n              justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 1\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.40\n9.81\n\n\n\n\n\n2. c1genk\n23.98\n7.38\n.49**\n\n\n\n\n\n\n\n[.47, .51]\n\n\n\n\n3. c5read\n133.00\n26.34\n.54**\n.61**\n\n\n\n\n\n\n[.52, .55]\n[.59, .62]",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-two-simulated-data-sets-1",
     "href": "multipleRegression.html#comparing-two-simulated-data-sets-1",
     "title": "6  Multivariate Linear Models",
     "section": "8.11 Comparing Two Simulated Data Sets",
-    "text": "8.11 Comparing Two Simulated Data Sets\npandoc.table(tab2[[3]], caption = \"Simulated data 2\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 2\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.62\n9.80\n\n\n\n\n\n2. c1genk\n24.11\n7.42\n.00\n\n\n\n\n\n\n\n[-.02, .03]\n\n\n\n\n3. c5read\n134.09\n26.22\n.54**\n.60**\n\n\n\n\n\n\n[.52, .56]\n[.58, .62]"
+    "text": "8.11 Comparing Two Simulated Data Sets\npandoc.table(tab2[[3]], caption = \"Simulated data 2\",\n             justify = c('left', 'left', 'right', 'right', 'left', 'left'))\n\nSimulated data 2\n\n\n\n\n\n\n\n\n\n\n \nVariable\nM\nSD\n1\n2\n\n\n\n\n\n1. c1read\n36.62\n9.80\n\n\n\n\n\n2. c1genk\n24.11\n7.42\n.00\n\n\n\n\n\n\n\n[-.02, .03]\n\n\n\n\n3. c5read\n134.09\n26.22\n.54**\n.60**\n\n\n\n\n\n\n[.52, .56]\n[.58, .62]",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-two-simulated-data-sets-2",
     "href": "multipleRegression.html#comparing-two-simulated-data-sets-2",
     "title": "6  Multivariate Linear Models",
     "section": "8.12 Comparing Two Simulated Data Sets",
-    "text": "8.12 Comparing Two Simulated Data Sets\n\ng1 &lt;- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Simulated Data 1\")\n\ng2 &lt;- ggplot(simach3orthogonal, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data 2\")\n\ngrid.arrange(g1, g2, nrow = 1)"
+    "text": "8.12 Comparing Two Simulated Data Sets\n\ng1 &lt;- ggplot(simach3, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) + \n  ggtitle(\"Simulated Data 1\")\n\ng2 &lt;- ggplot(simach3orthogonal, aes(c1read, c1genk)) + \n  geom_point(alpha = .4) + \n  theme(legend.position = \"none\") +\n  geom_smooth(method = \"lm\", fullrange = TRUE) +\n  ylim(-15, 50) + xlim(-10, 80) +\n  ggtitle(\"Simulated Data 2\")\n\ngrid.arrange(g1, g2, nrow = 1)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
     "objectID": "multipleRegression.html#comparing-models",
     "href": "multipleRegression.html#comparing-models",
     "title": "6  Multivariate Linear Models",
     "section": "8.13 Comparing Models",
-    "text": "8.13 Comparing Models\nmod1 &lt;- lm(c5read ~ c1read, data = simach3orthogonal)\nmod2 &lt;- update(mod1, . ~ c1genk)\nmod3 &lt;- update(mod1, . ~ . + c1genk)\nmod4 &lt;- lm(c5read ~ c1read + c1genk, data = simach3)\nhtmlreg(list(mod1, mod2, mod3, mod4), doctype = FALSE)\n\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\nModel 4\n\n\n\n\n\n\n(Intercept)\n\n\n81.27***\n\n\n82.89***\n\n\n30.19***\n\n\n63.64***\n\n\n\n\n \n\n\n(1.09)\n\n\n(0.90)\n\n\n(0.99)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.44***\n\n\n \n\n\n1.44***\n\n\n0.84***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.02)\n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.12***\n\n\n2.12***\n\n\n1.61***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.03)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05"
+    "text": "8.13 Comparing Models\nmod1 &lt;- lm(c5read ~ c1read, data = simach3orthogonal)\nmod2 &lt;- update(mod1, . ~ c1genk)\nmod3 &lt;- update(mod1, . ~ . + c1genk)\nmod4 &lt;- lm(c5read ~ c1read + c1genk, data = simach3)\nhtmlreg(list(mod1, mod2, mod3, mod4), doctype = FALSE)\n\n\nStatistical models\n\n\n\n\n \n\n\nModel 1\n\n\nModel 2\n\n\nModel 3\n\n\nModel 4\n\n\n\n\n\n\n(Intercept)\n\n\n81.27***\n\n\n82.89***\n\n\n30.19***\n\n\n63.64***\n\n\n\n\n \n\n\n(1.09)\n\n\n(0.90)\n\n\n(0.99)\n\n\n(1.04)\n\n\n\n\nc1read\n\n\n1.44***\n\n\n \n\n\n1.44***\n\n\n0.84***\n\n\n\n\n \n\n\n(0.03)\n\n\n \n\n\n(0.02)\n\n\n(0.03)\n\n\n\n\nc1genk\n\n\n \n\n\n2.12***\n\n\n2.12***\n\n\n1.61***\n\n\n\n\n \n\n\n \n\n\n(0.04)\n\n\n(0.03)\n\n\n(0.04)\n\n\n\n\nR2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nAdj. R2\n\n\n0.29\n\n\n0.36\n\n\n0.65\n\n\n0.44\n\n\n\n\nNum. obs.\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n6206\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
+    ]
   },
   {
-    "objectID": "structuralRegression.html#dags",
-    "href": "structuralRegression.html#dags",
+    "objectID": "structuralRegression.html",
+    "href": "structuralRegression.html",
     "title": "7  Structural Regression",
-    "section": "7.1 DAGS",
-    "text": "7.1 DAGS"
+    "section": "",
+    "text": "7.1 DAGS",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Structural Regression</span>"
+    ]
+  },
+  {
+    "objectID": "moderatedRegression.html",
+    "href": "moderatedRegression.html",
+    "title": "8  Moderated Regression",
+    "section": "",
+    "text": "8.1 Interactions in Linear Models\nDoes the relation between one predictor and the outcome depend on the value of another predictor?",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Moderated Regression</span>"
+    ]
   },
   {
     "objectID": "moderatedRegression.html#interactions-in-linear-models",
     "href": "moderatedRegression.html#interactions-in-linear-models",
     "title": "8  Moderated Regression",
-    "section": "8.1 Interactions in Linear Models",
-    "text": "8.1 Interactions in Linear Models\nDoes the relation between one predictor and the outcome depend on the value of another predictor?\n\n8.1.1 Runner’s Data\n\nTime - 5-kilometer race time in minutes\nAge - runners age in years\nMiles - typical miles run per week training for 5-kilometer race\n\n\nrunners &lt;- read.csv(\"data/runners.csv\", \n                    header = TRUE)\nheadTail(runners) # from psych package\n\n     Time Age Miles\n1   24.91  29    10\n2   21.82  25    20\n3   21.54  27    40\n4   23.03  25    50\n...   ... ...   ...\n77  21.51  42    40\n78  34.53  58    10\n79  23.68  56    30\n80   23.5  53    50\n\n\n\n\n8.1.2 Explore Univariae Distributions of the Variables\n\nhist(runners$Time)\n\n\n\nhist(runners$Age)\n\n\n\n\n\nhist(runners$Miles)\n\n\n\ndescribe(runners, fast = TRUE)\n\n      vars  n  mean    sd   min   max range   se\nTime     1 80 23.55  5.29 14.87 37.75 22.88 0.59\nAge      2 80 39.66 11.56 20.00 59.00 39.00 1.29\nMiles    3 80 29.88 13.82 10.00 50.00 40.00 1.55\n\n\n\n\n8.1.3 Visualize the Bivariate Relations Between Variables\n\nplot(Time ~ Age, runners)\nabline(reg = lm(Time ~ Age, runners), \n       col = \"red\")\n\n\n\n\n\nplot(Time ~ Miles, runners)\nabline(reg = lm(Time ~ Miles, runners), \n       col = \"red\")\n\n\n\n\n\n\n8.1.4 Quantifying Bivariate Relations\n\nplot(Age ~ Miles, runners)\nabline(reg = lm(Age ~ Miles, runners), col = \"red\")\n\n\n\n\n\nprint(cor(runners), digits = 2)\n\n       Time   Age Miles\nTime   1.00  0.47 -0.73\nAge    0.47  1.00 -0.16\nMiles -0.73 -0.16  1.00\n\n\n\n\n8.1.5 Multiple Regression: Additive Model\n\nadditivemod &lt;- lm(Time ~ Age + Miles, data = runners)\nsummary(additivemod)\n\n\nCall:\nlm(formula = Time ~ Age + Miles, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.7507 -2.3133  0.0271  2.2358  7.1882 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 24.60519    1.57309  15.641  &lt; 2e-16 ***\nAge          0.16724    0.03059   5.468 5.43e-07 ***\nMiles       -0.25728    0.02558 -10.057 1.13e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.103 on 77 degrees of freedom\nMultiple R-squared:  0.6648,    Adjusted R-squared:  0.6561 \nF-statistic: 76.35 on 2 and 77 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n8.1.6 Centering Predictors\n\nrunners$Age40 &lt;- runners$Age - 40\nrunners$Miles30 &lt;- runners$Miles - 30\n\n\n8.1.6.1 Multiple Regression: Additive Model (Centered)\n\ncentaddmod &lt;- lm(Time ~ Age40 + Miles30, data = runners)\nsummary(centaddmod)\n\n\nCall:\nlm(formula = Time ~ Age40 + Miles30, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.7507 -2.3133  0.0271  2.2358  7.1882 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 23.57653    0.34706  67.932  &lt; 2e-16 ***\nAge40        0.16724    0.03059   5.468 5.43e-07 ***\nMiles30     -0.25728    0.02558 -10.057 1.13e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.103 on 77 degrees of freedom\nMultiple R-squared:  0.6648,    Adjusted R-squared:  0.6561 \nF-statistic: 76.35 on 2 and 77 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n8.1.6.2 Does the Effect of Training Miles Depend on Runner’s Age?\n\ninteractionmod &lt;- lm(Time ~ Age + Miles + Age:Miles, data = runners)\nsummary(interactionmod)\n\n\nCall:\nlm(formula = Time ~ Age + Miles + Age:Miles, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.6046 -1.8405 -0.0875  1.9707  6.2404 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 18.899198   3.036308   6.224 2.44e-08 ***\nAge          0.308398   0.071342   4.323 4.61e-05 ***\nMiles       -0.068653   0.090112  -0.762   0.4485    \nAge:Miles   -0.004767   0.002188  -2.179   0.0325 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.03 on 76 degrees of freedom\nMultiple R-squared:  0.6845,    Adjusted R-squared:  0.672 \nF-statistic: 54.96 on 3 and 76 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\n8.1.7 Model Comparison\n\nanova(centaddmod, interactionmod)\n\nAnalysis of Variance Table\n\nModel 1: Time ~ Age40 + Miles30\nModel 2: Time ~ Age + Miles + Age:Miles\n  Res.Df    RSS Df Sum of Sq      F  Pr(&gt;F)  \n1     77 741.20                              \n2     76 697.63  1     43.57 4.7465 0.03246 *\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n8.1.8 Plotting the Interaction Model Predicted Values\n\nplot(\n  predictorEffects(mod = interactionmod,\n                   predictors = ~ Age, \n                   xlevels = list(Miles = c(10, 30, 50))),\n  ylim = c(10, 40),\n  lines = list(multiline = TRUE)\n)\n\n\n\n\n\n\n\n\n8.1.9 Interpreting Coefficients in Models with Interactions\n\n8.1.9.1 Additive Model\n\nThe coefficient is the expected change in the outcome (Y) for a one unit change in this predictor (X1) holding the other predictor (X2) constant\nThis effect of X1 is the same no matter what the value of X2\n\n\n\n8.1.9.2 Moderation Model (with Interaction)\n\nFor variables included in the interaction term, the coefficient is interpreted as the effect of a one unit change in that predictor (X1) on the outcome (Y) when the other predictor in the interaction (X2) is zero.\nThe size of the effect of X1 on Y changes depending on the value of X2.\n\n\n\n8.1.9.3 Let’s use the centered variables\n\ncintmod &lt;- lm(Time ~ Age40 + Miles30 + Age40:Miles30, \n              data = runners)\nsummary(cintmod)\n\n\nCall:\nlm(formula = Time ~ Age40 + Miles30 + Age40:Miles30, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.6046 -1.8405 -0.0875  1.9707  6.2404 \n\nCoefficients:\n               Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   23.454674   0.343498  68.282  &lt; 2e-16 ***\nAge40          0.165377   0.029880   5.535 4.26e-07 ***\nMiles30       -0.259348   0.025001 -10.374 3.27e-16 ***\nAge40:Miles30 -0.004767   0.002188  -2.179   0.0325 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.03 on 76 degrees of freedom\nMultiple R-squared:  0.6845,    Adjusted R-squared:  0.672 \nF-statistic: 54.96 on 3 and 76 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\nStatistical models\n\n\n\n\n \n\n\nadditive\n\n\ncentered additive.\n\n\nmoderation\n\n\ncenter moderation\n\n\n\n\n\n\n(Intercept)\n\n\n24.605***\n\n\n23.577***\n\n\n18.899***\n\n\n23.455***\n\n\n\n\n \n\n\n(1.573)\n\n\n(0.347)\n\n\n(3.036)\n\n\n(0.343)\n\n\n\n\nAge\n\n\n0.167***\n\n\n \n\n\n0.308***\n\n\n \n\n\n\n\n \n\n\n(0.031)\n\n\n \n\n\n(0.071)\n\n\n \n\n\n\n\nMiles\n\n\n-0.257***\n\n\n \n\n\n-0.069\n\n\n \n\n\n\n\n \n\n\n(0.026)\n\n\n \n\n\n(0.090)\n\n\n \n\n\n\n\nAge40\n\n\n \n\n\n0.167***\n\n\n \n\n\n0.165***\n\n\n\n\n \n\n\n \n\n\n(0.031)\n\n\n \n\n\n(0.030)\n\n\n\n\nMiles30\n\n\n \n\n\n-0.257***\n\n\n \n\n\n-0.259***\n\n\n\n\n \n\n\n \n\n\n(0.026)\n\n\n \n\n\n(0.025)\n\n\n\n\nAge:Miles\n\n\n \n\n\n \n\n\n-0.005*\n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n(0.002)\n\n\n \n\n\n\n\nAge40:Miles30\n\n\n \n\n\n \n\n\n \n\n\n-0.005*\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n(0.002)\n\n\n\n\nR2\n\n\n0.665\n\n\n0.665\n\n\n0.684\n\n\n0.684\n\n\n\n\nAdj. R2\n\n\n0.656\n\n\n0.656\n\n\n0.672\n\n\n0.672\n\n\n\n\nNum. obs.\n\n\n80\n\n\n80\n\n\n80\n\n\n80\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05"
+    "section": "",
+    "text": "8.1.1 Runner’s Data\n\nTime - 5-kilometer race time in minutes\nAge - runners age in years\nMiles - typical miles run per week training for 5-kilometer race\n\n\nrunners &lt;- read.csv(\"data/runners.csv\", \n                    header = TRUE)\nheadTail(runners) # from psych package\n\n     Time Age Miles\n1   24.91  29    10\n2   21.82  25    20\n3   21.54  27    40\n4   23.03  25    50\n...   ... ...   ...\n77  21.51  42    40\n78  34.53  58    10\n79  23.68  56    30\n80   23.5  53    50\n\n\n\n\n8.1.2 Explore Univariae Distributions of the Variables\n\nhist(runners$Time)\n\n\n\n\n\n\n\nhist(runners$Age)\n\n\n\n\n\n\n\n\n\nhist(runners$Miles)\n\n\n\n\n\n\n\ndescribe(runners, fast = TRUE)\n\n      vars  n  mean    sd median   min   max range  skew kurtosis   se\nTime     1 80 23.55  5.29   22.9 14.87 37.75 22.88  0.64    -0.14 0.59\nAge      2 80 39.66 11.56   39.0 20.00 59.00 39.00  0.07    -1.24 1.29\nMiles    3 80 29.88 13.82   30.0 10.00 50.00 40.00 -0.01    -1.29 1.55\n\n\n\n\n8.1.3 Visualize the Bivariate Relations Between Variables\n\nplot(Time ~ Age, runners)\nabline(reg = lm(Time ~ Age, runners), \n       col = \"red\")\n\n\n\n\n\n\n\n\n\nplot(Time ~ Miles, runners)\nabline(reg = lm(Time ~ Miles, runners), \n       col = \"red\")\n\n\n\n\n\n\n\n\n\n\n8.1.4 Quantifying Bivariate Relations\n\nplot(Age ~ Miles, runners)\nabline(reg = lm(Age ~ Miles, runners), col = \"red\")\n\n\n\n\n\n\n\n\n\nprint(cor(runners), digits = 2)\n\n       Time   Age Miles\nTime   1.00  0.47 -0.73\nAge    0.47  1.00 -0.16\nMiles -0.73 -0.16  1.00\n\n\n\n\n8.1.5 Multiple Regression: Additive Model\n\nadditivemod &lt;- lm(Time ~ Age + Miles, data = runners)\nsummary(additivemod)\n\n\nCall:\nlm(formula = Time ~ Age + Miles, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.7507 -2.3133  0.0271  2.2358  7.1882 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 24.60519    1.57309  15.641  &lt; 2e-16 ***\nAge          0.16724    0.03059   5.468 5.43e-07 ***\nMiles       -0.25728    0.02558 -10.057 1.13e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.103 on 77 degrees of freedom\nMultiple R-squared:  0.6648,    Adjusted R-squared:  0.6561 \nF-statistic: 76.35 on 2 and 77 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n8.1.6 Centering Predictors\n\nrunners$Age40 &lt;- runners$Age - 40\nrunners$Miles30 &lt;- runners$Miles - 30\n\n\n8.1.6.1 Multiple Regression: Additive Model (Centered)\n\ncentaddmod &lt;- lm(Time ~ Age40 + Miles30, data = runners)\nsummary(centaddmod)\n\n\nCall:\nlm(formula = Time ~ Age40 + Miles30, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.7507 -2.3133  0.0271  2.2358  7.1882 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 23.57653    0.34706  67.932  &lt; 2e-16 ***\nAge40        0.16724    0.03059   5.468 5.43e-07 ***\nMiles30     -0.25728    0.02558 -10.057 1.13e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.103 on 77 degrees of freedom\nMultiple R-squared:  0.6648,    Adjusted R-squared:  0.6561 \nF-statistic: 76.35 on 2 and 77 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n8.1.6.2 Does the Effect of Training Miles Depend on Runner’s Age?\n\ninteractionmod &lt;- lm(Time ~ Age + Miles + Age:Miles, data = runners)\nsummary(interactionmod)\n\n\nCall:\nlm(formula = Time ~ Age + Miles + Age:Miles, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.6046 -1.8405 -0.0875  1.9707  6.2404 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 18.899198   3.036308   6.224 2.44e-08 ***\nAge          0.308398   0.071342   4.323 4.61e-05 ***\nMiles       -0.068653   0.090112  -0.762   0.4485    \nAge:Miles   -0.004767   0.002188  -2.179   0.0325 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.03 on 76 degrees of freedom\nMultiple R-squared:  0.6845,    Adjusted R-squared:  0.672 \nF-statistic: 54.96 on 3 and 76 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\n8.1.7 Model Comparison\n\nanova(centaddmod, interactionmod)\n\nAnalysis of Variance Table\n\nModel 1: Time ~ Age40 + Miles30\nModel 2: Time ~ Age + Miles + Age:Miles\n  Res.Df    RSS Df Sum of Sq      F  Pr(&gt;F)  \n1     77 741.20                              \n2     76 697.63  1     43.57 4.7465 0.03246 *\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n8.1.8 Plotting the Interaction Model Predicted Values\n\nplot(\n  predictorEffects(mod = interactionmod,\n                   predictors = ~ Age, \n                   xlevels = list(Miles = c(10, 30, 50))),\n  ylim = c(10, 40),\n  lines = list(multiline = TRUE)\n)\n\n\n\n\n\n\n\n\n\n\n\n\n8.1.9 Interpreting Coefficients in Models with Interactions\n\n8.1.9.1 Additive Model\n\nThe coefficient is the expected change in the outcome (Y) for a one unit change in this predictor (X1) holding the other predictor (X2) constant\nThis effect of X1 is the same no matter what the value of X2\n\n\n\n8.1.9.2 Moderation Model (with Interaction)\n\nFor variables included in the interaction term, the coefficient is interpreted as the effect of a one unit change in that predictor (X1) on the outcome (Y) when the other predictor in the interaction (X2) is zero.\nThe size of the effect of X1 on Y changes depending on the value of X2.\n\n\n\n8.1.9.3 Let’s use the centered variables\n\ncintmod &lt;- lm(Time ~ Age40 + Miles30 + Age40:Miles30, \n              data = runners)\nsummary(cintmod)\n\n\nCall:\nlm(formula = Time ~ Age40 + Miles30 + Age40:Miles30, data = runners)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.6046 -1.8405 -0.0875  1.9707  6.2404 \n\nCoefficients:\n               Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   23.454674   0.343498  68.282  &lt; 2e-16 ***\nAge40          0.165377   0.029880   5.535 4.26e-07 ***\nMiles30       -0.259348   0.025001 -10.374 3.27e-16 ***\nAge40:Miles30 -0.004767   0.002188  -2.179   0.0325 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.03 on 76 degrees of freedom\nMultiple R-squared:  0.6845,    Adjusted R-squared:  0.672 \nF-statistic: 54.96 on 3 and 76 DF,  p-value: &lt; 2.2e-16\n\n\n\n\nStatistical models\n\n\n\n\n \n\n\nadditive\n\n\ncentered additive.\n\n\nmoderation\n\n\ncenter moderation\n\n\n\n\n\n\n(Intercept)\n\n\n24.605***\n\n\n23.577***\n\n\n18.899***\n\n\n23.455***\n\n\n\n\n \n\n\n(1.573)\n\n\n(0.347)\n\n\n(3.036)\n\n\n(0.343)\n\n\n\n\nAge\n\n\n0.167***\n\n\n \n\n\n0.308***\n\n\n \n\n\n\n\n \n\n\n(0.031)\n\n\n \n\n\n(0.071)\n\n\n \n\n\n\n\nMiles\n\n\n-0.257***\n\n\n \n\n\n-0.069\n\n\n \n\n\n\n\n \n\n\n(0.026)\n\n\n \n\n\n(0.090)\n\n\n \n\n\n\n\nAge40\n\n\n \n\n\n0.167***\n\n\n \n\n\n0.165***\n\n\n\n\n \n\n\n \n\n\n(0.031)\n\n\n \n\n\n(0.030)\n\n\n\n\nMiles30\n\n\n \n\n\n-0.257***\n\n\n \n\n\n-0.259***\n\n\n\n\n \n\n\n \n\n\n(0.026)\n\n\n \n\n\n(0.025)\n\n\n\n\nAge:Miles\n\n\n \n\n\n \n\n\n-0.005*\n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n(0.002)\n\n\n \n\n\n\n\nAge40:Miles30\n\n\n \n\n\n \n\n\n \n\n\n-0.005*\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n(0.002)\n\n\n\n\nR2\n\n\n0.665\n\n\n0.665\n\n\n0.684\n\n\n0.684\n\n\n\n\nAdj. R2\n\n\n0.656\n\n\n0.656\n\n\n0.672\n\n\n0.672\n\n\n\n\nNum. obs.\n\n\n80\n\n\n80\n\n\n80\n\n\n80\n\n\n\n\n\n\n***p &lt; 0.001; **p &lt; 0.01; *p &lt; 0.05",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Moderated Regression</span>"
+    ]
   },
   {
-    "objectID": "missingdata.html#traditional-methods-and-why-the-should-be-avoided",
-    "href": "missingdata.html#traditional-methods-and-why-the-should-be-avoided",
+    "objectID": "missingdata.html",
+    "href": "missingdata.html",
     "title": "9  Modeling with Missing Data",
-    "section": "9.1 Traditional Methods (and Why The Should Be Avoided)",
-    "text": "9.1 Traditional Methods (and Why The Should Be Avoided)"
+    "section": "",
+    "text": "9.1 Traditional Methods (and Why The Should Be Avoided)",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Modeling with Missing Data</span>"
+    ]
   },
   {
     "objectID": "missingdata.html#modern-methods",
     "href": "missingdata.html#modern-methods",
     "title": "9  Modeling with Missing Data",
     "section": "9.2 Modern Methods",
-    "text": "9.2 Modern Methods\n\n9.2.1 Full Information Maximum Likelihood\n\n\n9.2.2 Multiple Imputation\n\n9.2.2.1 Joint Modeling\n\n\n9.2.2.2 Fully Conditional Specification\n\n\n9.2.2.3 Model-Bases Imputation"
+    "text": "9.2 Modern Methods\n\n9.2.1 Full Information Maximum Likelihood\n\n\n9.2.2 Multiple Imputation\n\n9.2.2.1 Joint Modeling\n\n\n9.2.2.2 Fully Conditional Specification\n\n\n9.2.2.3 Model-Bases Imputation",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Modeling with Missing Data</span>"
+    ]
   },
   {
     "objectID": "missingdata.html#multilevel-multiple-imputation",
     "href": "missingdata.html#multilevel-multiple-imputation",
     "title": "9  Modeling with Missing Data",
     "section": "9.3 Multilevel Multiple Imputation",
-    "text": "9.3 Multilevel Multiple Imputation"
+    "text": "9.3 Multilevel Multiple Imputation",
+    "crumbs": [
+      "Linear Models",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Modeling with Missing Data</span>"
+    ]
+  },
+  {
+    "objectID": "intro_bayesian.html",
+    "href": "intro_bayesian.html",
+    "title": "10  Introduction to Bayesian Modeling",
+    "section": "",
+    "text": "Bayesian modeling",
+    "crumbs": [
+      "Bayesian Modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Introduction to Bayesian Modeling</span>"
+    ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Fife, D. A., & Rodgers, J. L. (2022). Understanding the\nexploratory/confirmatory data analysis continuum: Moving beyond the\n“replication crisis”. American\nPsychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science,\n146(3642), 347–353."
+    "text": "Fife, D. A., & Rodgers, J. L. (2022). Understanding the\nexploratory/confirmatory data analysis continuum: Moving beyond the\n“replication crisis”. American\nPsychologist, 77(3), 453–466. https://doi.org/10.1037/amp0000886\n\n\nPlatt, J. R. (1964). Strong inference. Science,\n146(3642), 347–353.",
+    "crumbs": [
+      "References"
+    ]
   }
 ]

@@ -244,6 +244,7 @@ text(x = 64, y = 69, bquote(bar(Y) == .(int)), col = "red")
 # text(x=5, y=11, bquote(Y[i] == .(int) + y[i]))
 # text(x=5, y=9, bquote(hat(Y)[i] == .(int)))
 ```
+
 ```{r}
 Ybar <- mean(df$Y)
 
@@ -413,7 +414,6 @@ For this simple regression, the estimated slope is about `r round(coef(mod)[2],2
 Technically, the slope is the expected change in the outcome for a one unit change in the predictor.
 For this example, that suggests that, according to this simple regression model, two graduate students who reported their heights as being different by one inch, would be predicted to differ in actual height by about `r round(coef(mod)[2],2)` inches.
 
-We set this up as 
 ## Real Data Example
 ```{r}
 #install.packages("NHANES)

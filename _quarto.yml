@@ -2,24 +2,31 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Research Design and Analysis: A Computational Model-Based Approach"
-  author: "William M. Murrah, III"
+  title: 'Research Design and Analysis: A Computational Model-Based Approach'
+  author: 'William M. Murrah, III'
   chapters:
     - index.qmd
-    - intro.qmd
-    - introR.qmd
-    - understandingData.qmd
-    - dgp.qmd
-    - simpleModels.qmd
-    - multipleRegression.qmd
-    - structuralRegression.qmd
-    - moderatedRegression.qmd
-    - missingdata.qmd
+    - part: "Introduction to Modeling"
+      chapters:
+      - intro.qmd
+      - introR.qmd
+      - understandingData.qmd
+      - dgp.qmd
+    - part: "Linear Models"
+      chapters:
+      - simpleModels.qmd
+      - multipleRegression.qmd    
+      - structuralRegression.qmd
+      - moderatedRegression.qmd
+      - missingdata.qmd
+    - part: "Bayesian Modeling"
+      chapters:
+      - intro_bayesian.qmd
     - references.qmd
-    - statisticalthinkinglink.qmd
+    - statisticalthinkinglink.qmd 
   page-footer:
     left: |
-      *Design and Analysis: A Computational Model-Based Approach* was written by William M. Murrah III.
+      Design and Analysis: A Computational Model-Based Approach was written by William M. Murrah III.
     right: |
       Return to  <a href="https://www.statistical-thinking.com">statistical-thinking.com</a>.
 bibliography: regmodbook.bib
@@ -30,6 +37,4 @@ format:
     css: styles.css
   pdf:
     documentclass: scrreprt
-
-
-
+    

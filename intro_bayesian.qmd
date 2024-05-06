@@ -1,0 +1,6 @@
+---
+title: "Introduction to Bayesian Modeling"
+editor: visual
+---
+
+Bayesian modeling
