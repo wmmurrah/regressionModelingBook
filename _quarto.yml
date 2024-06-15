@@ -35,6 +35,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    code-overflow: wrap
   pdf:
     documentclass: scrreprt
     

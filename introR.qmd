@@ -87,7 +87,7 @@ Here is a video demonstrating the installation of R:
 
 ### Installing RStudio
 
-To install RStudio go to [www.posit.co](https::/www.posit.co) and follow the links to download the free desktop version of RStudio.
+To install RStudio go to [www.posit.co](https://posit.co/) and follow the links to download the free desktop version of RStudio.
 
 Here is a video demonstrating the installation of Rstudio:
 
@@ -465,3 +465,4 @@ Below I give links to R resources if you desire to learn more about R.
 A good next step is Roger Peng's book *R Programming for Data Science*, which can be read free online at [https://bookdown.org/rdpeng/rprogdatascience/](https://bookdown.org/rdpeng/rprogdatascience/).
 You can also download a pdf or epub of the book at [https://leanpub.com/rprogramming](https://leanpub.com/rprogramming). 
 Both these links also have links to purchase a printed copy if that works better for you.
+
