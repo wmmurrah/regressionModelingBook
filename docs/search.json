@@ -317,7 +317,7 @@
     "href": "multipleRegression.html#simple-regression-model",
     "title": "6  Multivariate Linear Models",
     "section": "6.3 Simple Regression Model",
-    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15.8362  -2.7001   0.0121   2.6521  15.4149 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  0.03968    0.04026   0.986    0.324    \nrepht        0.99350    0.01003  99.070   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.026 on 9998 degrees of freedom\nMultiple R-squared:  0.4954,    Adjusted R-squared:  0.4953 \nF-statistic:  9815 on 1 and 9998 DF,  p-value: &lt; 2.2e-16",
+    "text": "6.3 Simple Regression Model\n\nmod.simple &lt;- lm(height ~ repht)\nsummary(mod.simple) \n\n\nCall:\nlm(formula = height ~ repht)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-14.4369  -2.7072   0.0178   2.7374  15.7961 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.008256   0.040332   0.205    0.838    \nrepht       1.003206   0.010014 100.182   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.033 on 9998 degrees of freedom\nMultiple R-squared:  0.501, Adjusted R-squared:  0.5009 \nF-statistic: 1.004e+04 on 1 and 9998 DF,  p-value: &lt; 2.2e-16",
     "crumbs": [
       "Linear Models",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Multivariate Linear Models</span>"
