@@ -1,0 +1,49 @@
+---
+title: "Bayesian Linear Regression  "
+editor: source
+execute: 
+  cache: true
+---
+
+
+```{r}
+#| warning: false
+#| message: false
+library(rethinking)
+data(Howell1)
+d <- Howell1
+precis(d)
+```
+
+
+```{r}
+d2 <- d[d$age <= 18, ]
+precis(d2)
+```
+
+```{r}
+m4.1 <- quap(
+  alist(
+    height ~ dnorm(mu, sigma),
+    mu ~ dnorm(178, 20),
+    sigma ~ dunif(0, 50)
+  ),
+  data = d2
+)
+
+precis(m4.1, prob = .95)
+```
+
+```{r}
+#| message: false
+library(brms)
+
+output <- capture.output(brm4.1 <- brm(height ~ 1, data = d2,
+              prior = c(prior(normal(178, 20), class = Intercept),
+                        prior(uniform(0, 50), class = sigma, ub = 50))))
+```
+
+```{r}
+summary(brm4.1, prob = .95)
+```
+

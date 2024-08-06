@@ -13,7 +13,7 @@ I am convinced one thing that makes learning statistical inference difficult is 
 
 ## Data Examples
 
-To illustrate the concepts and techniques presented in this chapter will will use a set of hypothetical research projects that aim to predict height of adults. These projects will increase in complexity. The goal of t
+To illustrate the concepts and techniques presented in this chapter will will use a set of hypothetical research projects that aim to predict height of adults. These projects will increase in complexity. 
 
 ### Example 1: How well does Reported Height Predict Measured Height?
 

@@ -49,5 +49,6 @@ We can find this with numeric optimization as follows:
 ```{r}
 opt1 <- optim(fn = binomNLL1, par = c(p = 0.5), N = n_j, k = k_j, method = "BFGS")
 ```
+
 ## Bayesian Estimation
 
