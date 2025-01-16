@@ -19,6 +19,9 @@ book:
       - structuralRegression.qmd
       - moderatedRegression.qmd
       - missingdata.qmd
+    - part: "Nonlinear Models"
+      chapters:
+      - intro_nonlinear.qmd  
     - part: "Bayesian Modeling"
       chapters:
       - intro_bayesian.qmd
