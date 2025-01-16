@@ -1,0 +1,37 @@
+---
+title: "Nonlinearity in the Parameters"
+editor: visual
+---
+
+```{r}
+suppressPackageStartupMessages(library(tidyverse))
+library(ggplot2)
+```
+
+```{r}
+heights <- read.table(here::here("data/height_67_girls_boys_data.txt"), skip = 10, 
+header = TRUE)
+```
+
+## Prepare the data for analysis
+
+```{r}
+heights <- heights |> 
+    mutate(sex = factor(sex, labels = c("boy", "girl")),
+    id = factor(id))
+```
+```{r}
+ggplot(heights, aes(y = height, x = year, group = id, color = sex)) + 
+    geom_line() + geom_point()
+```
+
+
+
+## Nonlinear Model
+
+
+```{r}
+library(nlme)
+
+
+```
